@@ -1,0 +1,30 @@
+#viewport {
+    width: 1280px;
+    height: 720px;
+    background: palegoldenrod;
+}
+
+#choose-scene-container {
+    width: 1280px;
+    height: 40px;
+    background:lightblue;
+}
+
+.scene {
+    width:1280px;
+    height:720px;
+    display:none;
+}
+
+.scene.selected {
+    display:block;
+}
+
+.choose-button {
+    height: 40px;
+    float:left;
+}
+
+.choose-button.selected {
+    background: palegoldenrod;
+}

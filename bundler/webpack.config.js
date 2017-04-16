@@ -1,4 +1,6 @@
 var path = require('path');
+var classNames = require('classnames');
+
 module.exports = {
     entry: '../main.jsx',
     output: {
