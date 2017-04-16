@@ -14,9 +14,7 @@ export default class Button extends React.Component {
 
     renderIcon() {
         if (this.props.iconClassName) {
-            //TODO: create component Icon and render it here
-            //<span class={this.props.iconClassName}></span>
-            return '';
+            return <span className={this.props.iconClassName}></span>;
         } else {
             return '';
         }

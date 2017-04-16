@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 10);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -88,6 +88,10 @@ var _Scene3 = _interopRequireDefault(_Scene2);
 var _Button = __webpack_require__(5);
 
 var _Button2 = _interopRequireDefault(_Button);
+
+var _SeekBar = __webpack_require__(8);
+
+var _SeekBar2 = _interopRequireDefault(_SeekBar);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -126,12 +130,7 @@ var SceneStream = function (_Scene) {
                         React.createElement(
                             'div',
                             { className: 'content' },
-                            React.createElement(
-                                'div',
-                                { className: 'bar' },
-                                React.createElement('div', { className: 'progress clickable', 'data-value': 'progress' }),
-                                React.createElement('div', { className: 'actual' })
-                            ),
+                            React.createElement(_SeekBar2.default, null),
                             React.createElement(
                                 'div',
                                 { className: 'channel-number' },
@@ -168,15 +167,18 @@ var SceneStream = function (_Scene) {
                                 { className: 'buttons' },
                                 React.createElement(_Button2.default, { className: 'button-play',
                                     'data-value': 'play',
-                                    text: 'Play'
+                                    text: 'Play',
+                                    iconClassName: 'icon-play3'
                                 }),
                                 React.createElement(_Button2.default, { className: 'button-back',
                                     'data-value': 'back',
-                                    text: 'Startover'
+                                    text: 'Startover',
+                                    iconClassName: 'icon-previous2'
                                 }),
                                 React.createElement(_Button2.default, { className: 'button-record',
                                     'data-value': 'record',
-                                    text: 'Record'
+                                    text: 'Record',
+                                    iconClassName: 'record'
                                 }),
                                 React.createElement(_Button2.default, { className: 'button-live',
                                     'data-value': 'live',
@@ -208,24 +210,7 @@ var SceneStream = function (_Scene) {
                             )
                         )
                     )
-                ),
-                '/*',
-                React.createElement(
-                    'div',
-                    { className: 'snippet-rc-buttons rc-buttons' },
-                    React.createElement(
-                        'table',
-                        null,
-                        React.createElement('tr', null)
-                    )
-                ),
-                React.createElement(
-                    'div',
-                    { className: 'snippet', id: 'snippet-stream-error' },
-                    React.createElement('div', { className: 'error-head' }),
-                    React.createElement('div', { className: 'error-body' })
-                ),
-                '*/'
+                )
             );
         }
     }]);
@@ -434,9 +419,13 @@ var _SceneStream = __webpack_require__(0);
 
 var _SceneStream2 = _interopRequireDefault(_SceneStream);
 
-var _ScenePairing = __webpack_require__(7);
+var _ScenePairing = __webpack_require__(9);
 
 var _ScenePairing2 = _interopRequireDefault(_ScenePairing);
+
+var _RCButtons = __webpack_require__(7);
+
+var _RCButtons2 = _interopRequireDefault(_RCButtons);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -462,7 +451,8 @@ var Container = function (_React$Component) {
                 "div",
                 { id: "viewport" },
                 React.createElement(_SceneStream2.default, { id: "scene-stream" }),
-                React.createElement(_ScenePairing2.default, { id: "scene-pairing" })
+                React.createElement(_ScenePairing2.default, { id: "scene-pairing" }),
+                React.createElement(_RCButtons2.default, null)
             );
         }
     }]);
@@ -520,9 +510,7 @@ var Button = function (_React$Component) {
         key: 'renderIcon',
         value: function renderIcon() {
             if (this.props.iconClassName) {
-                //TODO: create component Icon and render it here
-                //<span class={this.props.iconClassName}></span>
-                return '';
+                return React.createElement('span', { className: this.props.iconClassName });
             } else {
                 return '';
             }
@@ -620,6 +608,152 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var RCButtons = function (_React$Component) {
+    _inherits(RCButtons, _React$Component);
+
+    function RCButtons() {
+        _classCallCheck(this, RCButtons);
+
+        return _possibleConstructorReturn(this, (RCButtons.__proto__ || Object.getPrototypeOf(RCButtons)).apply(this, arguments));
+    }
+
+    _createClass(RCButtons, [{
+        key: "render",
+        value: function render() {
+            return React.createElement(
+                "div",
+                { className: "snippet-rc-buttons rc-buttons" },
+                React.createElement(
+                    "table",
+                    null,
+                    React.createElement(
+                        "tbody",
+                        null,
+                        React.createElement(
+                            "tr",
+                            null,
+                            React.createElement("td", { className: "start" }),
+                            React.createElement("td", { className: "fill" }),
+                            React.createElement(
+                                "td",
+                                { className: "button-red" },
+                                React.createElement("div", { className: "color-button-red" }),
+                                React.createElement("div", { className: "button" }),
+                                React.createElement(
+                                    "div",
+                                    { className: "button-red-text" },
+                                    "Menu"
+                                )
+                            ),
+                            React.createElement(
+                                "td",
+                                { className: "button-green" },
+                                React.createElement("div", { className: "color-button-green" }),
+                                React.createElement("div", { className: "button" }),
+                                React.createElement(
+                                    "div",
+                                    { className: "button-green-text" },
+                                    "Currently"
+                                )
+                            ),
+                            React.createElement(
+                                "td",
+                                { className: "button-yellow" },
+                                React.createElement("div", { className: "color-button-yellow" }),
+                                React.createElement("div", { className: "button" }),
+                                React.createElement(
+                                    "div",
+                                    { className: "button-yellow-text" },
+                                    "EPG"
+                                )
+                            ),
+                            React.createElement(
+                                "td",
+                                { className: "button-back" },
+                                React.createElement("div", { className: "color-button-back" }),
+                                React.createElement("div", { className: "button" }),
+                                React.createElement(
+                                    "div",
+                                    { className: "button-back-text" },
+                                    "Quit"
+                                )
+                            )
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return RCButtons;
+}(React.Component);
+
+exports.default = RCButtons;
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SeekBar = function (_React$Component) {
+    _inherits(SeekBar, _React$Component);
+
+    function SeekBar() {
+        _classCallCheck(this, SeekBar);
+
+        return _possibleConstructorReturn(this, (SeekBar.__proto__ || Object.getPrototypeOf(SeekBar)).apply(this, arguments));
+    }
+
+    _createClass(SeekBar, [{
+        key: "render",
+        value: function render() {
+            return React.createElement(
+                "div",
+                { className: "bar" },
+                React.createElement("div", { className: "progress clickable", "data-value": "progress" }),
+                React.createElement("div", { className: "actual" })
+            );
+        }
+    }]);
+
+    return SeekBar;
+}(React.Component);
+
+exports.default = SeekBar;
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _Scene2 = __webpack_require__(1);
 
 var _Scene3 = _interopRequireDefault(_Scene2);
@@ -681,7 +815,7 @@ var ScenePairing = function (_Scene) {
 exports.default = ScenePairing;
 
 /***/ }),
-/* 8 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

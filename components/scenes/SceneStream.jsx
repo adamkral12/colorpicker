@@ -1,5 +1,6 @@
 import Scene from '../core/Scene.jsx'
 import Button from '../core/Button.jsx';
+import SeekBar from '../sceneComponents/SeekBar.jsx';
 
 export default class SceneStream extends Scene {
 
@@ -19,10 +20,7 @@ export default class SceneStream extends Scene {
                     <div className="player">
 
                         <div className="content">
-                            <div className="bar">
-                                <div className="progress clickable" data-value="progress"></div>
-                                <div className="actual"></div>
-                            </div>
+                            <SeekBar />
                             <div className="channel-number"><div className="text"></div></div>
                             <table>
                                 <tr>
@@ -40,14 +38,17 @@ export default class SceneStream extends Scene {
                                 <Button className="button-play"
                                         data-value="play"
                                         text="Play"
+                                        iconClassName="icon-play3"
                                 />
                                 <Button className="button-back"
                                         data-value="back"
                                         text="Startover"
+                                        iconClassName="icon-previous2"
                                 />
                                 <Button className="button-record"
                                         data-value="record"
                                         text="Record"
+                                        iconClassName="record"
                                 />
                                 <Button className="button-live"
                                         data-value="live"
@@ -78,19 +79,6 @@ export default class SceneStream extends Scene {
                     </div>
 
                 </div>
-                /*
-                <div className="snippet-rc-buttons rc-buttons">
-                    <table>
-                        <tr>
-                        </tr>
-                    </table>
-                </div>
-
-                <div className="snippet" id="snippet-stream-error">
-                    <div className="error-head"></div>
-                    <div className="error-body"></div>
-                </div>
-                */
             </div>
         );
     }
