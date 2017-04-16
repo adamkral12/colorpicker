@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -85,6 +85,10 @@ var _Scene2 = __webpack_require__(1);
 
 var _Scene3 = _interopRequireDefault(_Scene2);
 
+var _Button = __webpack_require__(5);
+
+var _Button2 = _interopRequireDefault(_Button);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -99,10 +103,7 @@ var SceneStream = function (_Scene) {
     function SceneStream(props) {
         _classCallCheck(this, SceneStream);
 
-        var _this = _possibleConstructorReturn(this, (SceneStream.__proto__ || Object.getPrototypeOf(SceneStream)).call(this, props));
-
-        _this.id = ' scene-stream';
-        return _this;
+        return _possibleConstructorReturn(this, (SceneStream.__proto__ || Object.getPrototypeOf(SceneStream)).call(this, props));
     }
 
     _createClass(SceneStream, [{
@@ -115,59 +116,26 @@ var SceneStream = function (_Scene) {
         value: function render() {
             return React.createElement(
                 'div',
-                { id: 'scene-stream' },
+                { id: this.props.id, className: 'scene' },
                 React.createElement(
                     'div',
                     { id: 'snippet-player' },
                     React.createElement(
                         'div',
-                        { 'class': 'locked' },
-                        React.createElement('div', { 'class': 'error-head' }),
-                        React.createElement('div', { 'class': 'error-body' })
-                    ),
-                    React.createElement(
-                        'div',
-                        { 'class': 'errorMsg' },
-                        React.createElement('p', null)
-                    ),
-                    React.createElement(
-                        'div',
-                        { 'class': 'pinError' },
-                        React.createElement('div', { 'class': 'error-head' }),
-                        React.createElement('div', { 'class': 'error-body' })
-                    ),
-                    React.createElement(
-                        'div',
-                        { id: 'ch-name-container' },
-                        React.createElement('div', { 'class': 'opaque' }),
-                        React.createElement('div', { id: 'ch-name' })
-                    ),
-                    React.createElement(
-                        'div',
-                        { id: 'ch-num-container' },
-                        React.createElement('div', { 'class': 'opaque' }),
+                        { className: 'player' },
                         React.createElement(
                             'div',
-                            { id: 'ch-num' },
-                            '---'
-                        )
-                    ),
-                    React.createElement(
-                        'div',
-                        { 'class': 'player' },
-                        React.createElement(
-                            'div',
-                            { 'class': 'content' },
+                            { className: 'content' },
                             React.createElement(
                                 'div',
-                                { 'class': 'bar' },
-                                React.createElement('div', { 'class': 'progress clickable', 'data-value': 'progress' }),
-                                React.createElement('div', { 'class': 'actual' })
+                                { className: 'bar' },
+                                React.createElement('div', { className: 'progress clickable', 'data-value': 'progress' }),
+                                React.createElement('div', { className: 'actual' })
                             ),
                             React.createElement(
                                 'div',
-                                { 'class': 'channel-number' },
-                                React.createElement('div', { 'class': 'text' })
+                                { className: 'channel-number' },
+                                React.createElement('div', { className: 'text' })
                             ),
                             React.createElement(
                                 'table',
@@ -175,91 +143,76 @@ var SceneStream = function (_Scene) {
                                 React.createElement(
                                     'tr',
                                     null,
-                                    React.createElement('td', { 'class': 'channels channel1' }),
+                                    React.createElement('td', { className: 'channels channel1' }),
                                     React.createElement(
                                         'td',
-                                        { 'class': 'titles title1' },
+                                        { className: 'titles title1' },
                                         React.createElement('div', null)
                                     ),
-                                    React.createElement('td', { 'class': 'time time1' })
+                                    React.createElement('td', { className: 'time time1' })
                                 ),
                                 React.createElement(
                                     'tr',
-                                    { 'class': 'secondRow' },
-                                    React.createElement('td', { 'class': 'channels channel2' }),
+                                    { className: 'secondRow' },
+                                    React.createElement('td', { className: 'channels channel2' }),
                                     React.createElement(
                                         'td',
-                                        { 'class': 'titles title2' },
+                                        { className: 'titles title2' },
                                         React.createElement('div', null)
                                     ),
-                                    React.createElement('td', { 'class': 'time time2' })
+                                    React.createElement('td', { className: 'time time2' })
                                 )
                             ),
                             React.createElement(
                                 'ul',
-                                { 'class': 'buttons' },
-                                React.createElement(
-                                    'li',
-                                    { 'class': 'buttons focusable button-play', 'data-value': 'play' },
-                                    React.createElement('span', { 'class': 'icon-play3' }),
-                                    React.createElement('div', { 'class': 'text' })
-                                ),
-                                React.createElement(
-                                    'li',
-                                    { 'class': 'buttons focusable button-pause', 'data-value': 'pause' },
-                                    React.createElement('span', { 'class': 'icon-pause2' }),
-                                    React.createElement('div', { 'class': 'text' })
-                                ),
-                                React.createElement(
-                                    'li',
-                                    { 'class': 'buttons focusable button-back', 'data-value': 'start' },
-                                    React.createElement('span', { 'class': 'icon-previous2' }),
-                                    React.createElement('div', { 'class': 'text' })
-                                ),
-                                React.createElement(
-                                    'li',
-                                    { 'class': 'buttons focusable button-record', 'data-value': 'record' },
-                                    React.createElement('div', { 'class': 'record' }),
-                                    React.createElement('div', { 'class': 'text' })
-                                ),
-                                React.createElement(
-                                    'li',
-                                    { 'class': 'buttons focusable button-live', 'data-value': 'live' },
-                                    React.createElement('span', { 'class': 'icon-play3' }),
-                                    React.createElement('div', { 'class': 'text' })
-                                ),
-                                React.createElement(
-                                    'li',
-                                    { 'class': 'buttons focusable button-previous', 'data-value': 'prev' },
-                                    React.createElement('span', { 'class': 'icon-backward2' }),
-                                    React.createElement('div', { 'class': 'text' })
-                                ),
-                                React.createElement(
-                                    'li',
-                                    { 'class': 'buttons focusable button-next', 'data-value': 'next' },
-                                    React.createElement('span', { 'class': 'icon-forward3' }),
-                                    React.createElement('div', { 'class': 'text' })
-                                )
+                                { className: 'buttons' },
+                                React.createElement(_Button2.default, { className: 'button-play',
+                                    'data-value': 'play',
+                                    text: 'Play'
+                                }),
+                                React.createElement(_Button2.default, { className: 'button-back',
+                                    'data-value': 'back',
+                                    text: 'Startover'
+                                }),
+                                React.createElement(_Button2.default, { className: 'button-record',
+                                    'data-value': 'record',
+                                    text: 'Record'
+                                }),
+                                React.createElement(_Button2.default, { className: 'button-live',
+                                    'data-value': 'live',
+                                    text: 'Live',
+                                    iconClassName: 'icon-play3'
+                                }),
+                                React.createElement(_Button2.default, { className: 'button-previous',
+                                    'data-value': 'prev',
+                                    text: 'Previous',
+                                    iconClassName: 'icon-backward2'
+                                }),
+                                React.createElement(_Button2.default, { className: 'button-next',
+                                    'data-value': 'next',
+                                    text: 'Next',
+                                    iconClassName: 'icon-forward3'
+                                })
                             ),
-                            React.createElement('div', { 'class': 'logo' })
+                            React.createElement('div', { className: 'logo' })
                         ),
                         React.createElement(
                             'div',
-                            { id: 'timeframe', 'class': 'focusable' },
+                            { id: 'timeframe', className: 'focusable' },
                             React.createElement(
                                 'div',
-                                { 'class': 'icon-timeframe' },
-                                React.createElement('span', { 'class': 'time' }),
-                                React.createElement('span', { 'class': 'path1' }),
-                                React.createElement('span', { 'class': 'path2' })
+                                { className: 'icon-timeframe' },
+                                React.createElement('span', { className: 'time' }),
+                                React.createElement('span', { className: 'path1' }),
+                                React.createElement('span', { className: 'path2' })
                             )
-                        ),
-                        React.createElement('div', { 'class': 'opaque' })
+                        )
                     )
                 ),
+                '/*',
                 React.createElement(
                     'div',
-                    { 'class': 'snippet-rc-buttons rc-buttons' },
+                    { className: 'snippet-rc-buttons rc-buttons' },
                     React.createElement(
                         'table',
                         null,
@@ -268,10 +221,11 @@ var SceneStream = function (_Scene) {
                 ),
                 React.createElement(
                     'div',
-                    { 'class': 'snippet', id: 'snippet-stream-error' },
-                    React.createElement('div', { 'class': 'error-head' }),
-                    React.createElement('div', { 'class': 'error-body' })
-                )
+                    { className: 'snippet', id: 'snippet-stream-error' },
+                    React.createElement('div', { className: 'error-head' }),
+                    React.createElement('div', { className: 'error-body' })
+                ),
+                '*/'
             );
         }
     }]);
@@ -335,6 +289,61 @@ exports.default = Scene;
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+  Copyright (c) 2016 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/
+/* global define */
+
+(function () {
+	'use strict';
+
+	var hasOwn = {}.hasOwnProperty;
+
+	function classNames () {
+		var classes = [];
+
+		for (var i = 0; i < arguments.length; i++) {
+			var arg = arguments[i];
+			if (!arg) continue;
+
+			var argType = typeof arg;
+
+			if (argType === 'string' || argType === 'number') {
+				classes.push(arg);
+			} else if (Array.isArray(arg)) {
+				classes.push(classNames.apply(null, arg));
+			} else if (argType === 'object') {
+				for (var key in arg) {
+					if (hasOwn.call(arg, key) && arg[key]) {
+						classes.push(key);
+					}
+				}
+			}
+		}
+
+		return classes.join(' ');
+	}
+
+	if (typeof module !== 'undefined' && module.exports) {
+		module.exports = classNames;
+	} else if (true) {
+		// register as 'classnames', consistent with npm package name
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
+			return classNames;
+		}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	} else {
+		window.classNames = classNames;
+	}
+}());
+
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
 "use strict";
 
 
@@ -344,7 +353,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _ChooseSceneButton = __webpack_require__(4);
+var _ChooseSceneButton = __webpack_require__(6);
 
 var _ChooseSceneButton2 = _interopRequireDefault(_ChooseSceneButton);
 
@@ -360,14 +369,15 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
     Component to maintain ChooseSceneButton components
     always one is selected - changes onclick
     if you want to add more buttons, modify this.childrenIdx in componentWillMount
+    on first render is selected first child
  */
 var ChooseSceneContainer = function (_React$Component) {
     _inherits(ChooseSceneContainer, _React$Component);
 
-    function ChooseSceneContainer(props) {
+    function ChooseSceneContainer() {
         _classCallCheck(this, ChooseSceneContainer);
 
-        return _possibleConstructorReturn(this, (ChooseSceneContainer.__proto__ || Object.getPrototypeOf(ChooseSceneContainer)).call(this, props));
+        return _possibleConstructorReturn(this, (ChooseSceneContainer.__proto__ || Object.getPrototypeOf(ChooseSceneContainer)).apply(this, arguments));
     }
 
     _createClass(ChooseSceneContainer, [{
@@ -408,7 +418,7 @@ var ChooseSceneContainer = function (_React$Component) {
 exports.default = ChooseSceneContainer;
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -424,7 +434,7 @@ var _SceneStream = __webpack_require__(0);
 
 var _SceneStream2 = _interopRequireDefault(_SceneStream);
 
-var _ScenePairing = __webpack_require__(5);
+var _ScenePairing = __webpack_require__(7);
 
 var _ScenePairing2 = _interopRequireDefault(_ScenePairing);
 
@@ -451,8 +461,8 @@ var Container = function (_React$Component) {
             return React.createElement(
                 "div",
                 { id: "viewport" },
-                React.createElement(_SceneStream2.default, null),
-                React.createElement(_ScenePairing2.default, null)
+                React.createElement(_SceneStream2.default, { id: "scene-stream" }),
+                React.createElement(_ScenePairing2.default, { id: "scene-pairing" })
             );
         }
     }]);
@@ -463,7 +473,7 @@ var Container = function (_React$Component) {
 exports.default = Container;
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -475,7 +485,85 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _classnames = __webpack_require__(7);
+var _classnames = __webpack_require__(2);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+/*
+    Abstract Button component
+    needs Props:
+        className
+        dataValue
+        text = innerHTML
+        optional iconClassName
+
+ */
+
+var Button = function (_React$Component) {
+    _inherits(Button, _React$Component);
+
+    function Button() {
+        _classCallCheck(this, Button);
+
+        return _possibleConstructorReturn(this, (Button.__proto__ || Object.getPrototypeOf(Button)).apply(this, arguments));
+    }
+
+    _createClass(Button, [{
+        key: 'renderIcon',
+        value: function renderIcon() {
+            if (this.props.iconClassName) {
+                //TODO: create component Icon and render it here
+                //<span class={this.props.iconClassName}></span>
+                return '';
+            } else {
+                return '';
+            }
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var classes = (0, _classnames2.default)('buttons focusable', this.props.className);
+
+            return React.createElement(
+                'li',
+                { className: classes, 'data-value': this.props.dataValue },
+                this.renderIcon(),
+                React.createElement(
+                    'div',
+                    { className: 'text' },
+                    this.props.text
+                )
+            );
+        }
+    }]);
+
+    return Button;
+}(React.Component);
+
+exports.default = Button;
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _classnames = __webpack_require__(2);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -490,10 +578,10 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var ChooseSceneButton = function (_React$Component) {
     _inherits(ChooseSceneButton, _React$Component);
 
-    function ChooseSceneButton(props) {
+    function ChooseSceneButton() {
         _classCallCheck(this, ChooseSceneButton);
 
-        return _possibleConstructorReturn(this, (ChooseSceneButton.__proto__ || Object.getPrototypeOf(ChooseSceneButton)).call(this, props));
+        return _possibleConstructorReturn(this, (ChooseSceneButton.__proto__ || Object.getPrototypeOf(ChooseSceneButton)).apply(this, arguments));
     }
 
     _createClass(ChooseSceneButton, [{
@@ -508,7 +596,6 @@ var ChooseSceneButton = function (_React$Component) {
             return React.createElement(
                 'div',
                 { className: classes,
-                    index: this.props.index,
                     onClick: this.click.bind(this) },
                 this.props.text
             );
@@ -521,7 +608,7 @@ var ChooseSceneButton = function (_React$Component) {
 exports.default = ChooseSceneButton;
 
 /***/ }),
-/* 5 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -594,7 +681,7 @@ var ScenePairing = function (_Scene) {
 exports.default = ScenePairing;
 
 /***/ }),
-/* 6 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -606,7 +693,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _ViewPort = __webpack_require__(3);
+var _ViewPort = __webpack_require__(4);
 
 var _ViewPort2 = _interopRequireDefault(_ViewPort);
 
@@ -614,7 +701,7 @@ var _SceneStream = __webpack_require__(0);
 
 var _SceneStream2 = _interopRequireDefault(_SceneStream);
 
-var _ChooseSceneContainer = __webpack_require__(2);
+var _ChooseSceneContainer = __webpack_require__(3);
 
 var _ChooseSceneContainer2 = _interopRequireDefault(_ChooseSceneContainer);
 
@@ -654,61 +741,6 @@ exports.default = Main;
 
 
 ReactDOM.render(React.createElement(Main, null), document.getElementsByTagName('body')[0]);
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
-  Copyright (c) 2016 Jed Watson.
-  Licensed under the MIT License (MIT), see
-  http://jedwatson.github.io/classnames
-*/
-/* global define */
-
-(function () {
-	'use strict';
-
-	var hasOwn = {}.hasOwnProperty;
-
-	function classNames () {
-		var classes = [];
-
-		for (var i = 0; i < arguments.length; i++) {
-			var arg = arguments[i];
-			if (!arg) continue;
-
-			var argType = typeof arg;
-
-			if (argType === 'string' || argType === 'number') {
-				classes.push(arg);
-			} else if (Array.isArray(arg)) {
-				classes.push(classNames.apply(null, arg));
-			} else if (argType === 'object') {
-				for (var key in arg) {
-					if (hasOwn.call(arg, key) && arg[key]) {
-						classes.push(key);
-					}
-				}
-			}
-		}
-
-		return classes.join(' ');
-	}
-
-	if (typeof module !== 'undefined' && module.exports) {
-		module.exports = classNames;
-	} else if (true) {
-		// register as 'classnames', consistent with npm package name
-		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
-			return classNames;
-		}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	} else {
-		window.classNames = classNames;
-	}
-}());
-
 
 /***/ })
 /******/ ]);

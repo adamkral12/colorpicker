@@ -4,8 +4,8 @@ export default class Container extends React.Component {
     render() {
         return (
             <div id="viewport">
-                <SceneStream />
-                <ScenePairing />
+                <SceneStream id="scene-stream"/>
+                <ScenePairing id="scene-pairing"/>
             </div>
         );
     }
