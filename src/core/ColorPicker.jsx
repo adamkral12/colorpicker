@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import SketchPicker from './../../bundler/node_modules/react-color/lib/components/sketch/Sketch';
+import SketchPicker from 'react-color';
 
 export default class ColorPicker extends Component {
     state = {
@@ -7,13 +7,23 @@ export default class ColorPicker extends Component {
     };
 
     handleChangeComplete = (color) => {
-        this.setState({ background: color.hex });
+        this.rgba = "rgba(" +
+            + color.rgb.r + "," +
+            + color.rgb.g + "," +
+            + color.rgb.b + "," +
+            + color.rgb.a + ")";
+        this.setState({ background: this.rgba});
     };
 
     render() {
         return (
-            <div id="color-picker-container">
-
+            <div id="color-picker-container"
+                 style={ {backgroundColor: this.rgba} }
+            >
+                <SketchPicker
+                    color={ this.state.background }
+                    onChangeComplete={ this.handleChangeComplete }
+                />
             </div>
         );
     }
