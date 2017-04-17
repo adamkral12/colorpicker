@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import reactCSS from 'reactcss';
 import classNames from 'classnames';
 
 /*
@@ -7,6 +8,7 @@ import classNames from 'classnames';
         className
         dataValue
         text = innerHTML
+        colorFamilyIndex
         optional iconClassName
 
  */
@@ -22,10 +24,23 @@ export default class Button extends Component {
     }
 
     render () {
-        var classes = classNames('buttons focusable', this.props.className);
+        const classes = classNames('buttons focusable', this.props.className);
+        console.log('button props = ' + JSON.stringify(this.props));
+        const styles = reactCSS({
+            'default': {
+                color: {
+                    background: `rgba(${ this.props.color.r },
+                              ${ this.props.color.g },
+                              ${ this.props.color.b },
+                              ${ this.props.color.a })`
+                }
+            }});
 
         return (
-        <li className={classes} data-value={this.props.dataValue}>
+        <li className={classes}
+            data-value={this.props.dataValue}
+            style={ styles.color }
+        >
             {this.renderIcon()}
             <div className="text">{this.props.text}</div>
         </li>

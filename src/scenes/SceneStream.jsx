@@ -1,15 +1,22 @@
 import React from 'react';
 import Scene from '../core/Scene'
-import Button from '../core/Button';
+import PlayerButtonContainer from '../sceneComponents/PlayerButtonContainer';
 import SeekBar from '../sceneComponents/SeekBar';
 
 export default class SceneStream extends Scene {
-    
-    componentWillMount() {
-        super.componentWillMount();
-    }
+
+    constructor(props) {
+        super(props);
+        this.handleStylesChange = this.handleStylesChange.bind(this);
+    };
+
+
+    handleStylesChange = (color) => {
+        this.props.onStylesChange(color);
+    };
 
     render () {
+        console.log('Scene stream color = ' + this.props.color);
         return (
             <div id={this.props.id} className='scene'>
 
@@ -18,61 +25,34 @@ export default class SceneStream extends Scene {
 
                         <div className="content">
                             <SeekBar />
-                            <div className="channel-number"><div className="text"></div></div>
+                            <div className="channel-number"><div className="text">01</div></div>
                             <table>
                                 <tr>
-                                    <td className="channels channel1"></td>
-                                    <td className="titles title1"><div></div></td>
-                                    <td className="time time1"></td>
+                                    <td className="channels channel1">HBO</td>
+                                    <td className="titles title1"><div>X-Men Origins:Wolverine</div></td>
+                                    <td className="time time1">22:20 - 00:35</td>
                                 </tr>
                                 <tr className="secondRow">
-                                    <td className="channels channel2"></td>
-                                    <td className="titles title2"><div></div></td>
+                                    <td className="channels channel2">Following:</td>
+                                    <td className="titles title2"><div>The Matrix</div></td>
                                     <td className="time time2"></td>
                                 </tr>
                             </table>
-                            <ul className="buttons">
-                                <Button className="button-play"
-                                        data-value="play"
-                                        text="Play"
-                                        iconClassName="icon-play3"
-                                />
-                                <Button className="button-back"
-                                        data-value="back"
-                                        text="Startover"
-                                        iconClassName="icon-previous2"
-                                />
-                                <Button className="button-record"
-                                        data-value="record"
-                                        text="Record"
-                                        iconClassName="record"
-                                />
-                                <Button className="button-live"
-                                        data-value="live"
-                                        text="Live"
-                                        iconClassName="icon-play3"
-                                />
-                                <Button className="button-previous"
-                                        data-value="prev"
-                                        text="Previous"
-                                        iconClassName="icon-backward2"
-                                />
-                                <Button className="button-next"
-                                        data-value="next"
-                                        text="Next"
-                                        iconClassName="icon-forward3"
-                                />
-                            </ul>
+                            <PlayerButtonContainer
+                                onChangeComplete={ this.handleStylesChange }
+                                color={ this.props.color }
+                            />
                             <div className="logo"></div>
                         </div>
 
                         <div id="timeframe" className="focusable">
                             <div className="icon-timeframe">
-                                <span className="time"></span>
+                                <span className="time">23:10</span>
                                 <span className="path1"></span>
                                 <span className="path2"></span>
                             </div>
                         </div>
+                        <div  className="opaque"/>
                     </div>
 
                 </div>
