@@ -1,8 +1,9 @@
+import React, { Component } from 'react';
 import SceneStream from "../scenes/SceneStream.jsx";
 import ScenePairing from "../scenes/ScenePairing.jsx";
 import RCButtons from "../sceneComponents/RCButtons.jsx";
 
-export default class Container extends React.Component {
+export default class Container extends Component {
     render() {
         return (
             <div id="viewport">

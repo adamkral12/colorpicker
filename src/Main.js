@@ -1,9 +1,9 @@
-import ViewPort from 'core/ViewPort.jsx';
-import ChooseSceneContainer from 'core/ChooseSceneContainer.jsx';
-import ColorPicker from "core/ColorPicker.jsx";
-import React from "react";
+import React, { Component } from 'react';
+import ViewPort from './core/ViewPort';
+import ChooseSceneContainer from './core/ChooseSceneContainer';
+import ColorPicker from "./core/ColorPicker";
 
-export default class Main extends React.Component {
+export default class Main extends Component {
     render () {
         return (
           <div id="container">

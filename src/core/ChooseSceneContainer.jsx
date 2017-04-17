@@ -1,4 +1,5 @@
-import ChooseSceneButton from './ChooseSceneButton.jsx';
+import React, { Component } from 'react';
+import ChooseSceneButton from './ChooseSceneButton';
 
 /*
     Component to maintain ChooseSceneButton components
@@ -6,7 +7,7 @@ import ChooseSceneButton from './ChooseSceneButton.jsx';
     if you want to add more buttons, modify this.childrenIdx in componentWillMount
     on first render is selected first child
  */
-export default class ChooseSceneContainer extends React.Component {
+export default class ChooseSceneContainer extends Component {
 
 
     componentWillMount() {

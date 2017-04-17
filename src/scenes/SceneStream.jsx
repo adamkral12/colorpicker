@@ -1,13 +1,10 @@
-import Scene from '../core/Scene.jsx'
-import Button from '../core/Button.jsx';
-import SeekBar from '../sceneComponents/SeekBar.jsx';
+import React from 'react';
+import Scene from '../core/Scene'
+import Button from '../core/Button';
+import SeekBar from '../sceneComponents/SeekBar';
 
 export default class SceneStream extends Scene {
-
-    constructor(props) {
-        super(props);
-    }
-
+    
     componentWillMount() {
         super.componentWillMount();
     }

@@ -1,3 +1,4 @@
+import React, { Component } from 'react';
 import classNames from 'classnames';
 
 /*
@@ -10,7 +11,7 @@ import classNames from 'classnames';
 
  */
 
-export default class Button extends React.Component {
+export default class Button extends Component {
 
     renderIcon() {
         if (this.props.iconClassName) {

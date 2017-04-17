@@ -1,4 +1,6 @@
-import Scene from "../core/Scene.jsx";
+import React from 'react';
+import Scene from "../core/Scene";
+
 export default class ScenePairing extends Scene {
     render () {
         return (

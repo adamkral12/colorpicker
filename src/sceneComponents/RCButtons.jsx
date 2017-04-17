@@ -1,4 +1,6 @@
-export default class RCButtons extends React.Component {
+import React, { Component } from 'react';
+
+export default class RCButtons extends Component {
     render() {
         return(
             <div className="snippet-rc-buttons rc-buttons">

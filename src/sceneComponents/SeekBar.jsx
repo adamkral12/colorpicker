@@ -1,4 +1,6 @@
-export default class SeekBar extends React.Component {
+import React, { Component } from 'react';
+
+export default class SeekBar extends Component {
     render() {
         return (
             <div className="bar">
