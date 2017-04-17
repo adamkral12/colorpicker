@@ -1,27 +1,42 @@
 import React, { Component } from 'react';
+import reactCSS from 'reactcss';
 import SketchPicker from 'react-color';
 
 export default class ColorPicker extends Component {
     state = {
-        background: '#fff',
+        color: {
+            r: '241',
+            g: '112',
+            b: '19',
+            a: '1'
+        }
     };
 
     handleChangeComplete = (color) => {
-        this.rgba = "rgba(" +
-            + color.rgb.r + "," +
-            + color.rgb.g + "," +
-            + color.rgb.b + "," +
-            + color.rgb.a + ")";
-        this.setState({ background: this.rgba});
+
+        this.setState({ color: color.rgb});
     };
 
     render() {
+        console.log(this.state.color.r);
+        const styles = reactCSS({
+            'default': {
+                color: {
+                    background: `rgba(${ this.state.color.r },
+                              ${ this.state.color.g },
+                              ${ this.state.color.b },
+                              ${ this.state.color.a })`
+                }
+        }});
+
+        console.log(styles);
+
         return (
             <div id="color-picker-container"
-                 style={ {backgroundColor: this.rgba} }
+                 style={ styles.color }
             >
                 <SketchPicker
-                    color={ this.state.background }
+                    color={ this.state.color }
                     onChangeComplete={ this.handleChangeComplete }
                 />
             </div>
