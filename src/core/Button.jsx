@@ -14,7 +14,7 @@ import classNames from 'classnames';
  */
 
 export default class Button extends Component {
-
+    
     renderIcon() {
         if (this.props.iconClassName) {
             return <span className={this.props.iconClassName}></span>;
@@ -25,17 +25,15 @@ export default class Button extends Component {
 
     render () {
         const classes = classNames('buttons focusable', this.props.className);
-        console.log('button props = ' + JSON.stringify(this.props));
-        const styles = reactCSS({
+        var styles = reactCSS({
             'default': {
                 color: {
-                    background: `rgba(${ this.props.color.r },
-                              ${ this.props.color.g },
-                              ${ this.props.color.b },
-                              ${ this.props.color.a })`
+                    background: `rgba(${ this.props.color.rgb.r },
+                              ${ this.props.color.rgb.g },
+                              ${ this.props.color.rgb.b },
+                              ${ this.props.color.rgb.a })`
                 }
             }});
-
         return (
         <li className={classes}
             data-value={this.props.dataValue}

@@ -11,13 +11,11 @@ export default class ColorPicker extends Component {
 
     handleStylesChange = (color) => {
         this.props.onStylesChange(color);
-        //this.setState({ color: color.rgb});
     };
 
     render() {
 
         const color = this.props.color;
-        console.log("color =" + JSON.stringify(color));
 
         return (
             <div id="color-picker-container"

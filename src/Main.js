@@ -13,15 +13,16 @@ export default class Main extends Component {
 
     state = {
         color: {
-            r: '241',
-            g: '112',
-            b: '19',
-            a: '1'
+            rgb: {
+                r: '241',
+                g: '112',
+                b: '19',
+                a: '1'
+            }
         }
     };
 
     handleStylesChange(color) {
-        console.log('Main Handlestyles change ' + color);
         this.setState({ color: color});
     };
 

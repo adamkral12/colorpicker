@@ -16,7 +16,6 @@ export default class Container extends Component {
     };
 
     render() {
-        console.log('View port color = ' + this.props.color);
         return (
             <div id="viewport">
                 <SceneStream id="scene-stream"

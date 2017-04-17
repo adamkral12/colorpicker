@@ -16,7 +16,6 @@ export default class SceneStream extends Scene {
     };
 
     render () {
-        console.log('Scene stream color = ' + this.props.color);
         return (
             <div id={this.props.id} className='scene'>
 
@@ -24,7 +23,10 @@ export default class SceneStream extends Scene {
                     <div className="player">
 
                         <div className="content">
-                            <SeekBar />
+                            <SeekBar
+                                onChangeComplete={ this.handleStylesChange }
+                                color={ this.props.color }
+                            />
                             <div className="channel-number"><div className="text">01</div></div>
                             <table>
                                 <tr>

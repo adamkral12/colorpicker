@@ -14,7 +14,7 @@ export default class PlayerButtonContainer extends Component {
     };
 
     render () {
-        console.log('Player button containerr color = ' + this.props.color);
+        console.log('Player button containerr color = ' + JSON.stringify(this.props.color));
         return (
             <ul className="buttons">
                 <Button className="button-play"
