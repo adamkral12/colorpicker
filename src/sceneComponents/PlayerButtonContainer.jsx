@@ -3,18 +3,7 @@ import Button from '../core/Button';
 
 export default class PlayerButtonContainer extends Component {
 
-    constructor(props) {
-        super(props);
-        this.handleStylesChange = this.handleStylesChange.bind(this);
-    };
-
-
-    handleStylesChange = (color) => {
-        this.props.onStylesChange(color);
-    };
-
     render () {
-        console.log('Player button containerr color = ' + JSON.stringify(this.props.color));
         return (
             <ul className="buttons">
                 <Button className="button-play"

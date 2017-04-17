@@ -1,27 +1,16 @@
-import React, { Component } from 'react';
-import reactCSS from 'reactcss';
+import React from 'react';
+import Button from '../core/Button';
 
-
-export default class SeekBar extends Component {
-
+export default class SeekBar extends Button {
 
     render() {
-
-        var styles = reactCSS({
-            'default': {
-                color: {
-                    background: `rgba(${ this.props.color.rgb.r },
-                              ${ this.props.color.rgb.g },
-                              ${ this.props.color.rgb.b },
-                              ${ this.props.color.rgb.a })`
-                }
-            }});
+        var styles = this.getStyles();
 
         return (
             <div className="bar">
                 <div className="progress clickable"
                      data-value="progress"
-                     style={ styles.color }
+                     style={ styles.noOpacity }
                 ></div>
                 <div className="actual"></div>
             </div>

@@ -5,23 +5,10 @@ import RCButtons from "../sceneComponents/RCButtons.jsx";
 
 export default class Container extends Component {
 
-    constructor(props) {
-        super(props);
-        this.handleStylesChange = this.handleStylesChange.bind(this);
-    };
-
-
-    handleStylesChange = (color) => {
-        this.props.onStylesChange(color);
-    };
-
     render() {
         return (
             <div id="viewport">
-                <SceneStream id="scene-stream"
-                             onStylesChange={ this.handleStylesChange }
-                             color={ this.props.color }
-                />
+                <SceneStream id="scene-stream"/>
                 <ScenePairing id="scene-pairing"/>
                 <RCButtons />
             </div>

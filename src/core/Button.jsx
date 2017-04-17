@@ -3,7 +3,7 @@ import reactCSS from 'reactcss';
 import classNames from 'classnames';
 
 /*
-    Abstract Button component
+    Button component
     needs Props:
         className
         dataValue
@@ -14,7 +14,17 @@ import classNames from 'classnames';
  */
 
 export default class Button extends Component {
-    
+
+    constructor(props) {
+        super(props);
+        this.mouseOver = this.mouseOver.bind(this);
+        this.mouseOut = this.mouseOut.bind(this);
+    };
+
+    state = {
+        hover: false
+    };
+
     renderIcon() {
         if (this.props.iconClassName) {
             return <span className={this.props.iconClassName}></span>;
@@ -23,21 +33,67 @@ export default class Button extends Component {
         }
     }
 
-    render () {
-        const classes = classNames('buttons focusable', this.props.className);
+    getStyles() {
         var styles = reactCSS({
-            'default': {
-                color: {
-                    background: `rgba(${ this.props.color.rgb.r },
+                'default': {
+                    color: {
+                        background: `rgba(${ this.props.color.rgb.r },
                               ${ this.props.color.rgb.g },
                               ${ this.props.color.rgb.b },
-                              ${ this.props.color.rgb.a })`
+                              ${ this.props.color.rgb.a })`,
+
+                        transition: `background-color 300ms linear`
+                    },
+                    /* Set seekBar opacity to 1 */
+                    noOpacity: {
+                        background: `rgb(${ this.props.color.rgb.r },
+                              ${ this.props.color.rgb.g },
+                              ${ this.props.color.rgb.b })`,
+                        transition: `background-color 300ms linear`
+                    },
+                    /* TimeFrame CSS */
+                    timeFrame: {
+                        color: `rgb(${ this.props.color.rgb.r },
+                              ${ this.props.color.rgb.g },
+                              ${ this.props.color.rgb.b })`,
+                        transition: `color 300ms linear`
+                    }
                 }
-            }});
+            });
+        if (this.state.hover) {
+            styles = reactCSS({
+                'default': {
+                    color: {
+                        background: `rgba(${ this.props.color.rgb.r },
+                              ${ this.props.color.rgb.g },
+                              ${ this.props.color.rgb.b },
+                              ${ this.props.color.rgb.a })`,
+                        transition: `background-color 300ms linear`
+
+                    }
+                }
+            });
+        }
+        return styles;
+    };
+
+    mouseOver() {
+        this.setState({hover: true});
+    }
+
+    mouseOut() {
+        this.setState({hover: true});
+    }
+
+    render () {
+        const classes = classNames('buttons focusable', this.props.className);
+        const styles = this.getStyles();
+
         return (
         <li className={classes}
-            data-value={this.props.dataValue}
             style={ styles.color }
+            onMouseOver={ this.mouseOver }
+            onMouseOut={ this.mouseOut }
         >
             {this.renderIcon()}
             <div className="text">{this.props.text}</div>

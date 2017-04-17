@@ -14,14 +14,13 @@ export default class ColorPicker extends Component {
     };
 
     render() {
-
         const color = this.props.color;
 
         return (
             <div id="color-picker-container"
             >
                 <SketchPicker
-                    color={ color }
+                    color={ color.rgb }
                     onChangeComplete={ this.handleStylesChange }
                 />
             </div>
