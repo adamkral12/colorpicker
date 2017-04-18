@@ -8,7 +8,10 @@ export default class Container extends Component {
     render() {
         return (
             <div id="viewport">
-                <SceneStream id="scene-stream"/>
+                <SceneStream id="scene-stream"
+                             onChangeComplete={ this.handleStylesChange }
+                             color={ this.props.color }
+                />
                 <ScenePairing id="scene-pairing"/>
                 <RCButtons />
             </div>

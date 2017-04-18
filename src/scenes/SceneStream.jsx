@@ -8,6 +8,7 @@ import ChannelNumber from "../sceneComponents/ChannelNumber";
 export default class SceneStream extends Scene {
 
     render () {
+        console.log('stream props color = ' + JSON.stringify(this.props.color));
         return (
             <div id={this.props.id} className='scene'>
 

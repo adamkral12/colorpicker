@@ -29,6 +29,7 @@ export default class Main extends Component {
     render () {
         const color = this.state.color;
 
+        console.log('main color = ' + JSON.stringify(this.state.color));
 
         return (
           <div id="container">

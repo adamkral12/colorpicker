@@ -34,6 +34,8 @@ export default class Button extends Component {
     }
 
     getStyles() {
+        console.log('style = ' + JSON.stringify(this.props.color));
+
         var styles = reactCSS({
                 'default': {
                     color: {
