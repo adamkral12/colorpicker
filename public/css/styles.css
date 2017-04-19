@@ -41,6 +41,27 @@ body {
     display: none; /*temporary*/
 }
 
+.change-focus-container .button {
+    border: none;
+    background: rgba(23,109,48,0.6);
+    color: white;
+    border-radius: 9px;
+    box-sizing: border-box;
+    width: 105px;
+    height: 34px;
+    margin: 5px;
+}
+
+.change-focus-container .button:hover {
+    border: 3px solid rgb(23,109,48);
+}
+
+.change-focus-container .button.focus {
+    background: rgba(23,109,48,1);
+}
+
+
+
 /*
 CSS copied from ModernTV app
 */

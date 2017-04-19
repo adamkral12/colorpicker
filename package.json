@@ -10,7 +10,8 @@
     "react":"^15.5.4",
     "react-dom":"^15.5.4",
     "classnames": "^2.2.5",
-    "react-color": "^2.11.4"
+    "react-color": "^2.11.4",
+    "ucfirst":""
   },
   "scripts": {
     "start": "react-scripts start",
