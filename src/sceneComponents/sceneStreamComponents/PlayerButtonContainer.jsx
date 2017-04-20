@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Button from '../core/Button';
+import Button from '../../core/Button';
 
 export default class PlayerButtonContainer extends Component {
 

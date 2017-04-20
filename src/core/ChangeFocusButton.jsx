@@ -17,7 +17,6 @@ export default class ChangeFocusButton extends Component {
     }
 
     handleFocus(focus) {
-        console.log('handle focus ' + focus);
     }
 
     render () {

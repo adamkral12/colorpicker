@@ -1,13 +1,16 @@
 import React from 'react';
 import Scene from '../core/Scene'
-import PlayerButtonContainer from '../sceneComponents/PlayerButtonContainer';
-import TimeFrame from '../sceneComponents/TimeFrame';
-import SeekBar from '../sceneComponents/SeekBar';
-import ChannelNumber from "../sceneComponents/ChannelNumber";
+import PlayerButtonContainer from '../sceneComponents/sceneStreamComponents/PlayerButtonContainer';
+import TimeFrame from '../sceneComponents/sceneStreamComponents/TimeFrame';
+import SeekBar from '../sceneComponents/sceneStreamComponents/SeekBar';
+import ChannelNumber from "../sceneComponents/sceneStreamComponents/ChannelNumber";
 
 export default class SceneStream extends Scene {
 
     render () {
+        if (!this.isSceneActive()) {
+            return this.renderNothing();
+        }
         return (
             <div id={this.props.id} className='scene'>
 
@@ -29,16 +32,18 @@ export default class SceneStream extends Scene {
                             />
 
                             <table>
-                                <tr>
-                                    <td className="channels channel1">HBO</td>
-                                    <td className="titles title1"><div>X-Men Origins:Wolverine</div></td>
-                                    <td className="time time1">22:20 - 00:35</td>
-                                </tr>
-                                <tr className="secondRow">
-                                    <td className="channels channel2">Following:</td>
-                                    <td className="titles title2"><div>The Matrix</div></td>
-                                    <td className="time time2"></td>
-                                </tr>
+                                <tbody>
+                                    <tr>
+                                        <td className="channels channel1">HBO</td>
+                                        <td className="titles title1"><div>X-Men Origins:Wolverine</div></td>
+                                        <td className="time time1">22:20 - 00:35</td>
+                                    </tr>
+                                    <tr className="secondRow">
+                                        <td className="channels channel2">Following:</td>
+                                        <td className="titles title2"><div>The Matrix</div></td>
+                                        <td className="time time2"></td>
+                                    </tr>
+                                </tbody>
                             </table>
 
                             <PlayerButtonContainer

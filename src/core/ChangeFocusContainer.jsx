@@ -13,7 +13,6 @@ export default class ChangeFocusContainer extends Component {
 
 
     handleFocus(focus) {
-        console.log('change focus click ' + focus);
         this.props.handleFocus(focus);
     };
 
@@ -21,15 +20,15 @@ export default class ChangeFocusContainer extends Component {
         return (
             <div className="change-focus-container">
                 <ChangeFocusButton text="focused"
-                                   handleFocus={this.handleFocus}
+                                   handleFocus={ this.handleFocus }
                                    focus={ this.props.focus }
                 />
                 <ChangeFocusButton text="normal"
-                                   handleFocus={this.handleFocus}
+                                   handleFocus={ this.handleFocus }
                                    focus={ this.props.focus }
                 />
                 <ChangeFocusButton text="disabled"
-                                   handleFocus={this.handleFocus}
+                                   handleFocus={ this.handleFocus }
                                    focus={ this.props.focus }
                 />
             </div>

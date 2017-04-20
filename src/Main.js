@@ -6,8 +6,9 @@ import ChangeFocusContainer from './core/ChangeFocusContainer';
 
 
 /* Main class
-    Handles state of style changing buttons
+    Handles style of style changing buttons
         focused | normal | disabled
+    Handles active scene
 
  */
 export default class Main extends Component {
@@ -16,6 +17,12 @@ export default class Main extends Component {
         super(props);
         this.handleStylesChange = this.handleStylesChange.bind(this);
         this.handleFocus = this.handleFocus.bind(this);
+        this.handleSceneChange = this.handleSceneChange.bind(this);
+    };
+
+
+    handleSceneChange(index) {
+        this.setState({ activeSceneIndex: index });
     };
 
 
@@ -44,8 +51,11 @@ export default class Main extends Component {
                 a: '0.2'
             }
         },
-        focus : 'normal'
+        focus : 'normal',
+        activeSceneIndex: 0
+
     };
+
 
     getColorbyFocus() {
         const focus = this.state.focus;
@@ -63,18 +73,21 @@ export default class Main extends Component {
         }
     };
 
+
     handleStylesChange(color) {
         var colorState = {};
         colorState[this.getColorbyFocus()] = color;
         this.setState( colorState );
     };
 
+
     handleFocus(focus) {
         var colorState = {};
         this.setState({focus: focus});
         colorState[this.getColorbyFocus()] = this.state[this.getColorbyFocus()];
         this.setState( colorState );
-    }
+    };
+
 
     render () {
         const color = this.state[this.getColorbyFocus()];
@@ -82,10 +95,14 @@ export default class Main extends Component {
 
         return (
           <div id="container">
-              <ChooseSceneContainer />
+              <ChooseSceneContainer
+                  onSceneChange={ this.handleSceneChange }
+                  activeSceneIndex={ this.state.activeSceneIndex }
+              />
 
               <ViewPort
                   onStylesChange={ this.handleStylesChange }
+                  activeSceneIndex={ this.state.activeSceneIndex }
                   color={ color }
                   focus={this.state.focus}
               />

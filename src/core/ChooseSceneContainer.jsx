@@ -10,9 +10,9 @@ import ChooseSceneButton from './ChooseSceneButton';
 export default class ChooseSceneContainer extends Component {
 
 
-    componentWillMount() {
-        // selected[index] == true if item with given index is currently selected
-        this.setState({selected: 0});
+    constructor(props) {
+        super(props);
+
         this.childrenIdx = {
             id: [0,1],
             text: ['Stream', 'Pairing']
@@ -20,11 +20,9 @@ export default class ChooseSceneContainer extends Component {
 
     };
 
-
-    onItemClick(id) {
-        this.setState({selected: id});
+    state = {
+        selected: 0
     };
-
 
     render () {
         return (
@@ -32,9 +30,10 @@ export default class ChooseSceneContainer extends Component {
                 {
                     this.childrenIdx.id.map(function(value, i) {
                         return (
-                            <ChooseSceneButton selected={this.state.selected === i}
-                                               onClick={this.onItemClick.bind(this)}
+                            <ChooseSceneButton selected={this.props.activeSceneIndex === i}
+                                               handleClick={ this.props.onSceneChange }
                                                index={i}
+                                               key={i}
                                                text={this.childrenIdx.text[i]}
                             />
                         );
