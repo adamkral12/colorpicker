@@ -11,8 +11,13 @@ export default class Container extends Component {
                 <SceneStream id="scene-stream"
                              onChangeComplete={ this.handleStylesChange }
                              color={ this.props.color }
+                             focus={ this.props.focus }
                 />
-                <ScenePairing id="scene-pairing"/>
+                <ScenePairing id="scene-pairing"
+                              onChangeComplete={ this.handleStylesChange }
+                              color={ this.props.color }
+                              focus={ this.props.focus }
+                />
                 <RCButtons />
             </div>
         );

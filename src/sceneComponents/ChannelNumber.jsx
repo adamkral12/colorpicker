@@ -4,6 +4,11 @@ import Button from '../core/Button';
 
 export default class ChannelNumber extends Button {
 
+    constructor(props) {
+        super(props);
+        this.state.focusable = this.state.disabable = false;
+    }
+
     render() {
         const styles = this.getStyles();
 

@@ -8,7 +8,6 @@ import ChannelNumber from "../sceneComponents/ChannelNumber";
 export default class SceneStream extends Scene {
 
     render () {
-        console.log('stream props color = ' + JSON.stringify(this.props.color));
         return (
             <div id={this.props.id} className='scene'>
 
@@ -20,11 +19,13 @@ export default class SceneStream extends Scene {
                             <SeekBar
                                 onChangeComplete={ this.handleStylesChange }
                                 color={ this.props.color }
+                                focus={ this.props.focus }
                             />
 
                             <ChannelNumber
                                 onChangeComplete={ this.handleStylesChange }
                                 color={ this.props.color }
+                                focus={ this.props.focus }
                             />
 
                             <table>
@@ -43,6 +44,7 @@ export default class SceneStream extends Scene {
                             <PlayerButtonContainer
                                 onChangeComplete={ this.handleStylesChange }
                                 color={ this.props.color }
+                                focus={ this.props.focus }
                             />
 
                             <div className="logo"></div>
@@ -51,6 +53,7 @@ export default class SceneStream extends Scene {
                         <TimeFrame
                             onChangeComplete={ this.handleStylesChange }
                             color={ this.props.color }
+                            focus={ this.props.focus }
                         />
 
                         <div  className="opaque"/>

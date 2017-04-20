@@ -3,6 +3,11 @@ import Button from '../core/Button';
 
 export default class TimeFrame extends Button {
 
+    constructor(props) {
+        super(props);
+        this.state.disabable = false;
+    }
+
     render() {
         var styles = this.getStyles();
         console.log('Timeframe color = ' + JSON.stringify(styles.timeFrame));

@@ -4,6 +4,12 @@ import ChooseSceneContainer from './core/ChooseSceneContainer';
 import ColorPicker from "./core/ColorPicker";
 import ChangeFocusContainer from './core/ChangeFocusContainer';
 
+
+/* Main class
+    Handles state of style changing buttons
+        focused | normal | disabled
+
+ */
 export default class Main extends Component {
 
     constructor(props) {
@@ -38,7 +44,7 @@ export default class Main extends Component {
                 a: '0.2'
             }
         },
-        focus : 'disabled'
+        focus : 'normal'
     };
 
     getColorbyFocus() {
@@ -81,6 +87,7 @@ export default class Main extends Component {
               <ViewPort
                   onStylesChange={ this.handleStylesChange }
                   color={ color }
+                  focus={this.state.focus}
               />
 
               <ColorPicker

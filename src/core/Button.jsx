@@ -21,9 +21,33 @@ export default class Button extends Component {
         this.mouseOut = this.mouseOut.bind(this);
     };
 
+    /* change focusable and disabable to false
+        if button is not focusable | disabable
+     */
     state = {
-        hover: false
+        hover: false,
+        focusable: true,
+        disabable: true
     };
+
+    /*
+        Re-render component only if:
+            1) focus is normal
+            2) focus is disabled and this.state.disabable == true
+            3) focus is focused and this.state.focusable == true
+     */
+    shouldComponentUpdate(nextProps, nextState) {
+        switch (nextProps.focus) {
+            case 'normal':
+                return true;
+            case 'disabled':
+                return nextState.disabable;
+            case 'focused':
+                return nextState.focusable;
+            default:
+                return true;
+        }
+    }
 
     renderIcon() {
         if (this.props.iconClassName) {
@@ -36,7 +60,7 @@ export default class Button extends Component {
     getStyles() {
         console.log('style = ' + JSON.stringify(this.props.color));
 
-        var styles = reactCSS({
+        let styles = reactCSS({
                 'default': {
                     color: {
                         background: `rgba(${ this.props.color.rgb.r },
@@ -62,6 +86,7 @@ export default class Button extends Component {
                     }
                 }
             });
+
         if (this.state.hover) {
             styles = reactCSS({
                 'default': {
@@ -87,8 +112,11 @@ export default class Button extends Component {
         this.setState({hover: true});
     }
 
+    /*
+        You can override this method by anything you want
+     */
     render () {
-        const classes = classNames('buttons focusable', this.props.className);
+        const classes = classNames('buttons', this.props.className);
         const styles = this.getStyles();
 
         return (

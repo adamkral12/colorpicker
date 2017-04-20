@@ -3,6 +3,11 @@ import Button from '../core/Button';
 
 export default class SeekBar extends Button {
 
+    constructor(props) {
+        super(props);
+        this.state.disabable = false;
+    };
+
     render() {
         var styles = this.getStyles();
 
