@@ -25,13 +25,13 @@ export default class Main extends Component {
         this.setState({ activeSceneIndex: index });
     };
 
-
+    /* default state */
     state = {
         'color': {
             rgb: {
-                r: '232',
-                g: '151',
-                b: '88',
+                r: '223',
+                g: '101',
+                b: '0',
                 a: '1'
             }
         },
@@ -104,7 +104,7 @@ export default class Main extends Component {
                   onStylesChange={ this.handleStylesChange }
                   activeSceneIndex={ this.state.activeSceneIndex }
                   color={ color }
-                  focus={this.state.focus}
+                  focus={ this.state.focus }
               />
 
               <ColorPicker

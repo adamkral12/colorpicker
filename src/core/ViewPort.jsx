@@ -24,7 +24,9 @@ export default class Container extends Component {
                               index={1}
                               key={1}
                 />
-                <RCButtons />
+                <RCButtons
+                    activeSceneIndex={ this.props.activeSceneIndex }
+                />
             </div>
         );
     }

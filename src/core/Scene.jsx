@@ -16,7 +16,7 @@ export default class Scene extends Component {
     };
 
 
-    renderNothing() {
+    hide() {
         return null;
     };
 

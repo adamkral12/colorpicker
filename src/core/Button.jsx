@@ -26,32 +26,37 @@ export default class Button extends Component {
      */
     state = {
         hover: false,
+        normal: true,
         focusable: true,
         disabable: true
     };
 
     /*
         Re-render component only if:
-            1) focus is normal
+            1) focus is normal and this.state.normal == true
             2) focus is disabled and this.state.disabable == true
             3) focus is focused and this.state.focusable == true
      */
     shouldComponentUpdate(nextProps, nextState) {
         switch (nextProps.focus) {
             case 'normal':
-                return true;
+                console.log('normal focus = ' + nextState.normal);
+                return nextState.normal;
             case 'disabled':
+                console.log('disabled focus')
                 return nextState.disabable;
             case 'focused':
+                console.log('focused focus')
                 return nextState.focusable;
             default:
+                console.log('unknoe focus');
                 return true;
         }
     }
 
     renderIcon() {
         if (this.props.iconClassName) {
-            return <span className={this.props.iconClassName}></span>;
+            return <span className={this.props.iconClassName}/>;
         } else {
             return '';
         }

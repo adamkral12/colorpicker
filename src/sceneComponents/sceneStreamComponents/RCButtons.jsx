@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
 
 export default class RCButtons extends Component {
+
+    renderNothing() {
+        return null;
+    }
+
     render() {
+        if (this.props.activeSceneIndex === 1) {
+            return this.renderNothing();
+        }
         return(
             <div className="snippet-rc-buttons rc-buttons">
                 <table>

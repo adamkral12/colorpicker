@@ -9,10 +9,15 @@ export default class SceneStream extends Scene {
 
     render () {
         if (!this.isSceneActive()) {
-            return this.renderNothing();
+            this.state.hidden = true;
+        } else {
+            this.state.hidden = false;
         }
         return (
-            <div id={this.props.id} className='scene'>
+            <div id={this.props.id}
+                 className='scene'
+                 style={ this.state.hidden ? { display: "none"} : { display: "block" }}
+            >
 
                 <div id="snippet-player">
                     <div className="player">

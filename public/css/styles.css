@@ -60,7 +60,15 @@ body {
     background: rgba(23,109,48,1);
 }
 
+.pairing-background {
+    width: 100%;
+    height: 100%;
+    background: #df6500 no-repeat;
+}
 
+.hidden {
+    display: none;
+}
 
 /*
 CSS copied from ModernTV app
@@ -470,8 +478,4 @@ div.url {
     left: 612px;
     width: 300px;
     font-size: 24px;
-}
-
-#scene-pairing2 {
-    background: #df6500 no-repeat;
 }
