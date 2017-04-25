@@ -132,8 +132,8 @@ export default class Button extends Component {
         return (
         <li className={classes}
             style={ styles.color }
-            onMouseOver={ this.mouseOver }
-            onMouseOut={ this.mouseOut }
+       //     onMouseOver={ this.mouseOver }
+         //   onMouseOut={ this.mouseOut }
         >
             {this.renderIcon()}
             <div className="text">{this.props.text}</div>

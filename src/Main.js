@@ -18,6 +18,7 @@ export default class Main extends Component {
         this.handleStylesChange = this.handleStylesChange.bind(this);
         this.handleFocus = this.handleFocus.bind(this);
         this.handleSceneChange = this.handleSceneChange.bind(this);
+        this.handleFontSelection = this.handleFontSelection.bind(this);
     };
 
 
@@ -88,19 +89,27 @@ export default class Main extends Component {
         }
     };
 
-    /* Change font if this.state.fontSelected
-        change color of this.state.focus otherwise
+    /* Change color of background or font based
+        on this.state.fontSelected
      */
     handleStylesChange(color) {
+        console.log('Main font selected = ' + this.state.fontSelected);
+        let nextColor = {};
         if (!this.state.fontSelected) {
-            let nextColor = { font: this.state[this.getColorbyFocus()].font,
+            nextColor = {
+                font: this.state[this.getColorbyFocus()].font,
                 rgb: color.rgb
             };
-            let colorState = {};
-            colorState[this.getColorbyFocus()] = nextColor;
-            console.log(' MAIN handleStylesChange colorState = ' + JSON.stringify(nextColor) + ', color = ' + JSON.stringify(color));
-            this.setState(colorState);
+        } else {
+            nextColor = { rgb: this.state[this.getColorbyFocus()].rgb,
+                font: color.rgb
+            };
         }
+
+        let colorState = {};
+        colorState[this.getColorbyFocus()] = nextColor;
+        console.log(' MAIN handleStylesChange colorState = ' + JSON.stringify(nextColor) + ', color = ' + JSON.stringify(color));
+        this.setState(colorState);
     };
 
 
@@ -111,11 +120,15 @@ export default class Main extends Component {
         this.setState( colorState );
     };
 
+    handleFontSelection(fontSelected) {
+        this.setState({ fontSelected : fontSelected});
+    };
+
 
     render () {
         const color = this.state[this.getColorbyFocus()];
-        const font = color.font;
-        console.log('MAIn font = ' + JSON.stringify(font));
+
+        const font = { rgb: color.font };
         const focus = this.state.focus;
 
         return (
@@ -130,16 +143,16 @@ export default class Main extends Component {
                   activeSceneIndex={ this.state.activeSceneIndex }
                   color={ color }
                   focus={ this.state.focus }
-                  font={ font }
               />
 
               <ColorPicker
-                  color={ color }
+                  color={ this.state.fontSelected ? font : color }
                   onStylesChange={ this.handleStylesChange }
               />
 
               <ChangeFocusContainer
                   handleFocus={this.handleFocus}
+                  handleFontSelection={ this.handleFontSelection }
                   focus={ focus }
               />
 

@@ -10,6 +10,7 @@ export default class ChangeFocusContainer extends Component {
     constructor(props) {
         super(props);
         this.handleFocus = this.handleFocus.bind(this);
+        this.handleFontSelection = this.handleFontSelection.bind(this);
     };
 
 
@@ -17,8 +18,9 @@ export default class ChangeFocusContainer extends Component {
         this.props.handleFocus(focus);
     };
 
-    handleFontChange(selected) {
+    handleFontSelection(selected) {
         console.log('Change focus container handlefontchange, selected = ' + selected);
+        this.props.handleFontSelection(selected);
     }
 
     render() {
@@ -36,7 +38,7 @@ export default class ChangeFocusContainer extends Component {
                                    handleFocus={ this.handleFocus }
                                    focus={ this.props.focus }
                 />
-                <ChangeFontButton handleFocus={ this.handleFontChange }
+                <ChangeFontButton handleFontSelection={ this.handleFontSelection }
                 />
             </div>
         );

@@ -6,22 +6,19 @@ export default class ChangeFontButton extends Component {
     constructor(props) {
         super(props);
         this.handleFocus = this.handleFocus.bind(this);
+        this.state = { focused: false };
     };
 
-    componentWillMount() {
-        this.setState({ focus: false});
-    }
-
-    handleFocus() {
-        this.setState({ focus: !this.state.focus });
-        this.props.handleFocus(this.state.focus);
+    handleFocus(focused) {
+        this.setState({ focused: !focused });
+        this.props.handleFontSelection(!focused);
     }
 
     render() {
-        const classes = classNames('change-font-button', this.state.focus ? 'selected' : '');
+        const classes = classNames('change-font-button', this.state.focused ? 'selected' : '');
         return (
             <button className={ classes }
-                    onClick={() => this.handleFocus() }
+                    onClick={() => this.handleFocus(this.state.focused) }
             >
                 Font color
             </button>
