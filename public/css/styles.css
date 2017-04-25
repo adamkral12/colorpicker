@@ -70,6 +70,24 @@ body {
     display: none;
 }
 
+.change-focus-container {
+    position: relative;
+    width: 350px;
+    float: left;
+}
+
+.change-font-button {
+    clear: both;
+    display: block;
+    margin:0 auto;
+    width: 200px;
+    background: white;
+}
+
+.change-font-button.selected {
+    background: black;
+}
+
 /*
 CSS copied from ModernTV app
 */
@@ -431,7 +449,7 @@ div.rc-buttons td.button-back {
 }
 
 .keyboardNumeric .line .key .BSP {
-    background: #1c1c1c url('../images/backspace.png') no-repeat 32px center;
+  /*  background: #1c1c1c url('../images/backspace.svg') no-repeat 32px center;*/
 }
 
 #snippet-code2 {

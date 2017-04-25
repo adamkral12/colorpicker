@@ -11,6 +11,7 @@ export default class ChannelNumber extends Button {
 
     render() {
         const styles = this.getStyles();
+        console.log('Channel number font = ' + JSON.stringify(this.props.font));
 
         return (
             <div className="channel-number"

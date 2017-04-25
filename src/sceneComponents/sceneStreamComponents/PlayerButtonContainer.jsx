@@ -4,6 +4,8 @@ import Button from '../../core/Button';
 export default class PlayerButtonContainer extends Component {
 
     render () {
+        console.log('PlayerButtonContainer font = ' + JSON.stringify(this.props.font));
+
         return (
             <ul className="buttons">
                 <Button className="button-play"
@@ -12,6 +14,7 @@ export default class PlayerButtonContainer extends Component {
                         iconClassName="icon-play3"
                         color={ this.props.color }
                         focus={ this.props.focus }
+                        font={ this.props.font }
                 />
                 <Button className="button-back"
                         data-value="back"
@@ -19,6 +22,7 @@ export default class PlayerButtonContainer extends Component {
                         iconClassName="icon-previous2"
                         color={ this.props.color }
                         focus={ this.props.focus }
+                        font={ this.props.font }
                 />
                 <Button className="button-record"
                         data-value="record"
@@ -26,6 +30,7 @@ export default class PlayerButtonContainer extends Component {
                         iconClassName="record"
                         color={ this.props.color }
                         focus={ this.props.focus }
+                        font={ this.props.font }
                 />
                 <Button className="button-live"
                         data-value="live"
@@ -33,6 +38,7 @@ export default class PlayerButtonContainer extends Component {
                         iconClassName="icon-play3"
                         color={ this.props.color }
                         focus={ this.props.focus }
+                        font={ this.props.font }
                 />
                 <Button className="button-previous"
                         data-value="prev"
@@ -40,6 +46,7 @@ export default class PlayerButtonContainer extends Component {
                         iconClassName="icon-backward2"
                         color={ this.props.color }
                         focus={ this.props.focus }
+                        font={ this.props.font }
                 />
                 <Button className="button-next"
                         data-value="next"
@@ -47,6 +54,7 @@ export default class PlayerButtonContainer extends Component {
                         iconClassName="icon-forward3"
                         color={ this.props.color }
                         focus={ this.props.focus }
+                        font={ this.props.font }
                 />
             </ul>
         );

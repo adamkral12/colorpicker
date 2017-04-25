@@ -13,6 +13,8 @@ export default class SceneStream extends Scene {
         } else {
             this.state.hidden = false;
         }
+        console.log('Scene stream font = ' + JSON.stringify(this.props.font));
+
         return (
             <div id={this.props.id}
                  className='scene'
@@ -28,12 +30,14 @@ export default class SceneStream extends Scene {
                                 onChangeComplete={ this.handleStylesChange }
                                 color={ this.props.color }
                                 focus={ this.props.focus }
+                                font={ this.props.font }
                             />
 
                             <ChannelNumber
                                 onChangeComplete={ this.handleStylesChange }
                                 color={ this.props.color }
                                 focus={ this.props.focus }
+                                font={ this.props.font }
                             />
 
                             <table>
@@ -55,6 +59,7 @@ export default class SceneStream extends Scene {
                                 onChangeComplete={ this.handleStylesChange }
                                 color={ this.props.color }
                                 focus={ this.props.focus }
+                                font={ this.props.font }
                             />
 
                             <div className="logo"></div>
@@ -64,6 +69,7 @@ export default class SceneStream extends Scene {
                             onChangeComplete={ this.handleStylesChange }
                             color={ this.props.color }
                             focus={ this.props.focus }
+                            font={ this.props.font }
                         />
 
                         <div  className="opaque"/>

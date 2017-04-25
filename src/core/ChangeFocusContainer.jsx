@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ChangeFocusButton from './ChangeFocusButton';
+import ChangeFontButton from './ChangeFontButton';
 
 /* Changes focus and state to
         focused: false || tue || 'disabled'
@@ -16,6 +17,10 @@ export default class ChangeFocusContainer extends Component {
         this.props.handleFocus(focus);
     };
 
+    handleFontChange(selected) {
+        console.log('Change focus container handlefontchange, selected = ' + selected);
+    }
+
     render() {
         return (
             <div className="change-focus-container">
@@ -30,6 +35,8 @@ export default class ChangeFocusContainer extends Component {
                 <ChangeFocusButton text="disabled"
                                    handleFocus={ this.handleFocus }
                                    focus={ this.props.focus }
+                />
+                <ChangeFontButton handleFocus={ this.handleFontChange }
                 />
             </div>
         );

@@ -28,6 +28,7 @@ export default class ScenePairing extends Scene {
             >
                 <PairingBackground color={ this.props.color }
                                    focus={ this.props.focus }
+                                   font={ this.props.font }
                 />
 
                 <div className="logo"></div>
@@ -41,22 +42,26 @@ export default class ScenePairing extends Scene {
                         text={ keyNumbers }
                         color={ this.props.color }
                         focus={ this.props.focus }
+                        font={ this.props.font }
                     />
                     <Line
                         text={ keyNumbers2 }
                         color={ this.props.color }
                         focus={ this.props.focus }
+                        font={ this.props.font }
                     />
                     <Line
                         text={ keyNumbers3 }
                         color={ this.props.color }
                         focus={ this.props.focus }
+                        font={ this.props.font }
                     />
                     <Line
                         text={ keyNumbers4 }
                         icon={ icon } //icon for backspace
                         color={ this.props.color }
                         focus={ this.props.focus }
+                        font={ this.props.font }
                     />
                 </div>
                 <div id="snippet-code2">

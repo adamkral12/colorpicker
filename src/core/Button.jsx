@@ -17,6 +17,7 @@ export default class Button extends Component {
 
     constructor(props) {
         super(props);
+        console.log('Button props ' + JSON.stringify(props));
         this.mouseOver = this.mouseOver.bind(this);
         this.mouseOut = this.mouseOut.bind(this);
     };
@@ -36,9 +37,12 @@ export default class Button extends Component {
             1) focus is normal and this.state.normal == true
             2) focus is disabled and this.state.disabable == true
             3) focus is focused and this.state.focusable == true
+            4) focus is font-color -> changes font color in current state
      */
     shouldComponentUpdate(nextProps, nextState) {
         switch (nextProps.focus) {
+            case 'font-color':
+                return true;
             case 'normal':
                 console.log('normal focus = ' + nextState.normal);
                 return nextState.normal;
@@ -49,7 +53,7 @@ export default class Button extends Component {
                 console.log('focused focus')
                 return nextState.focusable;
             default:
-                console.log('unknoe focus');
+                console.log('unknown focus');
                 return true;
         }
     }
@@ -70,6 +74,10 @@ export default class Button extends Component {
                               ${ this.props.color.rgb.g },
                               ${ this.props.color.rgb.b },
                               ${ this.props.color.rgb.a })`,
+
+                        color: `rgb(${ this.props.color.font.r },
+                              ${ this.props.color.font.g },
+                              ${ this.props.color.font.b })`,
 
                         transition: `background-color 300ms linear`
                     },

@@ -33,6 +33,11 @@ export default class Main extends Component {
                 g: '101',
                 b: '0',
                 a: '1'
+            },
+            font: {
+                r: '255',
+                g: '255',
+                b: '255'
             }
         },
         'color-focused': {
@@ -41,6 +46,11 @@ export default class Main extends Component {
                 g: '118',
                 b: '29',
                 a: '1'
+            },
+            font: {
+                r: '0',
+                g: '0',
+                b: '0'
             }
         },
         'color-disabled': {
@@ -49,6 +59,11 @@ export default class Main extends Component {
                 g: '118',
                 b: '29',
                 a: '0.2'
+            },
+            font: {
+                r: '255',
+                g: '255',
+                b: '255'
             }
         },
         focus : 'normal',
@@ -69,12 +84,13 @@ export default class Main extends Component {
                 return 'color-disabled';
             default:
                 console.warn('Main: Unknown focus ' + focus);
-                return 'normal';
+                return 'color';
         }
     };
 
 
     handleStylesChange(color) {
+        console.log(' MAIN handleStylesChange color = ' + JSON.stringify(color));
         var colorState = {};
         colorState[this.getColorbyFocus()] = color;
         this.setState( colorState );
@@ -91,6 +107,8 @@ export default class Main extends Component {
 
     render () {
         const color = this.state[this.getColorbyFocus()];
+        const font = color.font;
+        console.log('MAIn font = ' + JSON.stringify(font));
         const focus = this.state.focus;
 
         return (
@@ -105,6 +123,7 @@ export default class Main extends Component {
                   activeSceneIndex={ this.state.activeSceneIndex }
                   color={ color }
                   focus={ this.state.focus }
+                  font={ font }
               />
 
               <ColorPicker

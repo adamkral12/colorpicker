@@ -10,6 +10,7 @@ export default class SeekBar extends Button {
 
     render() {
         var styles = this.getStyles();
+        console.log('Seekbar font = ' + JSON.stringify(this.props.font));
 
         return (
             <div className="bar">
