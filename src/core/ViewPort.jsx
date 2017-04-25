@@ -18,7 +18,6 @@ export default class Container extends Component {
                              index={0}
                              key={0}
                 />
-                /*
                 <ScenePairing id="scene-pairing"
                               onChangeComplete={ this.handleStylesChange }
                               activeSceneIndex={ this.props.activeSceneIndex }
@@ -28,7 +27,6 @@ export default class Container extends Component {
                               index={1}
                               key={1}
                 />
-                */
                 <RCButtons
                     activeSceneIndex={ this.props.activeSceneIndex }
                 />
