@@ -11,7 +11,8 @@
     "react-dom":"^15.5.4",
     "classnames": "^2.2.5",
     "react-color": "^2.11.4",
-    "ucfirst":""
+    "ucfirst":"",
+    "react-addons-update": ""
   },
   "scripts": {
     "start": "react-scripts start",

@@ -29,7 +29,8 @@ export default class Button extends Component {
         hover: false,
         normal: true,
         focusable: true,
-        disabable: true
+        disabable: true,
+        fontSelected: false
     };
 
     /*
@@ -41,8 +42,6 @@ export default class Button extends Component {
      */
     shouldComponentUpdate(nextProps, nextState) {
         switch (nextProps.focus) {
-            case 'font-color':
-                return true;
             case 'normal':
                 console.log('normal focus = ' + nextState.normal);
                 return nextState.normal;

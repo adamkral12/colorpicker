@@ -67,8 +67,8 @@ export default class Main extends Component {
             }
         },
         focus : 'normal',
-        activeSceneIndex: 0
-
+        activeSceneIndex: 0,
+        fontSelected: false
     };
 
 
@@ -88,12 +88,19 @@ export default class Main extends Component {
         }
     };
 
-
+    /* Change font if this.state.fontSelected
+        change color of this.state.focus otherwise
+     */
     handleStylesChange(color) {
-        console.log(' MAIN handleStylesChange color = ' + JSON.stringify(color));
-        var colorState = {};
-        colorState[this.getColorbyFocus()] = color;
-        this.setState( colorState );
+        if (!this.state.fontSelected) {
+            let nextColor = { font: this.state[this.getColorbyFocus()].font,
+                rgb: color.rgb
+            };
+            let colorState = {};
+            colorState[this.getColorbyFocus()] = nextColor;
+            console.log(' MAIN handleStylesChange colorState = ' + JSON.stringify(nextColor) + ', color = ' + JSON.stringify(color));
+            this.setState(colorState);
+        }
     };
 
 

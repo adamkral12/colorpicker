@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '../../core/Button';
 import classNames from 'classnames';
+import update from 'react-addons-update';
 
 export default class Key extends Button {
 
@@ -11,7 +12,7 @@ export default class Key extends Button {
 
     render() {
         const styles = this.getStyles();
-        console.log('key will mount = ' + this.shouldComponentUpdate(this.props, this.state).toString() + ', state = ' + JSON.stringify(this.state) + ", props = " + JSON.stringify(this.props));
+    //    console.log('key will mount = ' + this.shouldComponentUpdate(this.props, this.state).toString() + ', state = ' + JSON.stringify(this.state) + ", props = " + JSON.stringify(this.props));
 
         let iconSpan = <span className="content keyboard"
                              style={ this.shouldComponentUpdate(this.props, this.state) ? styles.color : {} }
