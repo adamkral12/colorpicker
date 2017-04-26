@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../../core/Button';
 
-export default class Panelheader extends Button {
+export default class PanelHeader extends Button {
     constructor(props) {
         super(props);
         this.state.disabable = this.state.focusable = false;

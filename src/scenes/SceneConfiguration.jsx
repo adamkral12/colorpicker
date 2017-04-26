@@ -1,7 +1,7 @@
 import React from 'react';
 import Scene from '../core/Scene';
 import TableSettingsRow from '../sceneComponents/sceneConfigurationComponents/TableSettingsRow';
-import PanelHeader from '../sceneComponents/sceneConfigurationComponents/Panelheader';
+import PanelHeader from '../sceneComponents/sceneConfigurationComponents/PanelHeader';
 
 export default class SceneConfiguration extends Scene {
     render() {

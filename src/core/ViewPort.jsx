@@ -4,6 +4,7 @@ import ScenePairing from "../scenes/ScenePairing.jsx";
 import SceneConfiguration from "../scenes/SceneConfiguration.jsx";
 import SceneCurrently from "../scenes/SceneCurrently";
 import SceneRecordings from "../scenes/SceneRecordings";
+import SceneEPG from "../scenes/SceneEPG";
 import RCButtons from "../sceneComponents/sceneStreamComponents/RCButtons.jsx";
 
 export default class Container extends Component {
@@ -51,6 +52,14 @@ export default class Container extends Component {
                                 focus={ this.props.focus }
                                 index={4}
                                 key={4}
+                />
+                <SceneEPG id="scene-epg"
+                                 onChangeComplete={ this.handleStylesChange }
+                                 activeSceneIndex={ this.props.activeSceneIndex }
+                                 color={ this.props.color }
+                                 focus={ this.props.focus }
+                                 index={5}
+                                 key={5}
                 />
                 <RCButtons
                     activeSceneIndex={ this.props.activeSceneIndex }
