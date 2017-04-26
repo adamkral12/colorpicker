@@ -5,7 +5,8 @@ import SceneConfiguration from "../scenes/SceneConfiguration.jsx";
 import SceneCurrently from "../scenes/SceneCurrently";
 import SceneRecordings from "../scenes/SceneRecordings";
 import SceneEPG from "../scenes/SceneEPG";
-import RCButtons from "../sceneComponents/sceneStreamComponents/RCButtons.jsx";
+import SceneMenu from "../scenes/SceneMenu";
+import RCButtons from "../sceneComponents/sceneStream/RCButtons.jsx";
 
 export default class Container extends Component {
 
@@ -60,6 +61,14 @@ export default class Container extends Component {
                                  focus={ this.props.focus }
                                  index={5}
                                  key={5}
+                />
+                <SceneMenu id="scene-menu"
+                          onChangeComplete={ this.handleStylesChange }
+                          activeSceneIndex={ this.props.activeSceneIndex }
+                          color={ this.props.color }
+                          focus={ this.props.focus }
+                          index={6}
+                          key={6}
                 />
                 <RCButtons
                     activeSceneIndex={ this.props.activeSceneIndex }

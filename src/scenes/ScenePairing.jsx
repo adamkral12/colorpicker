@@ -1,7 +1,7 @@
 import React from 'react';
 import Scene from "../core/Scene";
-import PairingBackground from '../sceneComponents/scenePairingComponents/PairingBackground';
-import Line from '../sceneComponents/scenePairingComponents/Line';
+import PairingBackground from '../sceneComponents/scenePairing/PairingBackground';
+import Line from '../sceneComponents/scenePairing/Line';
 
 export default class ScenePairing extends Scene {
 

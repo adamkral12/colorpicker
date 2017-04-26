@@ -1,6 +1,6 @@
 import React from 'react';
 import Scene from '../core/Scene';
-import Panelheader from '../sceneComponents/sceneConfigurationComponents/PanelHeader';
+import Panelheader from '../sceneComponents/sceneConfiguration/PanelHeader';
 
 export default class SceneRecordings extends Scene {
     render() {

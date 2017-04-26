@@ -1,9 +1,9 @@
 import React from 'react';
 import Scene from '../core/Scene'
-import PlayerButtonContainer from '../sceneComponents/sceneStreamComponents/PlayerButtonContainer';
-import TimeFrame from '../sceneComponents/sceneStreamComponents/TimeFrame';
-import SeekBar from '../sceneComponents/sceneStreamComponents/SeekBar';
-import ChannelNumber from "../sceneComponents/sceneStreamComponents/ChannelNumber";
+import PlayerButtonContainer from '../sceneComponents/sceneStream/PlayerButtonContainer';
+import TimeFrame from '../sceneComponents/sceneStream/TimeFrame';
+import SeekBar from '../sceneComponents/sceneStream/SeekBar';
+import ChannelNumber from "../sceneComponents/sceneStream/ChannelNumber";
 
 export default class SceneStream extends Scene {
 

@@ -24,34 +24,31 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 .icon-menu_currently .path1:before {
-  content: "\e90a";
-  color: rgb(35, 31, 32);
-}
-.icon-menu_currently .path2:before {
   content: "\e90b";
   margin-left: -1.0361328125em;
 }
-.icon-menu_currently .path3:before {
+.icon-menu_currently .path2:before {
   content: "\e90c";
   margin-left: -1.0361328125em;
   opacity: 0.15;
   color: black;
 }
-.icon-menu_currently .path4:before {
+.icon-menu_currently .path3:before {
   content: "\e90d";
   margin-left: -1.0361328125em;
 }
-.icon-menu_currently .path5:before {
+.icon-menu_currently .path4:before {
   content: "\e90e";
   margin-left: -1.0361328125em;
 }
-.icon-menu_currently .path6:before {
+.icon-menu_currently .path5:before {
   content: "\e90f";
   margin-left: -1.0361328125em;
   color: white;
 }
-.icon-menu_currently .path7:before {
+.icon-menu_currently .path6:before {
   content: "\e910";
   margin-left: -1.0361328125em;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import Scene from '../core/Scene';
-import PanelHeader from '../sceneComponents/sceneConfigurationComponents/PanelHeader';
+import PanelHeader from '../sceneComponents/sceneConfiguration/PanelHeader';
 
 export default class SceneEPG extends Scene {
     render() {
