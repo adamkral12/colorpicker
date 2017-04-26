@@ -8,12 +8,7 @@ import ChannelNumber from "../sceneComponents/sceneStreamComponents/ChannelNumbe
 export default class SceneStream extends Scene {
 
     render () {
-        if (!this.isSceneActive()) {
-            this.state.hidden = true;
-        } else {
-            this.state.hidden = false;
-        }
-        console.log('Scene stream font = ' + JSON.stringify(this.props.font));
+        this.state.hidden = !this.isSceneActive();
 
         return (
             <div id={this.props.id}

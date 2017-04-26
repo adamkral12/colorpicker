@@ -14,8 +14,8 @@ export default class ChooseSceneContainer extends Component {
         super(props);
 
         this.childrenIdx = {
-            id: [0,1],
-            text: ['Stream', 'Pairing']
+            id: [0, 1, 2],
+            text: ['Stream', 'Pairing', 'Configuration']
         };
 
     };

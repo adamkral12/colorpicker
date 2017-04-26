@@ -12,15 +12,8 @@ export default class ScenePairing extends Scene {
         const keyNumbers4 = [0,"", "OK"];
         const icon = "BSP";
 
+        this.state.hidden = !this.isSceneActive();
 
-        if (!this.isSceneActive()) {
-            this.state.hidden = true;
-        } else {
-            this.state.hidden = false;
-        }
-
-        console.log(' state hidden = ' + this.state.hidden);
-        
         return (
             <div id="scene-pairing2"
                  className="scene"

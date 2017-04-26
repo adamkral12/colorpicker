@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SceneStream from "../scenes/SceneStream.jsx";
 import ScenePairing from "../scenes/ScenePairing.jsx";
+import SceneConfiguration from "../scenes/SceneConfiguration.jsx";
 import RCButtons from "../sceneComponents/sceneStreamComponents/RCButtons.jsx";
 
 export default class Container extends Component {
@@ -26,6 +27,15 @@ export default class Container extends Component {
                               font={ this.props.font }
                               index={1}
                               key={1}
+                />
+                <SceneConfiguration id="scene-configuration"
+                              onChangeComplete={ this.handleStylesChange }
+                              activeSceneIndex={ this.props.activeSceneIndex }
+                              color={ this.props.color }
+                              focus={ this.props.focus }
+                              font={ this.props.font }
+                              index={2}
+                              key={2}
                 />
                 <RCButtons
                     activeSceneIndex={ this.props.activeSceneIndex }

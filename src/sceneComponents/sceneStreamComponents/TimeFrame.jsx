@@ -9,12 +9,14 @@ export default class TimeFrame extends Button {
     }
 
     render() {
-        var styles = this.getStyles();
-        console.log('TimeFrame font = ' + JSON.stringify(this.props.font));
+        const styles = this.getStyles();
+        console.log('TimeFrame font = ' + JSON.stringify(styles.color));
         return (
             <div id="timeframe" className="focusable">
                 <div className="icon-timeframe">
-                    <span className="time">23:10</span>
+                    <span className="time"
+                          style={ styles.color }
+                    >23:10</span>
                     <span className="path1"/>
                     <span className="path2"
                           style={ styles.timeFrame }
