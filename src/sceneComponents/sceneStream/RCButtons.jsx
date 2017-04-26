@@ -33,7 +33,7 @@ export default class RCButtons extends Component {
                             <div className="button-yellow-text">EPG</div>
                         </td>
                         <td className="button-back">
-                            <div className="color-button-back"></div>
+                            <span className="icon-undo2"/>
                             <div className="button"></div>
                             <div className="button-back-text">Quit</div>
                         </td>

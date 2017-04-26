@@ -8,7 +8,7 @@ export default class MenuButton extends Button {
     renderPaths() {
         let paths = [];
         const styles = this.getStyles();
-        
+
         for(let i =1; i <= this.props.numberOfPaths; i++ ) {
             let classes = "path path" + i;
             if (i === 1) {

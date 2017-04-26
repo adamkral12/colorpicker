@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SketchPicker from 'react-color';
+import { SketchPicker } from 'react-color';
 
 export default class ColorPicker extends Component {
 
@@ -15,6 +15,7 @@ export default class ColorPicker extends Component {
 
     handleStylesChange = (styles) => {
         console.log('ColorPicker Handle style change styles = ' + JSON.stringify(styles));
+
         const nextStyles = {
             rgb: styles.rgb,
             font: this.state.font
@@ -32,6 +33,7 @@ export default class ColorPicker extends Component {
             >
                 <SketchPicker
                     color={ color.rgb }
+                    width={320}
                     onChangeComplete={ this.handleStylesChange }
                 />
             </div>

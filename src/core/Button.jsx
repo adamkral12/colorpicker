@@ -78,7 +78,7 @@ export default class Button extends Component {
                               ${ this.props.color.font.g },
                               ${ this.props.color.font.b })`,
 
-                        transition: `background-color 300ms linear`
+                        transition: `background-color 300ms linear`,
                     },
                     /* Set seekBar opacity to 1 */
                     noOpacity: {

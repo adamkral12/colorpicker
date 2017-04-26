@@ -6,6 +6,12 @@ body {
 #color-picker-container {
     float: left;
     width: 400px;
+    margin: 20px;
+}
+
+#container {
+    overflow: hidden;
+    width: 1800px;
 }
 
 #viewport {
@@ -74,18 +80,21 @@ body {
     position: relative;
     width: 350px;
     float: left;
+    margin: 20px 0 0 20px;
 }
 
 .change-font-button {
-    clear: both;
     display: block;
-    margin:0 auto;
+    margin: 32px auto;
     width: 200px;
     background: white;
+    padding: 12px;
+    border-radius: 20px;
 }
 
 .change-font-button.selected {
-    background: black;
+    color: white;
+    background: rgba(23,109,48,1);
 }
 
 /*
@@ -334,29 +343,47 @@ div.rc-buttons td.fill {
     width: 100%;
 }
 
-div.rc-buttons td.button-red {
-    background: transparent url('../images/button-red.png') no-repeat;
-    background-position: 0 5px;
+div.rc-buttons td.button-red div.color-button-red {
+    width: 20px;
+    background: red;
+    height: 20px;
+    float: left;
+    border-radius: 10%;
+    margin-right: 5px;
+    margin-top: 3px;
 }
 
 div.rc-buttons td div {
     padding-left: 30px;
 }
 
-div.rc-buttons td.button-green {
-    background: transparent url('../images/button-green.png') no-repeat;
-    background-position: 0 5px;
+div.rc-buttons td.button-green div.color-button-green {
+    width: 20px;
+    background: green;
+    height: 20px;
+    float: left;
+    border-radius: 10%;
+    margin-right: 5px;
+    margin-top: 3px;
 }
 
-div.rc-buttons td.button-yellow {
-    background: transparent url('../images/button-yellow.png') no-repeat;
-    background-position: 0 5px;
+body div.rc-buttons td.button-yellow div.color-button-yellow {
+    width: 20px;
+    background: yellow;
+    height: 20px;
+    float: left;
+    border-radius: 10%;
+    margin-right: 5px;
+    margin-top: 3px;
 }
 
-div.rc-buttons td.button-back {
-    background: transparent url('../images/button-back.png') no-repeat;
-    background-position: 0 5px;
+div.rc-buttons td.button-back .icon-undo2 {
+    float: left;
+    font-size: 22px;
+    margin-right: 8px;
+    margin-left: -10px;
 }
+
 
 #scene-stream > #snippet-player > .player > div.opaque {
     position: absolute;
