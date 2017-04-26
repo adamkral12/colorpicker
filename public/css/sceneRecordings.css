@@ -1,0 +1,29 @@
+#curArrowLeft, #curArrowRight, #recArrowLeft, #recArrowRight {
+    top: 22%;
+    height: 297px;
+    width: 20px;
+}
+
+#recArrowRight {
+    right: 34%;
+}
+
+#recArrowLeft {
+    left: 1%;
+}
+
+#recArrowUp {
+    top: 4.5%;
+    left: 30.5%;
+}
+
+#recArrowDown {
+    bottom: 16%;
+    left: 30.5%;
+}
+
+table.recorded-list {
+    margin: 35px auto 0 72px;
+    left: 105px;
+    color: #ffffff;
+}

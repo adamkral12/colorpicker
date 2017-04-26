@@ -15,7 +15,7 @@ export default class Panelheader extends Button {
                  style={ styles.color }
             >
                 <div className="day">Wednesday 26. 4.</div>
-                <div className="title">SETTINGS</div>
+                <div className="title">{ this.props.text }</div>
                 <div className="time">07:45</div>
             </div>
         )

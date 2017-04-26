@@ -14,6 +14,7 @@ export default class SceneConfiguration extends Scene {
             >
 
             <PanelHeader
+                text="SETTINGS"
                 color={ this.props.color }
                 focus={ this.props.focus }
             />

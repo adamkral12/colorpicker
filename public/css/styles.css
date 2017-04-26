@@ -11,7 +11,7 @@ body {
 #viewport {
     width: 1280px;
     height: 720px;
-    background: palegoldenrod;
+    background: black;
     position:relative;
     float: left;
 }

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import SceneStream from "../scenes/SceneStream.jsx";
 import ScenePairing from "../scenes/ScenePairing.jsx";
 import SceneConfiguration from "../scenes/SceneConfiguration.jsx";
+import SceneCurrently from "../scenes/SceneCurrently";
+import SceneRecordings from "../scenes/SceneRecordings";
 import RCButtons from "../sceneComponents/sceneStreamComponents/RCButtons.jsx";
 
 export default class Container extends Component {
@@ -33,6 +35,22 @@ export default class Container extends Component {
                               focus={ this.props.focus }
                               index={2}
                               key={2}
+                />
+                <SceneCurrently id="scene-currently"
+                                    onChangeComplete={ this.handleStylesChange }
+                                    activeSceneIndex={ this.props.activeSceneIndex }
+                                    color={ this.props.color }
+                                    focus={ this.props.focus }
+                                    index={3}
+                                    key={3}
+                />
+                <SceneRecordings id="scene-recordings"
+                                onChangeComplete={ this.handleStylesChange }
+                                activeSceneIndex={ this.props.activeSceneIndex }
+                                color={ this.props.color }
+                                focus={ this.props.focus }
+                                index={4}
+                                key={4}
                 />
                 <RCButtons
                     activeSceneIndex={ this.props.activeSceneIndex }
