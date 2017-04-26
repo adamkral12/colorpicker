@@ -22,8 +22,8 @@ export default class Button extends Component {
         this.mouseOut = this.mouseOut.bind(this);
     };
 
-    /* change focusable and disabable to false
-        if button is not focusable | disabable
+    /* change focusable / normal / disabable to false
+        if button is should not change in these states
      */
     state = {
         hover: false,
@@ -115,11 +115,12 @@ export default class Button extends Component {
     };
 
     mouseOver() {
-        this.setState({hover: true});
+       // this.setState({hover: true});
+
     }
 
     mouseOut() {
-        this.setState({hover: true});
+        this.setState({hover: false});
     }
 
     /*
@@ -132,8 +133,8 @@ export default class Button extends Component {
         return (
         <li className={classes}
             style={ styles.color }
-       //     onMouseOver={ this.mouseOver }
-         //   onMouseOut={ this.mouseOut }
+            onMouseOver={ this.mouseOver }
+            onMouseOut={ this.mouseOut }
         >
             {this.renderIcon()}
             <div className="text">{this.props.text}</div>

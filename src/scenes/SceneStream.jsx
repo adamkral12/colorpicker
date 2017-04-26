@@ -22,17 +22,13 @@ export default class SceneStream extends Scene {
                         <div className="content">
 
                             <SeekBar
-                                onChangeComplete={ this.handleStylesChange }
                                 color={ this.props.color }
                                 focus={ this.props.focus }
-                                font={ this.props.font }
                             />
 
                             <ChannelNumber
-                                onChangeComplete={ this.handleStylesChange }
                                 color={ this.props.color }
                                 focus={ this.props.focus }
-                                font={ this.props.font }
                             />
 
                             <table>
@@ -51,20 +47,16 @@ export default class SceneStream extends Scene {
                             </table>
 
                             <PlayerButtonContainer
-                                onChangeComplete={ this.handleStylesChange }
                                 color={ this.props.color }
                                 focus={ this.props.focus }
-                                font={ this.props.font }
                             />
 
                             <div className="logo"></div>
                         </div>
 
                         <TimeFrame
-                            onChangeComplete={ this.handleStylesChange }
                             color={ this.props.color }
                             focus={ this.props.focus }
-                            font={ this.props.font }
                         />
 
                         <div  className="opaque"/>

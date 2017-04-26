@@ -1,0 +1,157 @@
+#scene-configuration {
+    background: black;
+}
+
+.snippet-panel-header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+    color: #ffffff;
+    z-index: 10;
+    background: #df6500;
+}
+
+.snippet-panel-header div.day {
+    position: relative;
+    float: left;
+    padding-left: 40px;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.snippet-panel-header div.title {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.snippet-panel-header div.time {
+    position: relative;
+    float: right;
+    padding-right: 40px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#snippet-settings {
+    position: absolute;
+    top: 0;
+    padding-top: 80px;
+    left: 45px;
+    width: 100%;
+    height: 100%;
+}
+
+#snippet-settings > div.player-clickable {
+    position: absolute;
+    top: 79px;
+    left: 859px;
+    width: 311px;
+    height: 175px;
+}
+
+#snippet-settings > table.settings {
+    color: #ffffff;
+}
+
+table.settings th + td {
+    margin-left: 6px;
+}
+
+#snippet-settings > table.settings th, #snippet-settings > table.settings td {
+    text-align: left;
+    height: 47px;
+    font-size: 23px;
+    font-weight: normal;
+}
+
+.px437 {
+    width: 437px;
+    background: rgba(36,36,36,0.5);
+    border-radius: 5px;
+}
+
+.px437 > div {
+    width: 387px;
+}
+
+.px263 {
+    background: rgba(36,36,36,0.5);
+    border-radius: 5px;
+    width: 263px;
+    margin-right: 6px;
+}
+
+.box > div {
+    padding: 0 25px;
+    text-overflow: ellipsis;
+    line-height: 46px;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #FFF;
+    text-align: left;
+    font-size: 23px;
+}
+
+.box.center > div {
+    text-align: center;
+}
+
+#snippet-settings > table.settings th, #snippet-settings > table.settings td {
+    text-align: left;
+    height: 47px;
+    font-size: 23px;
+    font-weight: normal;
+}
+
+#scene-configuration > div.info {
+    position: absolute;
+    left: 905px;
+    top: 280px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+#scene-configuration > div.info div.label_value_wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 350px;
+    display: table;
+}
+
+#scene-configuration > div.info {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+#scene-configuration > div.info div.label {
+    clear: both;
+    float: left;
+    width: 140px;
+    line-height: 26px;
+}
+
+#scene-configuration > div.info div.value {
+    width: 210px;
+    line-height: 26px;
+    font-weight: bold;
+    height: 100%;
+    left: 140px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#scene-configuration > div.tech_podpora {
+    position: absolute;
+    right: 70px;
+    bottom: 78px;
+    text-align: right;
+    font-size: 16px;
+    line-height: 28px;
+}
+

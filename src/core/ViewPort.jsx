@@ -15,7 +15,6 @@ export default class Container extends Component {
                              activeSceneIndex={ this.props.activeSceneIndex }
                              color={ this.props.color }
                              focus={ this.props.focus }
-                             font={ this.props.font }
                              index={0}
                              key={0}
                 />
@@ -24,7 +23,6 @@ export default class Container extends Component {
                               activeSceneIndex={ this.props.activeSceneIndex }
                               color={ this.props.color }
                               focus={ this.props.focus }
-                              font={ this.props.font }
                               index={1}
                               key={1}
                 />
@@ -33,7 +31,6 @@ export default class Container extends Component {
                               activeSceneIndex={ this.props.activeSceneIndex }
                               color={ this.props.color }
                               focus={ this.props.focus }
-                              font={ this.props.font }
                               index={2}
                               key={2}
                 />
