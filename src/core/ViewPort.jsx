@@ -27,6 +27,7 @@ export default class Container extends Component {
                               onChangeComplete={ this.handleStylesChange }
                               activeSceneIndex={ this.props.activeSceneIndex }
                               color={ this.props.color }
+                              colorFocused={ this.props.colorFocused }
                               focus={ this.props.focus }
                               index={1}
                               key={1}
@@ -35,6 +36,7 @@ export default class Container extends Component {
                               onChangeComplete={ this.handleStylesChange }
                               activeSceneIndex={ this.props.activeSceneIndex }
                               color={ this.props.color }
+                              colorFocused={ this.props.colorFocused }
                               focus={ this.props.focus }
                               index={2}
                               key={2}
@@ -43,6 +45,7 @@ export default class Container extends Component {
                                     onChangeComplete={ this.handleStylesChange }
                                     activeSceneIndex={ this.props.activeSceneIndex }
                                     color={ this.props.color }
+                                    colorFocused={ this.props.colorFocused }
                                     focus={ this.props.focus }
                                     index={3}
                                     key={3}
@@ -51,6 +54,7 @@ export default class Container extends Component {
                                 onChangeComplete={ this.handleStylesChange }
                                 activeSceneIndex={ this.props.activeSceneIndex }
                                 color={ this.props.color }
+                                colorFocused={ this.props.colorFocused }
                                 focus={ this.props.focus }
                                 index={4}
                                 key={4}
@@ -59,6 +63,7 @@ export default class Container extends Component {
                                  onChangeComplete={ this.handleStylesChange }
                                  activeSceneIndex={ this.props.activeSceneIndex }
                                  color={ this.props.color }
+                                 colorFocused={ this.props.colorFocused }
                                  focus={ this.props.focus }
                                  index={5}
                                  key={5}
@@ -67,6 +72,7 @@ export default class Container extends Component {
                           onChangeComplete={ this.handleStylesChange }
                           activeSceneIndex={ this.props.activeSceneIndex }
                           color={ this.props.color }
+                          colorFocused={ this.props.colorFocused }
                           focus={ this.props.focus }
                           index={6}
                           key={6}

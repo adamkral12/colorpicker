@@ -10,23 +10,30 @@ export default class Key extends Button {
         this.state.disabable = this.state.normal = false;
     }
 
+    shouldComponentUpdate(nextProps, nextState) {
+        return this.state.hover === !nextState.hover;
+    }
+
     render() {
         const styles = this.getStyles();
-    //    console.log('key will mount = ' + this.shouldComponentUpdate(this.props, this.state).toString() + ', state = ' + JSON.stringify(this.state) + ", props = " + JSON.stringify(this.props));
+        console.log('key will mount = ' + this.shouldComponentUpdate(this.props, this.state).toString() + ', styles = ' + JSON.stringify(styles));
 
         let iconSpan = <span className="content keyboard"
-                             style={ this.shouldComponentUpdate(this.props, this.state) ? styles.color : {} }
+                             style={ this.state.hover ? styles.color : {} }
                         > { this.props.text }
                         </span>;
 
         if (this.props.icon) {
             const classes = classNames("content keyboard", this.props.icon );
             iconSpan = <span className={ classes }
-                             style={ this.shouldComponentUpdate(styles, this.state) ? styles.color : {} }
+                             style={ this.state.hover ? styles.color : {} }
                         />;
         }
         return(
-            <span className="key">
+            <span className="key"
+                  onMouseOver={ this.mouseOver }
+                  onMouseOut={ this.mouseOut }
+            >
                 { iconSpan }
             </span>
         )

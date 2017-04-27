@@ -6,10 +6,7 @@ import SeekBar from '../sceneComponents/sceneStream/SeekBar';
 import ChannelNumber from "../sceneComponents/sceneStream/ChannelNumber";
 
 export default class SceneStream extends Scene {
-
-    handleSingleButtonFocus() {
-        console.log('Scene stream handling single button focus');
-    }
+    
 
     render () {
         this.state.hidden = !this.isSceneActive();

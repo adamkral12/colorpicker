@@ -41,7 +41,7 @@ export default class Button extends Component {
             4) focus is font-color -> changes font color in current state
      */
     shouldComponentUpdate(nextProps, nextState) {
-        console.log('Buttons next state = ' + JSON.stringify(nextState));
+        console.log('Buttons next state = ' + JSON.stringify(nextState) + ', nextprops = ' + JSON.stringify(nextProps));
         switch (nextProps.focus) {
             case 'normal':
                 console.log('normal focus = ' + nextState.normal);
@@ -54,7 +54,7 @@ export default class Button extends Component {
                 return nextState.focusable;
             default:
                 console.log('unknown focus');
-                return true;
+                return false;
         }
     }
 
@@ -68,13 +68,14 @@ export default class Button extends Component {
 
     getStyles() {
         let color = {};
+        console.log('get styles, state hover = ' + this.state.hover + ', focusable = ' + this.state.focusable);
         if (this.state.hover && this.state.focusable) {
             color = this.props.colorFocused;
         } else {
             color = this.props.color;
         }
 
-        let styles = reactCSS({
+        return reactCSS({
                 'default': {
                     color: {
                         background: `rgba(${ color.rgb.r },
@@ -87,25 +88,27 @@ export default class Button extends Component {
                               ${ color.font.b })`,
 
                         transition: `background-color 300ms linear`,
+                        cursor: `pointer`,
                     },
                     /* Set seekBar opacity to 1 */
                     noOpacity: {
                         background: `rgb(${ color.rgb.r },
                               ${ color.rgb.g },
                               ${ color.rgb.b })`,
-                        transition: `background-color 300ms linear`
+                        transition: `background-color 300ms linear`,
+                        cursor: `pointer`,
                     },
                     /* TimeFrame CSS */
                     timeFrame: {
                         color: `rgb(${ color.rgb.r },
                               ${ color.rgb.g },
                               ${ color.rgb.b })`,
-                        transition: `color 300ms linear`
+                        transition: `color 300ms linear`,
+                        cursor: `pointer`
                     }
                 }
             });
 
-        return styles;
     };
 
     mouseOver() {
