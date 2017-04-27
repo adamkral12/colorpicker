@@ -1,0 +1,560 @@
+#channel_FightboxHD {
+    top: 60px;
+}
+
+#event_FightboxHD-0 {
+    left: 230px;
+    width: 221px;
+}
+
+#event_FightboxHD-1 {
+    left: 451px;
+    width: 162.166666666667px;
+}
+
+#event_FightboxHD-2 {
+    left: 613.794444444445px;
+    width: 108.111111111111px;
+}
+
+#event_FightboxHD-3 {
+    left: 721.905555555556px;
+    width: 108.111111111111px;
+}
+
+#event_FightboxHD-4 {
+    left: 830.016666666667px;
+    width: 372.983333333333px;
+}
+#channel_boomerang {
+    top: 110px;
+}
+
+#event_boomerang-0 {
+    left: 230px;
+    width: 140.544444444444px;
+}
+
+#event_boomerang-1 {
+    left: 370.544444444445px;
+    width: 135.138888888889px;
+}
+
+#event_boomerang-2 {
+    left: 505.683333333333px;
+    width: 108.111111111111px;
+}
+
+#event_boomerang-3 {
+    left: 613.794444444445px;
+    width: 135.138888888889px;
+}
+
+#event_boomerang-4 {
+    left: 748.933333333333px;
+    width: 135.138888888889px;
+}
+
+#event_boomerang-5 {
+    left: 884.072222222222px;
+    width: 318.927777777778px;
+}
+
+#channel_cartoon {
+    top: 160px;
+}
+
+#event_cartoon-0 {
+    left: 230px;
+    width: 464.877777777778px;
+}
+
+#event_cartoon-1 {
+    left: 694.877777777778px;
+    width: 108.111111111111px;
+}
+
+#event_cartoon-2 {
+    left: 802.988888888889px;
+    width: 81.0833333333333px;
+}
+
+#event_cartoon-3 {
+    left: 884.072222222222px;
+    width: 162.166666666667px;
+}
+
+#event_cartoon-4 {
+    left: 1046.23888888889px;
+    width: 135.138888888889px;
+}
+
+#event_cartoon-5 {
+    left: 1181.37777777778px;
+    width: 21.6222222222222px;
+}
+
+#channel_cnn {
+    top: 210px;
+}
+
+#event_cnn-0 {
+    left: 230px;
+    width: 113.516666666667px;
+}
+
+#event_cnn-1 {
+    left: 343.516666666667px;
+    width: 162.166666666667px;
+}
+
+#event_cnn-2 {
+    left: 505.683333333333px;
+    width: 324.333333333333px;
+}
+
+#event_cnn-3 {
+    left: 830.016666666667px;
+    width: 162.166666666667px;
+}
+
+#event_cnn-4 {
+    left: 992.183333333333px;
+    width: 162.166666666667px;
+}
+
+#event_cnn-5 {
+    left: 1154.35px;
+    width: 48.65px;
+}
+
+#channel_russiatoday {
+    top: 260px;
+}
+
+#event_russiatoday-0 {
+    left: 230px;
+    width: 108.111111111111px;
+}
+
+#event_russiatoday-1 {
+    left: 338.111111111111px;
+    width: 167.572222222222px;
+}
+
+#event_russiatoday-2 {
+    left: 505.683333333333px;
+    width: 156.761111111111px;
+}
+
+#event_russiatoday-3 {
+    left: 662.444444444445px;
+    width: 167.572222222222px;
+}
+
+#event_russiatoday-4 {
+    left: 830.016666666667px;
+    width: 156.761111111111px;
+}
+
+#event_russiatoday-5 {
+    left: 986.777777777778px;
+    width: 167.572222222222px;
+}
+
+#event_russiatoday-6 {
+    left: 1154.35px;
+    width: 48.65px;
+}
+
+#channel_golf {
+    top: 310px;
+}
+
+#event_golf-0 {
+    left: 230px;
+    width: 275.683333333333px;
+}
+
+#event_golf-1 {
+    left: 505.683333333333px;
+    width: 324.333333333333px;
+}
+
+#event_golf-2 {
+    left: 830.016666666667px;
+    width: 162.166666666667px;
+}
+
+#event_golf-3 {
+    left: 992.183333333333px;
+    width: 210.816666666667px;
+}
+
+#scene-epg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    z-index: 2;
+}
+
+
+#epgEventInfo {
+    position: absolute;
+    left: 40px;
+    top: 70px;
+    right: 390px;
+    height: 175px;
+}
+
+#epgEventTitle {
+    position: absolute;
+    top: 0;
+    height: 48px;
+    width: 100%;
+    margin: 0;
+    font-size: 28px;
+    line-height: 48px;
+    font-weight: bold;
+    color: #ffff99;
+    text-transform: uppercase;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#epgEventTime {
+    position: absolute;
+    top: 48px;
+    height: 28px;
+    width: 100%;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#epgEventDescription {
+    position: absolute;
+    top: 88px;
+    width: 100%;
+    display: block;
+    display: -webkit-box;
+
+    font-size: 24px;
+    line-height: 1.2;
+    height: 87px; /* 3 lines (max 99px) */
+    -webkit-line-clamp: 3; /* 3 lines */
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#epgTable {
+    position: absolute;
+    top: 260px;
+    left: 10px;
+    right: 10px;
+    bottom: 70px;
+}
+
+#epgLoaderBox {
+    position: absolute;
+    top: 0;
+    left: 540px;
+    width: 180px;
+    height: 150px;
+    border-radius: 5px;
+    background-color: #454545;
+    background-color: rgba(153, 153, 153, 0.5);
+    z-index: 200;
+}
+
+#epgLoader {
+    position: absolute;
+    top: 55px;
+    left: 49px;
+}
+
+#epgTimeLine {
+    position: absolute;
+    top: 35px;
+    height: 20px;
+    font-size: 16px;
+    line-height: 20px;
+    left: 250px;
+    right: 20px;
+    overflow: hidden;
+}
+
+#epgTimeLine .timeInterval {
+    position: absolute;
+    top: 0;
+    height: 20px;
+    padding-left: 5px;
+    border-style: solid;
+    border-color: #fcc715;
+    border-width: 0 0 0 3px;
+}
+
+#epgNow {
+    position: absolute;
+    top: 30px;
+    width: 6px;
+    height: 357px;
+    display: none;
+    z-index: 1000;
+    background-color: #eb2a52;
+}
+#epgNowTime {
+    position: absolute;
+    top: -22px;
+    left: -25px;
+    width: 56px;
+    text-align: center;
+    height: 22px;
+    background-color: #eb2a52;
+    content: '';
+    text-transform: inherit;
+    font-size: 17px;
+    line-height: 22px;
+}
+
+#epgChannelChangeInput {
+    box-sizing: border-box;
+    text-align: center;
+    position: absolute;
+    top: 22px;
+    left: 30px;
+    width: 60px;
+    height: 35px;
+    font-size: 28px;
+    line-height: 28px;
+    padding: 5px;
+    color: #fcc715;
+}
+
+
+#epgTable .epgArrow {
+    position: absolute;
+    z-index: 10;
+}
+
+#epgTable .epgArrow .arrow {
+    position: absolute;
+    font-family: 'icomoon';
+    font-size: 70px;
+    text-align: left;
+    color: #fcc715;
+    overflow: hidden;
+    display: none;
+}
+
+#epgTable .epgArrow.disabled .arrow {
+    color: #80808d;
+}
+
+
+#epgArrowLeft,
+#epgArrowRight {
+    top: 60px;
+    height: 297px;
+    width: 20px;
+}
+#epgArrowLeft {left: 0;}
+#epgArrowRight {right: 0;}
+
+#epgArrowLeft .arrow,
+#epgArrowRight .arrow {
+    top: 113px;
+    width: 18px;
+    height: 70px;
+    line-height: 70px;
+}
+#epgArrowLeft .arrow {left: 0;}
+#epgArrowRight .arrow {right: 0;}
+
+
+#epgArrowUp,
+#epgArrowDown {
+    height: 20px;
+    left: 90px;
+    width: 162px;
+}
+#epgArrowUp {top: 35px;}
+#epgArrowDown {top: 365px;}
+
+#epgArrowUp .arrow,
+#epgArrowDown .arrow {
+    top: 0;
+    left: 16px;
+    width: 70px;      height: 18px;
+    line-height: 18px;
+}
+
+
+#scene-epg .channel {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    left: 30px;
+    right: 30px;
+    height: 47px;
+    background: #222;
+    overflow: hidden;
+}
+
+#scene-epg .channel .channelBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 230px;
+    height: 47px;
+    background-color: #000;
+}
+
+#scene-epg .channel .channelIndex,
+#scene-epg .channel .channelName {
+    position: absolute;
+    box-sizing: border-box;
+    top: 1px;
+    height:45px;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+#scene-epg .channel .channelIndex {
+    background-color: #444;
+    text-align: center;
+    left: 0;
+    width: 60px;
+    padding: 5px;
+    color: #ccc;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#scene-epg .channel .channelName {
+    left: 60px;
+    width: 160px;
+    padding: 5px 10px;
+    background-color: #242424;
+    color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#scene-epg .event {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0px;
+    color: #fff;
+    background-color: #454545;
+    height: 47px;
+    padding: 5px;
+    font-size: 24px;
+    line-height: 36px;
+    border-style: solid;
+    border-color: #000;
+    border-width: 0 0 0 3px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#scene-epg .event.now {
+    background-color: #81b7bc;
+}
+
+#scene-epg .event.playable {
+    background-color: #26799B;
+}
+#scene-epg .event.playable.now {
+    background-color: #10CAE4;
+}
+#scene-epg .event.unavailable {
+}
+#scene-epg .event.unavailable.now {
+    background-color: #6c6c6c;
+}
+
+#scene-epg .event.pin {
+    font-style: italic;
+    /*background-color: #d997b1;*/
+}
+#scene-epg .event.pin.playable {
+    background-color: #9f4c6b;
+}
+#scene-epg .event.pin.now {
+    background-color: #e280a7;
+}
+#scene-epg .event.pin.future {
+    background-color: #d997b1;
+}
+
+#scene-epg .event.future {
+    background-color: #aaa;
+}
+#scene-epg .event .pvr {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: block;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    white-space: nowrap;
+    background-color: red;
+    border: 1px solid red;
+    border-radius: 9px;
+}
+
+
+#scene-epg .event.empty {
+    background-color: #222;
+    font-style: italic;
+    color: #888;
+}
+
+#scene-epg .channel.focus {
+
+}
+
+#scene-epg .channel.focus .channelName {
+    background-color: #fcc715;
+    color: #000;
+}
+
+#scene-epg .channel.focus .channelName .channelIndex {
+    background-color: #dfaf00;
+    color: #000;
+}
+
+#scene-epg .channel.focus .event {
+
+}
+
+#scene-epg .channel .event.focus {
+    background-color: #fcc715;
+    color: #000;
+}
+
+#scene-epg .channel.focus .event.selected,
+#scene-epg .channel.focus .event.focus {
+    background-color: #fcc715;
+    color: #000;
+}
+
+
