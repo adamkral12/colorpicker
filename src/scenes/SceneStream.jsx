@@ -7,6 +7,10 @@ import ChannelNumber from "../sceneComponents/sceneStream/ChannelNumber";
 
 export default class SceneStream extends Scene {
 
+    handleSingleButtonFocus() {
+        console.log('Scene stream handling single button focus');
+    }
+
     render () {
         this.state.hidden = !this.isSceneActive();
 
@@ -23,11 +27,13 @@ export default class SceneStream extends Scene {
 
                             <SeekBar
                                 color={ this.props.color }
+                                colorFocused={ this.props.colorFocused }
                                 focus={ this.props.focus }
                             />
 
                             <ChannelNumber
                                 color={ this.props.color }
+                                colorFocused={ this.props.colorFocused }
                                 focus={ this.props.focus }
                             />
 
@@ -41,13 +47,14 @@ export default class SceneStream extends Scene {
                                     <tr className="secondRow">
                                         <td className="channels channel2">Following:</td>
                                         <td className="titles title2"><div>The Matrix</div></td>
-                                        <td className="time time2"></td>
+                                        <td className="time time2"/>
                                     </tr>
                                 </tbody>
                             </table>
 
                             <PlayerButtonContainer
                                 color={ this.props.color }
+                                colorFocused={ this.props.colorFocused }
                                 focus={ this.props.focus }
                             />
 
@@ -56,6 +63,7 @@ export default class SceneStream extends Scene {
 
                         <TimeFrame
                             color={ this.props.color }
+                            colorFocused={ this.props.colorFocused }
                             focus={ this.props.focus }
                         />
 

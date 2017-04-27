@@ -41,6 +41,7 @@ export default class Button extends Component {
             4) focus is font-color -> changes font color in current state
      */
     shouldComponentUpdate(nextProps, nextState) {
+        console.log('Buttons next state = ' + JSON.stringify(nextState));
         switch (nextProps.focus) {
             case 'normal':
                 console.log('normal focus = ' + nextState.normal);
@@ -66,56 +67,49 @@ export default class Button extends Component {
     }
 
     getStyles() {
+        let color = {};
+        if (this.state.hover && this.state.focusable) {
+            color = this.props.colorFocused;
+        } else {
+            color = this.props.color;
+        }
+
         let styles = reactCSS({
                 'default': {
                     color: {
-                        background: `rgba(${ this.props.color.rgb.r },
-                              ${ this.props.color.rgb.g },
-                              ${ this.props.color.rgb.b },
-                              ${ this.props.color.rgb.a })`,
+                        background: `rgba(${ color.rgb.r },
+                              ${ color.rgb.g },
+                              ${ color.rgb.b },
+                              ${ color.rgb.a })`,
 
-                        color: `rgb(${ this.props.color.font.r },
-                              ${ this.props.color.font.g },
-                              ${ this.props.color.font.b })`,
+                        color: `rgb(${ color.font.r },
+                              ${ color.font.g },
+                              ${ color.font.b })`,
 
                         transition: `background-color 300ms linear`,
                     },
                     /* Set seekBar opacity to 1 */
                     noOpacity: {
-                        background: `rgb(${ this.props.color.rgb.r },
-                              ${ this.props.color.rgb.g },
-                              ${ this.props.color.rgb.b })`,
+                        background: `rgb(${ color.rgb.r },
+                              ${ color.rgb.g },
+                              ${ color.rgb.b })`,
                         transition: `background-color 300ms linear`
                     },
                     /* TimeFrame CSS */
                     timeFrame: {
-                        color: `rgb(${ this.props.color.rgb.r },
-                              ${ this.props.color.rgb.g },
-                              ${ this.props.color.rgb.b })`,
+                        color: `rgb(${ color.rgb.r },
+                              ${ color.rgb.g },
+                              ${ color.rgb.b })`,
                         transition: `color 300ms linear`
                     }
                 }
             });
 
-        if (this.state.hover) {
-            styles = reactCSS({
-                'default': {
-                    color: {
-                        background: `rgba(${ this.props.color.rgb.r },
-                              ${ this.props.color.rgb.g },
-                              ${ this.props.color.rgb.b },
-                              ${ this.props.color.rgb.a })`,
-                        transition: `background-color 300ms linear`
-
-                    }
-                }
-            });
-        }
         return styles;
     };
 
     mouseOver() {
-       // this.setState({hover: true});
+       this.setState({hover: true});
 
     }
 

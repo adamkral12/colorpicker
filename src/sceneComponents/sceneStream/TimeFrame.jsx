@@ -16,10 +16,14 @@ export default class TimeFrame extends Button {
                 <div className="icon-timeframe">
                     <span className="time"
                           style={ styles.color }
+                          onMouseOver={ this.mouseOver }
+                          onMouseOut={ this.mouseOut }
                     >23:10</span>
                     <span className="path1"/>
                     <span className="path2"
                           style={ styles.timeFrame }
+                          onMouseOver={ this.mouseOver }
+                          onMouseOut={ this.mouseOut }
                     />
                 </div>
             </div>

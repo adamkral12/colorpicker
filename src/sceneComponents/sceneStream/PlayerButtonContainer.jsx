@@ -13,6 +13,7 @@ export default class PlayerButtonContainer extends Component {
                         text="Play"
                         iconClassName="icon-play3"
                         color={ this.props.color }
+                        colorFocused={ this.props.colorFocused }
                         focus={ this.props.focus }
                 />
                 <Button className="button-back"
@@ -20,6 +21,7 @@ export default class PlayerButtonContainer extends Component {
                         text="Startover"
                         iconClassName="icon-previous2"
                         color={ this.props.color }
+                        colorFocused={ this.props.colorFocused }
                         focus={ this.props.focus }
                 />
                 <Button className="button-record"
@@ -27,6 +29,7 @@ export default class PlayerButtonContainer extends Component {
                         text="Record"
                         iconClassName="record"
                         color={ this.props.color }
+                        colorFocused={ this.props.colorFocused }
                         focus={ this.props.focus }
                 />
                 <Button className="button-live"
@@ -34,6 +37,7 @@ export default class PlayerButtonContainer extends Component {
                         text="Live"
                         iconClassName="icon-play3"
                         color={ this.props.color }
+                        colorFocused={ this.props.colorFocused }
                         focus={ this.props.focus }
                 />
                 <Button className="button-previous"
@@ -41,6 +45,7 @@ export default class PlayerButtonContainer extends Component {
                         text="Previous"
                         iconClassName="icon-backward2"
                         color={ this.props.color }
+                        colorFocused={ this.props.colorFocused }
                         focus={ this.props.focus }
                 />
                 <Button className="button-next"
@@ -48,6 +53,7 @@ export default class PlayerButtonContainer extends Component {
                         text="Next"
                         iconClassName="icon-forward3"
                         color={ this.props.color }
+                        colorFocused={ this.props.colorFocused }
                         focus={ this.props.focus }
                 />
             </ul>

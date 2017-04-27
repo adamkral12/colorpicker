@@ -21,7 +21,7 @@ export default class SceneConfiguration extends Scene {
 
                 <div id="snippet-settings">
 
-                    <div className="player-clickable clickable" data-value="stream"></div>
+                    <div className="player-clickable clickable"></div>
 
                     <table className="settings">
                         <tbody>
@@ -30,6 +30,7 @@ export default class SceneConfiguration extends Scene {
                                 textRight="HD"
                                 color={ this.props.color }
                                 focus={ this.props.focus }
+
                             />
                             <TableSettingsRow
                                 textLeft="Output settings"

@@ -73,8 +73,10 @@ export default class Main extends Component {
     };
 
 
-    getColorbyFocus() {
-        const focus = this.state.focus;
+    getColorbyFocus(focus) {
+        if (!focus || focus === undefined) {
+            focus = this.state.focus;
+        }
 
         switch(focus) {
             case 'normal':
@@ -127,6 +129,7 @@ export default class Main extends Component {
 
     render () {
         const color = this.state[this.getColorbyFocus()];
+        const colorFocused = this.state[this.getColorbyFocus('focused')];
 
         const font = { rgb: color.font };
         const focus = this.state.focus;
@@ -142,6 +145,7 @@ export default class Main extends Component {
                   onStylesChange={ this.handleStylesChange }
                   activeSceneIndex={ this.state.activeSceneIndex }
                   color={ color }
+                  colorFocused={ colorFocused }
                   focus={ this.state.focus }
               />
 

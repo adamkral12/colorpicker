@@ -15,7 +15,8 @@ export default class SeekBar extends Button {
         return (
             <div className="bar">
                 <div className="progress clickable"
-                     data-value="progress"
+                     onMouseOver={ this.mouseOver }
+                     onMouseOut={ this.mouseOut }
                      style={ styles.noOpacity }
                 ></div>
                 <div className="actual"></div>
