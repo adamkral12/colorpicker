@@ -1,6 +1,5 @@
 body {
     font-family: sans-serif;
-    color: #ffffff;
 }
 
 #color-picker-container {
@@ -320,6 +319,7 @@ div.rc-buttons {
     height: 56px;
     background: #222323;
     z-index: 10;
+    color:#FFFFFF;
 }
 
 div.rc-buttons td.start, div.rc-buttons td.end {
