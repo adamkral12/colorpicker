@@ -6,7 +6,8 @@ export default class TableSettingsRow extends OnlyFocusButton {
     render() {
         const styles = this.getStyles();
         const classes =  "row focusable";
-        const lightColor = this.shadeRGBColor(0.15);
+        const lightColor = this.shadeRGBColor(this.props.colorFocused, 0.15);
+        console.log('config get css = ' + JSON.stringify(this.getCSS(lightColor)));
         return (
             <tr className={ classes }
                 onMouseOver={ this.mouseOver }
@@ -18,7 +19,7 @@ export default class TableSettingsRow extends OnlyFocusButton {
                     <div>{ this.props.textLeft }</div>
                 </th>
                 <td className="box px263 focus-yellow center"
-                    style={ this.state.hover ? { background: lightColor} : {} }
+                    style={ this.state.hover ? this.getCSS(lightColor).color : {} }
                 >
                     <div>{ this.props.textRight }</div>
                 </td>

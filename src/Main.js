@@ -56,9 +56,9 @@ export default class Main extends Component {
         },
         'color-disabled': {
             rgb: {
-                r: '232',
-                g: '118',
-                b: '29',
+                r: '210',
+                g: '180',
+                b: '161',
                 a: '0.2'
             },
             font: {
@@ -130,7 +130,9 @@ export default class Main extends Component {
     render () {
         const color = this.state[this.getColorbyFocus()];
         const colorFocused = this.state[this.getColorbyFocus('focused')];
-
+        const colorDisabled = this.state[this.getColorbyFocus('disabled')];
+        const colorNormal = this.state[this.getColorbyFocus('normal')];
+        console.log('colro normal = ' + JSON.stringify(colorNormal));
         const font = { rgb: color.font };
         const focus = this.state.focus;
 
@@ -146,6 +148,8 @@ export default class Main extends Component {
                   activeSceneIndex={ this.state.activeSceneIndex }
                   color={ color }
                   colorFocused={ colorFocused }
+                  colorDisabled={ colorDisabled }
+                  colorNormal={ colorNormal }
                   focus={ this.state.focus }
               />
 

@@ -4,7 +4,7 @@ import OnlyFocusButton from '../../core/OnlyFocusButton';
 export default class ChannelName extends OnlyFocusButton {
     render() {
         const styles= this.getStyles();
-        console.log('Channel name props hove r = ' + this.props.hover + ', color = ' + JSON.stringify(styles.color));
+
         return (
             <div className="channelBox"
             >

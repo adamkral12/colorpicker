@@ -62,75 +62,100 @@ export default class SceneEPG extends Scene {
                             channelName="FightBox"
                             color={ this.props.color }
                             colorFocused={ this.props.colorFocused }
+                            colorDisabled={ this.props.colorDisabled }
+                            colorNormal={ this.props.colorNormal }
                             focus={ this.props.focus }
                             numberOfEvents={5}
                             eventNow={2}
                             events={['World Series of Boxing - WSB', 'OZ Academy', 'Ultimate Taekwondo', 'Osaka Funny Wrestling', 'King of Kings Heroes Grand Prix']}
                         />
 
-                        <div className="channel" id="channel_boomerang">
-                            <div className="channelBox" id="channelBox_boomerang">
-                                <div className="channelIndex">2</div>
-                                <div className="channelName"> Boomerang</div>
-                            </div>
-                            <div id="event_boomerang-0" className="event focusable playable ">The Flintstones (Kleptomaniac Pebbles)</div>
-                            <div id="event_boomerang-1" className="event focusable playable " >Tom &amp; Jerry Tales</div>
-                            <div id="event_boomerang-2" className="event focusable playable " >Tom &amp; Jerry Tales</div>
-                            <div id="event_boomerang-3" className="event focusable playable now" >Be Cool, Scooby-Doo! (Be Cold, Scooby-Doo!)</div>
-                            <div id="event_boomerang-4" className="event focusable playable future " >Bunnicula</div>
-                            <div id="event_boomerang-5" className="event focusable playable future " >The Garfield Show</div>
-                        </div>
+                        <EPGChannel
+                            id="channel_boomerang"
+                            index={2}
+                            key={2}
+                            channelName="Boomerang"
+                            color={ this.props.color }
+                            colorFocused={ this.props.colorFocused }
+                            colorDisabled={ this.props.colorDisabled }
+                            colorNormal={ this.props.colorNormal }
+                            focus={ this.props.focus }
+                            numberOfEvents={6}
+                            eventNow={3}
+                            events={['The Flintstones (Kleptomaniac Pebbles)', 'Tom &amp; Jerry Tales', 'Tom &amp; Jerry Tales',
+                                'Be Cool, Scooby-Doo! (Be Cold, Scooby-Doo!)', 'Bunnicula', 'The Garfield Show']
+                            }
+                        />
 
-                        <div className="channel" id="channel_cartoon" >
-                            <div className="channelBox" id="channelBox_cartoon">
-                                <div className="channelIndex">3</div>
-                                <div className="channelName"> Cartoon Network</div>
-                            </div>
-                            <div id="event_cartoon-0" className="event focusable playable now" >Cartoon Toon Toon: The Marvelous Misadventures of Flapjack</div>
-                            <div id="event_cartoon-1" className="event focusable playable future " >The Amazing World of Gumball - Elements (Ghost, The)</div>
-                            <div id="event_cartoon-2" className="event focusable playable future " >Mighty Magiswords - Season 1 (Champions of Breakfast)</div>
-                            <div id="event_cartoon-3" className="event focusable playable future " >NinjaGo: Masters of Spinjitzu (The Invitation)</div>
-                            <div id="event_cartoon-4" className="event focusable playable future " >NEW! Ninjago - Masters of Spinjitzu</div>
-                            <div id="event_cartoon-5" className="event focusable playable future " >Ben 10</div>
-                        </div>
+                        <EPGChannel
+                            id="channel_cartoon"
+                            index={3}
+                            key={3}
+                            channelName="Cartoon Network"
+                            color={ this.props.color }
+                            colorFocused={ this.props.colorFocused }
+                            colorDisabled={ this.props.colorDisabled }
+                            colorNormal={ this.props.colorNormal }
+                            focus={ this.props.focus }
+                            numberOfEvents={6}
+                            eventNow={0}
+                            events={['Cartoon Toon Toon: The Marvelous Misadventures of Flapjack', 'The Amazing World of Gumball - Elements (Ghost, The)', 'Mighty Magiswords - Season 1 (Champions of Breakfast)',
+                                'NinjaGo: Masters of Spinjitzu (The Invitation)', 'NEW! Ninjago - Masters of Spinjitzu', 'Ben 10']
+                            }
+                        />
 
-                        <div className="channel focus" id="channel_cnn" >
-                            <div className="channelBox" id="channelBox_cnn">
-                                <div className="channelIndex">4</div>
-                                <div className="channelName"> CNN</div>
-                            </div>
-                            <div id="event_cnn-0" className="event focusable playable " >Amanpour.</div>
-                            <div id="event_cnn-1" className="event focusable playable " >CNN World Rugby</div>
-                            <div id="event_cnn-2" className="event focusable playable now focus" >CNNMoney View with Nina Dos Santos</div>
-                            <div id="event_cnn-3" className="event focusable playable future" >CNN Newsroom</div>
-                            <div id="event_cnn-4" className="event focusable playable future " >World Sport</div>
-                            <div id="event_cnn-5" className="event focusable playable future " >News Stream (with World Sport)</div>
-                        </div>
+                        <EPGChannel
+                            id="channel_cnn"
+                            index={4}
+                            key={4}
+                            channelName="CNN"
+                            color={ this.props.color }
+                            colorFocused={ this.props.colorFocused }
+                            colorDisabled={ this.props.colorDisabled }
+                            colorNormal={ this.props.colorNormal }
+                            focus={ this.props.focus }
+                            numberOfEvents={6}
+                            eventNow={2}
+                            events={['Amanpour.', 'CNN World Rugby', 'CNNMoney View with Nina Dos Santos',
+                                'CNN Newsroom', 'World Sport', 'News Stream (with World Sport)']
+                            }
+                        />
 
-                        <div className="channel" id="channel_russiatoday" >
-                            <div className="channelBox" id="channelBox_russiatoday">
-                                <div className="channelIndex">5</div>
-                                <div className="channelName"> Russia Today</div>
-                            </div>
-                            <div id="event_russiatoday-0" className="event focusable playable " >Headline News</div>
-                            <div id="event_russiatoday-1" className="event focusable playable " >Keiser Report</div>
-                            <div id="event_russiatoday-2" className="event focusable playable now " >Headline News</div>
-                            <div id="event_russiatoday-3" className="event focusable playable future " >Documentary</div>
-                            <div id="event_russiatoday-4" className="event focusable playable future " >Headline News</div>
-                            <div id="event_russiatoday-5" className="event focusable playable future " >Watching the Hawks</div>
-                            <div id="event_russiatoday-6" className="event focusable playable future " >Headline News</div>
-                        </div>
+                        <EPGChannel
+                            id="channel_russiatoday"
+                            index={5}
+                            key={5}
+                            channelName="Russia Today"
+                            color={ this.props.color }
+                            colorFocused={ this.props.colorFocused }
+                            colorDisabled={ this.props.colorDisabled }
+                            colorNormal={ this.props.colorNormal }
+                            focus={ this.props.focus }
+                            numberOfEvents={7}
+                            eventNow={2}
+                            events={['Headline News', 'Keiser Report', 'Headline News',
+                                'Documentary', 'Headline News', 'Watching the Hawks', 'Headline News']
+                            }
+                        />
 
-                        <div className="channel" id="channel_golf" >
-                            <div className="channelBox" id="channelBox_golf">
-                                <div className="channelIndex">6</div>
-                                <div className="channelName"> Golf Channel</div>
-                            </div>
-                            <div id="event_golf-0" className="event focusable playable " >Valero Texas Open</div>
-                            <div id="event_golf-1" className="event focusable playable now " >United Leasing &amp; Finance Championships</div>
-                            <div id="event_golf-2" className="event focusable playable future " >Golf Central</div>
-                            <div id="event_golf-3" className="event focusable playable future " >Valero Texas Open</div>
-                        </div>
+
+                        <EPGChannel
+                            id="channel_golf"
+                            index={6}
+                            key={6}
+                            channelName="Golf Channel"
+                            color={ this.props.color }
+                            colorFocused={ this.props.colorFocused }
+                            colorDisabled={ this.props.colorDisabled }
+                            colorNormal={ this.props.colorNormal }
+                            focus={ this.props.focus }
+                            numberOfEvents={4}
+                            eventNow={1}
+                            events={['Valero Texas Open', 'United Leasing &amp; Finance Championships', 'Golf Central',
+                                'Valero Texas Open' ]
+                            }
+                        />
+
                     </div>
                 </div>
 

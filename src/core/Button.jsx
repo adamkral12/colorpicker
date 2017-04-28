@@ -66,12 +66,31 @@ export default class Button extends Component {
         }
     }
 
+    getCSS(color) {
+        return reactCSS({
+            'default': {
+                color: {
+                    background: `rgba(${ color.rgb.r },
+                              ${ color.rgb.g },
+                              ${ color.rgb.b })`,
+                    color: `rgb(${ color.font.r },
+                              ${ color.font.g },
+                              ${ color.font.b })`,
+
+                    transition: `background-color 300ms linear`,
+                    cursor: `pointer`,
+                }
+            }
+        });
+    }
+
     getStyles() {
         let color = {};
 
         if (this.state.hover && this.state.focusable) {
             color = this.props.colorFocused;
         } else {
+            console.log('get props color');
             color = this.props.color;
         }
 
@@ -111,12 +130,18 @@ export default class Button extends Component {
 
     };
 
-    shadeRGBColor(percent) {
+    shadeRGBColor(color, percent) {
         let t = percent<0?0:255,p=percent<0?percent*-1:percent;
-        let R = parseInt(this.props.colorFocused.rgb.r);
-        let G = parseInt(this.props.colorFocused.rgb.g);
-        let B =parseInt(this.props.colorFocused.rgb.b);
-        return "rgb("+(Math.round((t-R)*p)+R)+","+(Math.round((t-G)*p)+G)+","+(Math.round((t-B)*p)+B)+")";
+        let R = parseInt(color.rgb.r);
+        let G = parseInt(color.rgb.g);
+        let B =parseInt(color.rgb.b);
+        return {rgb: {
+            r: (Math.round((t-R)*p)+R),
+            g: (Math.round((t-G)*p)+G),
+            b: (Math.round((t-B)*p)+B)
+            },
+            font: color.font
+        };
     }
 
     mouseOver() {

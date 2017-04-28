@@ -11,7 +11,7 @@ import RCButtons from "../sceneComponents/sceneStream/RCButtons.jsx";
 export default class Container extends Component {
 
     render() {
-        console.log('Viewport font = ' + JSON.stringify(this.props.font));
+        console.log('Viewport font = ' + JSON.stringify(this.props.colorNormal));
         return (
             <div id="viewport">
                 <SceneStream id="scene-stream"
@@ -60,13 +60,15 @@ export default class Container extends Component {
                                 key={4}
                 />
                 <SceneEPG id="scene-epg"
-                                 onChangeComplete={ this.handleStylesChange }
-                                 activeSceneIndex={ this.props.activeSceneIndex }
-                                 color={ this.props.color }
-                                 colorFocused={ this.props.colorFocused }
-                                 focus={ this.props.focus }
-                                 index={5}
-                                 key={5}
+                          onChangeComplete={ this.handleStylesChange }
+                          activeSceneIndex={ this.props.activeSceneIndex }
+                          color={ this.props.color }
+                          colorFocused={ this.props.colorFocused }
+                          colorDisabled={ this.props.colorDisabled }
+                          colorNormal={ this.props.colorNormal }
+                          focus={ this.props.focus }
+                          index={5}
+                          key={5}
                 />
                 <SceneMenu id="scene-menu"
                           onChangeComplete={ this.handleStylesChange }

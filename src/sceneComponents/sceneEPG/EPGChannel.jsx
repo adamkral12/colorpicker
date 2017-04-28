@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ChannelName from './ChannelName';
 import Event from './Event';
 
+
 export default class EPGChannel extends Component {
 
     constructor(props) {
@@ -36,6 +37,8 @@ export default class EPGChannel extends Component {
                 timePosition={ timePosition }
                 color={ this.props.color }
                 colorFocused={ this.props.colorFocused }
+                colorDisabled={ this.props.colorDisabled }
+                colorNormal={ this.props.colorNormal }
                 focus={ this.props.focus }
             />
         );
