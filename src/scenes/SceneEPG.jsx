@@ -1,6 +1,7 @@
 import React from 'react';
 import Scene from '../core/Scene';
 import PanelHeader from '../sceneComponents/sceneConfiguration/PanelHeader';
+import EPGChannel from '../sceneComponents/sceneEPG/EPGChannel';
 
 export default class SceneEPG extends Scene {
     render() {
@@ -54,17 +55,18 @@ export default class SceneEPG extends Scene {
                             <span className="arrow arrow-down icon-arrow-bottom"/>
                         </div>
 
-                        <div className="channel" id="channel_FightboxHD">
-                            <div className="channelBox" id="channelBox_FightboxHD">
-                                <div className="channelIndex">1</div>
-                                <div className="channelName"> FightBox</div>
-                            </div>
-                            <div id="event_FightboxHD-0" className="event focusable playable ">World Series of Boxing - WSB</div>
-                            <div id="event_FightboxHD-1" className="event focusable playable ">OZ Academy</div>
-                            <div id="event_FightboxHD-2" className="event focusable playable now">Ultimate Taekwondo</div>
-                            <div id="event_FightboxHD-3" className="event focusable playable future ">Osaka Funny Wrestling</div>
-                            <div id="event_FightboxHD-4" className="event focusable playable future ">King of Kings Heroes Grand Prix</div>
-                        </div>
+                        <EPGChannel
+                            id="channel_FightboxHD"
+                            index={1}
+                            key={1}
+                            channelName="FightBox"
+                            color={ this.props.color }
+                            colorFocused={ this.props.colorFocused }
+                            focus={ this.props.focus }
+                            numberOfEvents={5}
+                            eventNow={2}
+                            events={['World Series of Boxing - WSB', 'OZ Academy', 'Ultimate Taekwondo', 'Osaka Funny Wrestling', 'King of Kings Heroes Grand Prix']}
+                        />
 
                         <div className="channel" id="channel_boomerang">
                             <div className="channelBox" id="channelBox_boomerang">

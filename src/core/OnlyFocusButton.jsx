@@ -9,7 +9,7 @@ export default  class OnlyFocusButton extends Button {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        return this.state.hover === !nextState.hover;
+        return (this.state.hover === !nextState.hover) || this.props.hover !== undefined;
     }
 
     /* Override this */

@@ -68,7 +68,7 @@ export default class Button extends Component {
 
     getStyles() {
         let color = {};
-        console.log('get styles, state hover = ' + this.state.hover + ', focusable = ' + this.state.focusable);
+
         if (this.state.hover && this.state.focusable) {
             color = this.props.colorFocused;
         } else {

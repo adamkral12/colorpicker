@@ -36,7 +36,7 @@ export default class SceneCurrently extends Scene {
                                     </div>
 
                                     <div className="opaque-scroll"></div>
-                    
+
                                     <div className="pages">1/3</div>
 
                                     <table className="tb-curlist">
