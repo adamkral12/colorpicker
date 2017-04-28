@@ -29,6 +29,7 @@ export default class SceneConfiguration extends Scene {
                                 textLeft="Video quality"
                                 textRight="HD"
                                 color={ this.props.color }
+                                colorFocused={ this.props.colorFocused }
                                 focus={ this.props.focus }
 
                             />
@@ -36,24 +37,28 @@ export default class SceneConfiguration extends Scene {
                                 textLeft="Output settings"
                                 textRight="1080p@50Hz"
                                 color={ this.props.color }
+                                colorFocused={ this.props.colorFocused }
                                 focus={ this.props.focus }
                             />
                             <TableSettingsRow
                                 textLeft="Show unavailable channels"
                                 textRight="YES"
                                 color={ this.props.color }
+                                colorFocused={ this.props.colorFocused }
                                 focus={ this.props.focus }
                             />
                             <TableSettingsRow
                                 textLeft="Account: custom@moderntv.eu"
                                 textRight="Delete pairing"
                                 color={ this.props.color }
+                                colorFocused={ this.props.colorFocused }
                                 focus={ this.props.focus }
                             />
                             <TableSettingsRow
                                 textLeft="Language selection"
                                 textRight="English"
                                 color={ this.props.color }
+                                colorFocused={ this.props.colorFocused }
                                 focus={ this.props.focus }
                             />
                         </tbody>

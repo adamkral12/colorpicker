@@ -111,6 +111,14 @@ export default class Button extends Component {
 
     };
 
+    shadeRGBColor(percent) {
+        let t = percent<0?0:255,p=percent<0?percent*-1:percent;
+        let R = parseInt(this.props.colorFocused.rgb.r);
+        let G = parseInt(this.props.colorFocused.rgb.g);
+        let B =parseInt(this.props.colorFocused.rgb.b);
+        return "rgb("+(Math.round((t-R)*p)+R)+","+(Math.round((t-G)*p)+G)+","+(Math.round((t-B)*p)+B)+")";
+    }
+
     mouseOver() {
        this.setState({hover: true});
 

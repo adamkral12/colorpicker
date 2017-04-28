@@ -1,22 +1,11 @@
 import React from 'react';
-import Button from '../../core/Button';
+import OnlyFocusButton from '../../core/OnlyFocusButton';
 import classNames from 'classnames';
-import update from 'react-addons-update';
 
-export default class Key extends Button {
-
-    constructor(props) {
-        super(props);
-        this.state.disabable = this.state.normal = false;
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-        return this.state.hover === !nextState.hover;
-    }
+export default class Key extends OnlyFocusButton {
 
     render() {
         const styles = this.getStyles();
-        console.log('key will mount = ' + this.shouldComponentUpdate(this.props, this.state).toString() + ', styles = ' + JSON.stringify(styles));
 
         let iconSpan = <span className="content keyboard"
                              style={ this.state.hover ? styles.color : {} }
