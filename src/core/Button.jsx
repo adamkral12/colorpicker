@@ -77,7 +77,6 @@ export default class Button extends Component {
                               ${ color.font.g },
                               ${ color.font.b })`,
 
-                    transition: `background-color 300ms linear`,
                     cursor: `pointer`,
                 }
             }
@@ -106,7 +105,6 @@ export default class Button extends Component {
                               ${ color.font.g },
                               ${ color.font.b })`,
 
-                        transition: `background-color 300ms linear`,
                         cursor: `pointer`,
                     },
                     /* Set seekBar opacity to 1 */
@@ -114,7 +112,6 @@ export default class Button extends Component {
                         background: `rgb(${ color.rgb.r },
                               ${ color.rgb.g },
                               ${ color.rgb.b })`,
-                        transition: `background-color 300ms linear`,
                         cursor: `pointer`,
                     },
                     /* TimeFrame CSS */
@@ -122,7 +119,6 @@ export default class Button extends Component {
                         color: `rgb(${ color.rgb.r },
                               ${ color.rgb.g },
                               ${ color.rgb.b })`,
-                        transition: `color 300ms linear`,
                         cursor: `pointer`
                     }
                 }

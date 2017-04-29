@@ -31,7 +31,6 @@ export default class SceneConfiguration extends Scene {
                                 color={ this.props.color }
                                 colorFocused={ this.props.colorFocused }
                                 focus={ this.props.focus }
-
                             />
                             <TableSettingsRow
                                 textLeft="Output settings"

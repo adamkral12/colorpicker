@@ -43,9 +43,9 @@ export default class Main extends Component {
         },
         'color-focused': {
             rgb: {
-                r: '232',
-                g: '118',
-                b: '29',
+                r: '245',
+                g: '166',
+                b: '5',
                 a: '1'
             },
             font: {

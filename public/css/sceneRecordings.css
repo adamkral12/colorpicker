@@ -23,7 +23,7 @@
 }
 
 table.recorded-list {
-    margin: 75px auto 0 72px;
+    margin: 75px auto 0 35px;
     left: 105px;
     color: #ffffff;
 }
@@ -33,6 +33,7 @@ table.recorded-list {
     top: 280px;
     left: 900px;
     width: 340px;
+    color: #ffffff;
 }
 
 #snippet-recorded-info > div.info {
@@ -57,3 +58,61 @@ table.recorded-list {
     font-size: 20px;
 }
 
+.px350 {
+    display: table-cell;
+    background: #242424;
+    border-radius: 5px;
+    width: 350px;
+    font-weight: normal;
+}
+
+.px350 div.text {
+    width: 290px;
+}
+.box > div {
+    padding: 0 25px;
+    text-overflow: ellipsis;
+    line-height: 46px;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #FFF;
+    text-align: left;
+    font-size: 23px;
+}
+
+.px240 {
+    display: table-cell;
+    background: #242424;
+    border-radius: 5px;
+}
+
+.px203 {
+    display: block;
+    background: #242424;
+    border-radius: 5px;
+    width: 203px;
+}
+
+#recArrowRight .arrow {
+    right: -50px;
+}
+
+#snippet-recorded-info > div.info-event {
+    color: #ffffff;
+}
+
+#snippet-recorded-info > div.info {
+    position: absolute;
+    top: 260px;
+    color: #ffffff;
+    width: 340px;
+}
+
+#snippet-recorded-info > div.info-event .eventName {
+    padding-left: 6px;
+    font-size: 22px;
+}
+
+#snippet-recorded-info table td {
+    text-align: right;
+}
