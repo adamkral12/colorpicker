@@ -1,0 +1,175 @@
+@colorNormal: rgba(223, 101, 0, 1);
+@fontNormal: rgb(255, 255, 255);
+@colorNormalLighter: rgb(236, 163, 102);
+@colorFocused: rgba(232, 118, 29, 1);
+@fontFocused: rgb(0, 0, 0);
+@colorDisabled: rgba(210, 118, 161, 0.2);
+@fontDisabled: rgb(255, 255, 255);
+
+
+
+.snippet-panel-header {
+  background: @colorNormal;
+}
+#snippet-main-menu > ul.list > li.last,
+#snippet-main-menu > ul.list > li.settings,
+#snippet-main-menu > ul.list > li.recorded,
+#snippet-main-menu > ul.list > li.epg,
+#snippet-main-menu > ul.list > li.actual {
+  background-image: url('');
+}
+
+#snippet-main-menu > ul.list > li {
+  font-size: 160px;
+}
+
+#snippet-main-menu > ul.list > li > span.path {
+  position: absolute;
+  left: 174px;
+  top: 13px;
+}
+
+.icon-menu_currently .path2,
+.icon-menu_epg .path1,
+.icon-menu_records .path1,
+.icon-menu_settings .path1,
+.icon-menu_last_playback.focusable .path1 {
+  color: @colorNormal;
+}
+
+.icon-menu_last_playback .path1 {
+  color: #ACACAC;
+}
+
+#snippet-main-menu > ul.list > li.icon-menu_currently.focus > .path2,
+#snippet-main-menu > ul.list > li.icon-menu_epg.focus > .path1,
+#snippet-main-menu > ul.list > li.icon-menu_records.focus > .path1,
+#snippet-main-menu > ul.list > li.icon-menu_settings.focus > .path1,
+#snippet-main-menu > ul.list > li.icon-menu_last_playback.focus > .path1 {
+  color: @colorFocused;
+}
+
+.icon-menu_currently .path5,
+.icon-menu_currently .path6,
+.icon-menu_currently .path7,
+.icon-menu_epg .path5,
+.icon-menu_epg .path6,
+.icon-menu_records .path5,
+.icon-menu_settings .path3,
+.icon-menu_last_playback .path4,
+.icon-menu_last_playback .path5 {
+  color: #ECECEC;
+}
+
+.icon-menu_currently .path4,
+.icon-menu_epg .path4,
+.icon-menu_records .path3,
+.icon-menu_records .path4,
+.icon-menu_settings .path5,
+.icon-menu_last_playback .path3 {
+  color: #242221;
+}
+
+#scene-pairing > #snippet-code > div.codes > div,
+#scene-pairing2 > #snippet-code2 > div.codes > div{
+  background:#6E3200;
+}
+/* puvodni svetle modra #05c4e1 */
+
+#snippet-info > div.info div.button.focus {
+  background-color: @colorFocused;
+}
+
+#snippet-options > ul.list > li.focus {
+  background-color: @colorFocused;
+}
+
+/* puvodni tmave modra #055d85 */
+
+#snippet-info > div.info div.button {
+  background-color: #914b0f;
+}
+
+/* puvodni nejsvetlejsi modra #22cde7 */
+
+#snippet-pindialog .keyboardNumeric .line .key.focus .content {
+  background-color: @colorFocused;
+}
+
+#snippet-enterpindialog .keyboardNumeric .line .key.focus .content {
+  background-color: @colorFocused;
+}
+
+#snippet-pindialog .keyboardNumeric .line .key:focus .BSP {
+  background-color: @colorFocused;
+}
+
+#snippet-enterpindialog .keyboardNumeric .line .key:focus .BSP {
+  background-color: @colorFocused;
+}
+
+#scene-pairing, #scene-pairing2 {
+  background: @colorNormal no-repeat;
+}
+
+#scene-pairing > div.logo,
+#scene-pairing2 > div.logo {
+  width: 183px;
+  height: 32px;
+  background: url("../images/moderntv/moderntv.png") no-repeat;
+  background-size: 183px;
+}
+
+#scene-epg .event.playable.now {
+  background-color: @colorNormalLighter;
+}
+#scene-epg .event.playable {
+  background-color: @colorNormal;
+}
+#scene-epg .event.now {
+  background-color: #81b7bc;
+}
+
+#scene-epg .event.future {
+  background-color: @colorDisabled;
+}
+
+#scene-epg .channel.focus .event.selected,
+#scene-epg .channel.focus .event.focus,
+#scene-epg .channel.focus .channelName {
+  background-color: @colorFocused;
+  color: #000;
+}
+
+/* player - buttons */
+#scene-stream > #snippet-player > .player > .content > ul.buttons > li {
+  border-radius: 6px;
+  background: @colorNormal;
+}
+
+#scene-stream > #snippet-player > .player > .content > ul.buttons > li.focus {
+  border-radius: 6px;
+  background: @colorFocused;
+}
+
+.icon-timeframe .path1 {
+  color: @colorNormal;
+}
+.icon-timeframe .path2 {
+  color: @colorFocused;
+}
+
+/* curlist and recorded list focus */
+.focus > .px263.focus-blue, .active > .px263.focus-blue {
+  background: @colorFocused;
+  border-radius: 5px;
+}
+
+.focus > .px437.focus-blue, .active > .px437.focus-blue {
+  background:#F7A30D;
+  border-radius:5px;
+}
+
+#scene-stream > #snippet-player > .player > .content > ul.buttons > li.noactive {
+  background-color: @colorDisabled;
+}
