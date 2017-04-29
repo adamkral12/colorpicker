@@ -2,6 +2,7 @@ import React from 'react';
 import Scene from "../core/Scene";
 import PairingBackground from '../sceneComponents/scenePairing/PairingBackground';
 import Line from '../sceneComponents/scenePairing/Line';
+import PairingCode from '../sceneComponents/scenePairing/PairingCode';
 import reactCSS from 'reactcss';
 
 export default class ScenePairing extends Scene {
@@ -41,13 +42,13 @@ export default class ScenePairing extends Scene {
 
                 <div className="logo"></div>
                 <div className="info"
-                     style={ this.getFontCss(this.props.color).font }
+                     style={ this.getFontCss(this.props.colorNormal).font }
                 >
                     <h1>Welcome</h1>
                     <p>You must enter a <strong>pairing code</strong>, which you have obtained from your ISP partner of<strong> moderntv.cz</strong>. </p>
                 </div>
                 <div className="keyboard_pin_instruction"
-                     style={ this.getFontCss(this.props.color).font }
+                     style={ this.getFontCss(this.props.colorNormal).font }
                 >
                     Enter pairing code:
                 </div>
@@ -79,16 +80,19 @@ export default class ScenePairing extends Scene {
                     />
                 </div>
                 <div id="snippet-code2"
-                     style={ this.getFontCss(this.props.color).font }
+                     style={ this.getFontCss(this.props.colorNormal).font }
                 >
                     <div className="codes pairing_code">
                         <h1>Pairing code:</h1>
-                        <div></div>
+                        <PairingCode
+                            color={ this.props.color }
+                            focus={ this.props.focus }
+                        />
                     </div>
                     <div className="numbers">12345678</div>
                 </div>
                 <div className="url"
-                     style={ this.getFontCss(this.props.color).font }
+                     style={ this.getFontCss(this.props.colorNormal).font }
                 >www.moderntv.cz</div>
             </div>
         )

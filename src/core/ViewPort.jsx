@@ -28,6 +28,7 @@ export default class Container extends Component {
                               activeSceneIndex={ this.props.activeSceneIndex }
                               color={ this.props.color }
                               colorFocused={ this.props.colorFocused }
+                              colorNormal={ this.props.colorNormal }
                               focus={ this.props.focus }
                               index={1}
                               key={1}

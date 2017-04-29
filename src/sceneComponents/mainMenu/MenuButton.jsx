@@ -25,7 +25,6 @@ export default class MenuButton extends Button {
     render() {
         const classes = classNames('item focusable', this.props.classes );
         const styles = this.getStyles();
-        console.log('font = ' + JSON.stringify(styles.color));
         return(
             <li className={ classes }
                 onMouseOver={ this.mouseOver }
@@ -35,7 +34,6 @@ export default class MenuButton extends Button {
 
                 <div className="wrapper">
                     <div className={ this.props.wrapperClass }
-                         style={ {color: styles.color.color} }
                     >
                         { this.props.wrapperText }
                     </div>

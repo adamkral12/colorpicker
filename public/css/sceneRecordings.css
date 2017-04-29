@@ -23,7 +23,37 @@
 }
 
 table.recorded-list {
-    margin: 35px auto 0 72px;
+    margin: 75px auto 0 72px;
     left: 105px;
     color: #ffffff;
 }
+
+#snippet-recorded-info {
+    position: absolute;
+    top: 280px;
+    left: 900px;
+    width: 340px;
+}
+
+#snippet-recorded-info > div.info {
+    position: absolute;
+    top: 260px;
+    color: #ffffff;
+    width: 340px;
+}
+
+#snippet-recorded-info table.info-event, #snippet-recorded-info table.info {
+    width: 340px;
+}
+#snippet-recorded-info table.info {
+    float: right;
+}
+
+#snippet-recorded-info .validity, #snippet-recorded-info .length, #snippet-recorded-info .totalCapacity, #snippet-recorded-info .freeCapacity, #snippet-recorded-info .countOfRecorded {
+    text-align: left;
+}
+
+#snippet-recorded-info table.info th, #snippet-recorded-info table.info td, #snippet-recorded-info > div.info-event th, #snippet-recorded-info > div.info-event td {
+    font-size: 20px;
+}
+
