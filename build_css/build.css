@@ -1,5 +1,5 @@
 .snippet-panel-header {
-  background: #df6500;
+  background: green;
 }
 #snippet-main-menu > ul.list > li.last,
 #snippet-main-menu > ul.list > li.settings,
@@ -21,7 +21,7 @@
 .icon-menu_records .path1,
 .icon-menu_settings .path1,
 .icon-menu_last_playback.focusable .path1 {
-  color: #df6500;
+  color: green;
 }
 .icon-menu_last_playback .path1 {
   color: #ACACAC;
@@ -31,7 +31,7 @@
 #snippet-main-menu > ul.list > li.icon-menu_records.focus > .path1,
 #snippet-main-menu > ul.list > li.icon-menu_settings.focus > .path1,
 #snippet-main-menu > ul.list > li.icon-menu_last_playback.focus > .path1 {
-  color: #e8761d;
+  color: black;
 }
 .icon-menu_currently .path5,
 .icon-menu_currently .path6,
@@ -56,33 +56,20 @@
 #scene-pairing2 > #snippet-code2 > div.codes > div {
   background: #6E3200;
 }
-/* puvodni svetle modra #05c4e1 */
-#snippet-info > div.info div.button.focus {
-  background-color: #e8761d;
-}
-#snippet-options > ul.list > li.focus {
-  background-color: #e8761d;
-}
-/* puvodni tmave modra #055d85 */
 #snippet-info > div.info div.button {
   background-color: #914b0f;
 }
-/* puvodni nejsvetlejsi modra #22cde7 */
-#snippet-pindialog .keyboardNumeric .line .key.focus .content {
-  background-color: #e8761d;
-}
-#snippet-enterpindialog .keyboardNumeric .line .key.focus .content {
-  background-color: #e8761d;
-}
-#snippet-pindialog .keyboardNumeric .line .key:focus .BSP {
-  background-color: #e8761d;
-}
+#snippet-options > ul.list > li.focus,
+#snippet-info > div.info div.button.focus,
+#snippet-pindialog .keyboardNumeric .line .key.focus .content,
+#snippet-enterpindialog .keyboardNumeric .line .key.focus .content,
+#snippet-pindialog .keyboardNumeric .line .key:focus .BSP,
 #snippet-enterpindialog .keyboardNumeric .line .key:focus .BSP {
-  background-color: #e8761d;
+  background-color: black;
 }
 #scene-pairing,
 #scene-pairing2 {
-  background: #df6500 no-repeat;
+  background: green no-repeat;
 }
 #scene-pairing > div.logo,
 #scene-pairing2 > div.logo {
@@ -95,46 +82,50 @@
   background-color: #eca366;
 }
 #scene-epg .event.playable {
-  background-color: #df6500;
+  background-color: green;
 }
 #scene-epg .event.now {
   background-color: #81b7bc;
 }
 #scene-epg .event.future {
-  background-color: rgba(210, 118, 161, 0.2);
+  background-color: rgba(210, 180, 161, 0.2);
 }
 #scene-epg .channel.focus .event.selected,
 #scene-epg .channel.focus .event.focus,
 #scene-epg .channel.focus .channelName {
-  background-color: #e8761d;
+  background-color: black;
   color: #000;
 }
 /* player - buttons */
 #scene-stream > #snippet-player > .player > .content > ul.buttons > li {
-  border-radius: 6px;
-  background: #df6500;
+  background: green;
 }
 #scene-stream > #snippet-player > .player > .content > ul.buttons > li.focus {
-  border-radius: 6px;
-  background: #e8761d;
+  background: black;
 }
 .icon-timeframe .path1 {
-  color: #df6500;
+  color: green;
 }
 .icon-timeframe .path2 {
-  color: #e8761d;
+  color: black;
 }
 /* curlist and recorded list focus */
 .focus > .px263.focus-blue,
 .active > .px263.focus-blue {
-  background: #e8761d;
-  border-radius: 5px;
+  background: black;
 }
 .focus > .px437.focus-blue,
 .active > .px437.focus-blue {
-  background: #F7A30D;
-  border-radius: 5px;
+  background: black;
 }
 #scene-stream > #snippet-player > .player > .content > ul.buttons > li.noactive {
-  background-color: rgba(210, 118, 161, 0.2);
+  background-color: rgba(210, 180, 161, 0.2);
+}
+.focus > .px350.focus-yellow,
+.active > .px350.focus-yellow {
+  background: black;
+}
+.focus > .px263.focus-yellow,
+.active > .px263.focus-yellow {
+  background: #eca366;
 }
