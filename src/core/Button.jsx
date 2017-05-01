@@ -70,7 +70,7 @@ export default class Button extends Component {
         return reactCSS({
             'default': {
                 color: {
-                    background: `rgba(${ color.rgb.r },
+                    background: `rgb(${ color.rgb.r },
                               ${ color.rgb.g },
                               ${ color.rgb.b })`,
                     color: `rgb(${ color.font.r },

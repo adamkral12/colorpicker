@@ -13,14 +13,6 @@ export default class Event extends OnlyFocusButton {
         } else return (this.state.hover === !nextState.hover);
     }
 
-    mouseOut() {
-        this.setState({ hover: false});
-    }
-
-    mouseOver() {
-        this.setState({ hover: true });
-    }
-
     render() {
         const id = 'event_' + this.props.channelId.split('channel_')[1] + '-' + this.props.index;
         const classes = classNames('event focusable playable', this.props.timePosition );
