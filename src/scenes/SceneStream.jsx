@@ -4,6 +4,7 @@ import PlayerButtonContainer from '../sceneComponents/sceneStream/PlayerButtonCo
 import TimeFrame from '../sceneComponents/sceneStream/TimeFrame';
 import SeekBar from '../sceneComponents/sceneStream/SeekBar';
 import ChannelNumber from "../sceneComponents/sceneStream/ChannelNumber";
+import LogoDropZone from '../core/LogoDropZone';
 
 export default class SceneStream extends Scene {
     
@@ -55,7 +56,11 @@ export default class SceneStream extends Scene {
                                 focus={ this.props.focus }
                             />
 
-                            <div className="logo"></div>
+                            <div className="logo">
+                                <LogoDropZone
+                                    colorDisabled={ this.props.colorDisabled }
+                                />
+                            </div>
                         </div>
 
                         <TimeFrame

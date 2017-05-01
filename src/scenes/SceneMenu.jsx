@@ -18,7 +18,7 @@ export default class SceneMenu extends Scene {
                         wrapperClass="menuCurrently"
                         wrapperText="CURRENTLY"
                         color={ this.props.color }
-                        colorFocused= { this.props.colorFocused }
+                        colorFocused={ this.props.colorFocused }
                         focus={ this.props.focus }
                     />
                     <MenuButton
@@ -27,7 +27,7 @@ export default class SceneMenu extends Scene {
                         wrapperClass="menuEPG"
                         wrapperText="EPG"
                         color={ this.props.color }
-                        colorFocused= { this.props.colorFocused }
+                        colorFocused={ this.props.colorFocused }
                         focus={ this.props.focus }
                     />
                     <MenuButton
@@ -36,7 +36,7 @@ export default class SceneMenu extends Scene {
                         wrapperClass="menuRecorded"
                         wrapperText="RECORDINGS"
                         color={ this.props.color }
-                        colorFocused= { this.props.colorFocused }
+                        colorFocused={ this.props.colorFocused }
                         focus={ this.props.focus }
                     />
                     <MenuButton
@@ -45,7 +45,7 @@ export default class SceneMenu extends Scene {
                         wrapperClass="menuLatestPlay"
                         wrapperText="LAST PLAYBACK"
                         color={ this.props.color }
-                        colorFocused= { this.props.colorFocused }
+                        colorFocused={ this.props.colorFocused }
                         focus={ this.props.focus }
                     />
                     <MenuButton
@@ -54,7 +54,7 @@ export default class SceneMenu extends Scene {
                         wrapperClass="menuConfiguration"
                         wrapperText="SETTINGS"
                         color={ this.props.color }
-                        colorFocused= { this.props.colorFocused }
+                        colorFocused={ this.props.colorFocused }
                         focus={ this.props.focus }
                     />
                 </ul>

@@ -17,7 +17,7 @@ export default class Button extends Component {
 
     constructor(props) {
         super(props);
-        console.log('Button props ' + JSON.stringify(props));
+       // console.log('Button props ' + JSON.stringify(props));
         this.mouseOver = this.mouseOver.bind(this);
         this.mouseOut = this.mouseOut.bind(this);
     };
@@ -41,19 +41,19 @@ export default class Button extends Component {
             4) focus is font-color -> changes font color in current state
      */
     shouldComponentUpdate(nextProps, nextState) {
-        console.log('Buttons next state = ' + JSON.stringify(nextState) + ', nextprops = ' + JSON.stringify(nextProps));
+        //console.log('Buttons next state = ' + JSON.stringify(nextState) + ', nextprops = ' + JSON.stringify(nextProps));
         switch (nextProps.focus) {
             case 'normal':
-                console.log('normal focus = ' + nextState.normal);
+                //console.log('normal focus = ' + nextState.normal);
                 return nextState.normal;
             case 'disabled':
-                console.log('disabled focus')
+             //   console.log('disabled focus')
                 return nextState.disabable;
             case 'focused':
-                console.log('focused focus')
+            //    console.log('focused focus')
                 return nextState.focusable;
             default:
-                console.log('unknown focus');
+             //   console.log('unknown focus');
                 return false;
         }
     }
@@ -89,7 +89,7 @@ export default class Button extends Component {
         if (this.state.hover && this.state.focusable) {
             color = this.props.colorFocused;
         } else {
-            console.log('get props color');
+            //console.log('get props color');
             color = this.props.color;
         }
 
@@ -127,14 +127,14 @@ export default class Button extends Component {
     };
 
     shadeRGBColor(color, percent) {
-        let t = percent<0?0:255,p=percent<0?percent*-1:percent;
-        let R = parseInt(color.rgb.r);
-        let G = parseInt(color.rgb.g);
-        let B =parseInt(color.rgb.b);
+        const t = percent<0?0:255,p=percent<0?percent*-1:percent;
+        const r = parseInt(color.rgb.r, 10);
+        const g = parseInt(color.rgb.g, 10);
+        const b = parseInt(color.rgb.b, 10);
         return {rgb: {
-            r: (Math.round((t-R)*p)+R),
-            g: (Math.round((t-G)*p)+G),
-            b: (Math.round((t-B)*p)+B)
+            r: (Math.round((t-r)*p)+r),
+            g: (Math.round((t-g)*p)+g),
+            b: (Math.round((t-b)*p)+b)
             },
             font: color.font
         };

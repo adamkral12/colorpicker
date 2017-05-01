@@ -11,7 +11,7 @@ import RCButtons from "../sceneComponents/sceneStream/RCButtons.jsx";
 export default class Container extends Component {
 
     render() {
-        console.log('Viewport font = ' + JSON.stringify(this.props.colorNormal));
+        //console.log('Viewport font = ' + JSON.stringify(this.props.colorNormal));
         return (
             <div id="viewport">
                 <SceneStream id="scene-stream"

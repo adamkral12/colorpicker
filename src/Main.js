@@ -95,7 +95,6 @@ export default class Main extends Component {
         on this.state.fontSelected
      */
     handleStylesChange(color) {
-        console.log('Main font selected = ' + this.state.fontSelected);
         let nextColor = {};
         if (!this.state.fontSelected) {
             nextColor = {
@@ -110,7 +109,6 @@ export default class Main extends Component {
 
         let colorState = {};
         colorState[this.getColorbyFocus()] = nextColor;
-        console.log(' MAIN handleStylesChange colorState = ' + JSON.stringify(nextColor) + ', color = ' + JSON.stringify(color));
         this.setState(colorState);
     };
 
@@ -132,7 +130,6 @@ export default class Main extends Component {
         const colorFocused = this.state[this.getColorbyFocus('focused')];
         const colorDisabled = this.state[this.getColorbyFocus('disabled')];
         const colorNormal = this.state[this.getColorbyFocus('normal')];
-        console.log('colro normal = ' + JSON.stringify(colorNormal));
         const font = { rgb: color.font };
         const focus = this.state.focus;
 

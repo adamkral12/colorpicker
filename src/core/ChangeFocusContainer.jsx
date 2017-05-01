@@ -19,7 +19,7 @@ export default class ChangeFocusContainer extends Component {
     };
 
     handleFontSelection(selected) {
-        console.log('Change focus container handlefontchange, selected = ' + selected);
+        //console.log('Change focus container handlefontchange, selected = ' + selected);
         this.props.handleFontSelection(selected);
     }
 

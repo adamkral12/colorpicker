@@ -55,7 +55,7 @@ export default class EPGChannel extends Component {
     }
 
     render() {
-        console.log('render epg channel hover = ' + this.state.hover);
+        //console.log('render epg channel hover = ' + this.state.hover);
         return (
             <div className="channel"
                  id={ this.props.id }

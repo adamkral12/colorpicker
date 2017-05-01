@@ -1,7 +1,6 @@
 import React from 'react';
 import OnlyFocusButton from '../../core/OnlyFocusButton';
 import classNames from 'classnames';
-import reactCSS from 'reactcss';
 
 export default class Event extends OnlyFocusButton {
 
@@ -28,7 +27,7 @@ export default class Event extends OnlyFocusButton {
         const lighterColor = this.shadeRGBColor(this.props.colorNormal, 0.4);
         const styles = this.getStyles();
 
-        console.log('props color = ' + JSON.stringify(this.props.colorNormal));
+        //console.log('props color = ' + JSON.stringify(this.props.colorNormal));
         return(
             <div id={ id }
                  className={ classes }

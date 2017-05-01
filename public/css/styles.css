@@ -96,10 +96,6 @@ body {
     background: rgba(23,109,48,1);
 }
 
-/*
-CSS copied from ModernTV app
-*/
-
-
-/* SCENE PAIRING */
-
+.dropzone {
+    float:left;
+}
