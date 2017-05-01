@@ -13,7 +13,7 @@
 
 #scene-stream > #snippet-player > .player > .content > ul.buttons {
     position: absolute;
-    top: 120px;
+    top: 100px;
     left: 15px;
     list-style-type: none;
     cursor:pointer;

@@ -25,7 +25,7 @@ export default class LogoDropZone extends Component {
             logoUploaded: {
                 'backgroundSize': '200px',
                 'backgroundRepeat': 'no-repeat',
-                'backgroundPosition': '0 0 ',
+                'backgroundPosition': 'bottom right ',
                 height: '72px',
                 width: '200px'
             }
