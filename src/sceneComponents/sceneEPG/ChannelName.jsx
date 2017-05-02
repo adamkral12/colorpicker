@@ -3,7 +3,8 @@ import OnlyFocusButton from '../../core/OnlyFocusButton';
 
 export default class ChannelName extends OnlyFocusButton {
     render() {
-        const styles= this.getCSS(this.props.colorNormal);
+        const styles = this.getCSS(this.props.colorFocused);
+        const normalFontStyle = { color: this.getCSS(this.props.colorNormal).color.color };
 
         return (
             <div className="channelBox"
@@ -13,7 +14,7 @@ export default class ChannelName extends OnlyFocusButton {
                 </div>
 
                 <div className="channelName"
-                     style={ this.state.hover || this.props.hover ? styles.color : {} }
+                     style={ this.state.hover || this.props.hover ? styles.color : normalFontStyle }
                 >
                     { this.props.channelName }
                 </div>

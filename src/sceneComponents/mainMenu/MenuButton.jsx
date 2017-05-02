@@ -22,6 +22,8 @@ export default class MenuButton extends Button {
     }
 
     render() {
+
+        const normalFontStyle = { color: this.getCSS(this.props.colorNormal).color.color };
         const classes = classNames('item focusable', this.props.classes );
         return(
             <li className={ classes }
@@ -32,6 +34,7 @@ export default class MenuButton extends Button {
 
                 <div className="wrapper">
                     <div className={ this.props.wrapperClass }
+                         style={ normalFontStyle }
                     >
                         { this.props.wrapperText }
                     </div>

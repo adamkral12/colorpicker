@@ -6,7 +6,7 @@ import RecordingsTableRow from '../sceneComponents/sceneRecords/RecordignsTableR
 export default class SceneRecordings extends Scene {
     render() {
         this.state.hidden = !this.isSceneActive();
-
+        const fontNormalStyle = this.getFontCSS(this.props.colorNormal).font;
         return (
             <div id="scene-recorded"
                  className="scene"
@@ -21,26 +21,37 @@ export default class SceneRecordings extends Scene {
                 />
 
 
-                <div id="snippet-recorded-info">
+                <div id="snippet-recorded-info"
+                >
                     <div className="info-event">
-                        <div className="eventName text">Westworld (9)</div>
+                        <div className="eventName text"
+                             style={ fontNormalStyle }
+                        >Westworld (9)</div>
                         <div className="eventInfo">
                             <table className="info-event">
                                 <tbody>
                                 <tr className="row">
                                         <th>
-                                            <div className="length text">Length: </div>
+                                            <div className="length text"
+                                                 style={ fontNormalStyle }
+                                            >Length: </div>
                                         </th>
                                         <td>
-                                            <div className="lengthValue text">01:25</div>
+                                            <div className="lengthValue text"
+                                                 style={ fontNormalStyle }
+                                            >01:25</div>
                                         </td>
                                     </tr>
                                     <tr className="row">
                                         <th>
-                                            <div className="validity text">Validity: </div>
+                                            <div className="validity text"
+                                                 style={ fontNormalStyle }
+                                            >Validity: </div>
                                         </th>
                                         <td>
-                                            <div className="validityValue text">3 months</div>
+                                            <div className="validityValue text"
+                                                 style={ fontNormalStyle }
+                                            >3 months</div>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -52,16 +63,36 @@ export default class SceneRecordings extends Scene {
                         <table className="info">
                             <tbody>
                                 <tr className="row">
-                                    <th><div className="freeCapacity text">Free capacity: </div></th>
-                                    <td><div className="freeCapacityValue text">6h 12m</div></td>
+                                    <th>
+                                        <div className="freeCapacity text"
+                                             style={ fontNormalStyle }
+                                    >
+                                        Free capacity:
+                                    </div>
+                                    </th>
+                                    <td>
+                                        <div className="freeCapacityValue text"
+                                             style={ fontNormalStyle }
+                                        >6h 12m</div>
+                                    </td>
                                 </tr>
                                 <tr className="row">
-                                    <th><div className="totalCapacity text">Total capacity: </div></th>
-                                    <td><div className="totalCapacityValue text">10h 00m</div></td>
+                                    <th>
+                                        <div className="totalCapacity text"
+                                             style={ fontNormalStyle }
+                                        >Total capacity:
+                                        </div></th>
+                                    <td><div className="totalCapacityValue text"
+                                             style={ fontNormalStyle }
+                                    >10h 00m</div></td>
                                 </tr>
                                 <tr className="row">
-                                    <th><div className="countOfRecorded text">Number of events: </div></th>
-                                    <td><div className="countOfRecordedValue text">5</div></td>
+                                    <th><div className="countOfRecorded text"
+                                             style={ fontNormalStyle }
+                                    >Number of events: </div></th>
+                                    <td><div className="countOfRecordedValue text"
+                                             style={ fontNormalStyle }
+                                    >5</div></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -98,6 +129,7 @@ export default class SceneRecordings extends Scene {
                             colorNormal={ this.props.colorNormal }
                             colorFocused={ this.props.colorFocused }
                             colorDisabled={ this.props.colorDisabled }
+                            focus={ this.props.focus }
                         />
                         <RecordingsTableRow
                             text="Watching the Hawks"
@@ -106,6 +138,7 @@ export default class SceneRecordings extends Scene {
                             colorNormal={ this.props.colorNormal }
                             colorFocused={ this.props.colorFocused }
                             colorDisabled={ this.props.colorDisabled }
+                            focus={ this.props.focus }
                         />
                         <RecordingsTableRow
                             text="CNN Newsroom"
@@ -114,6 +147,7 @@ export default class SceneRecordings extends Scene {
                             colorNormal={ this.props.colorNormal }
                             colorFocused={ this.props.colorFocused }
                             colorDisabled={ this.props.colorDisabled }
+                            focus={ this.props.focus }
                         />
                         <RecordingsTableRow
                             text="NinjaGo: Masters of Spinjitzu (The Titanium Ninja)"
@@ -122,6 +156,7 @@ export default class SceneRecordings extends Scene {
                             colorNormal={ this.props.colorNormal }
                             colorFocused={ this.props.colorFocused }
                             colorDisabled={ this.props.colorDisabled }
+                            focus={ this.props.focus }
                         />
                         <RecordingsTableRow
                             text="My Knight and Me"
@@ -130,6 +165,7 @@ export default class SceneRecordings extends Scene {
                             colorNormal={ this.props.colorNormal }
                             colorFocused={ this.props.colorFocused }
                             colorDisabled={ this.props.colorDisabled }
+                            focus={ this.props.focus }
                         />
                         <RecordingsTableRow
                             text="Grimsby"
@@ -138,6 +174,7 @@ export default class SceneRecordings extends Scene {
                             colorNormal={ this.props.colorNormal }
                             colorFocused={ this.props.colorFocused }
                             colorDisabled={ this.props.colorDisabled }
+                            focus={ this.props.focus }
                         />
                         <RecordingsTableRow
                             text="Avengers"
@@ -146,6 +183,7 @@ export default class SceneRecordings extends Scene {
                             colorNormal={ this.props.colorNormal }
                             colorFocused={ this.props.colorFocused }
                             colorDisabled={ this.props.colorDisabled }
+                            focus={ this.props.focus }
                         />
                         <RecordingsTableRow
                             text="Westworld (9)"
@@ -154,6 +192,7 @@ export default class SceneRecordings extends Scene {
                             colorNormal={ this.props.colorNormal }
                             colorFocused={ this.props.colorFocused }
                             colorDisabled={ this.props.colorDisabled }
+                            focus={ this.props.focus }
                         />
                         <RecordingsTableRow
                             text="Krypto: The Superdog"
@@ -162,6 +201,7 @@ export default class SceneRecordings extends Scene {
                             colorNormal={ this.props.colorNormal }
                             colorFocused={ this.props.colorFocused }
                             colorDisabled={ this.props.colorDisabled }
+                            focus={ this.props.focus }
                         />
                         <RecordingsTableRow
                             text="X-Men Origins: Wolverine"
@@ -170,6 +210,7 @@ export default class SceneRecordings extends Scene {
                             colorNormal={ this.props.colorNormal }
                             colorFocused={ this.props.colorFocused }
                             colorDisabled={ this.props.colorDisabled }
+                            focus={ this.props.focus }
                         />
                     </tbody>
                 </table>

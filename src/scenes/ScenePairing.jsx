@@ -3,30 +3,16 @@ import Scene from "../core/Scene";
 import PairingBackground from '../sceneComponents/scenePairing/PairingBackground';
 import Line from '../sceneComponents/scenePairing/Line';
 import PairingCode from '../sceneComponents/scenePairing/PairingCode';
-import reactCSS from 'reactcss';
 
 export default class ScenePairing extends Scene {
 
-    getFontCss(color) {
-        console.log('gete font = ' + JSON.stringify(color.font.r));
-        return reactCSS({
-                'default': {
-                    font: {
-                        color: `rgb(${ color.font.r },
-                              ${ color.font.g },
-                              ${ color.font.b })`
-                    }
-                }
-            }
-        );
-    }
 
     render () {
         const keyNumbers = [1,2,3];
         const keyNumbers2 = [4,5,6];
         const keyNumbers3 = [7,8,9];
         const keyNumbers4 = [0,"", "OK"];
-        const icon = "BSP";
+        const icon = "icon-backspace";
 
         this.state.hidden = !this.isSceneActive();
         console.log("logo background style = " + this.props.logoBackgroundStyle);
@@ -44,13 +30,13 @@ export default class ScenePairing extends Scene {
                      style={ this.props.logoBackgroundStyle }
                 ></div>
                 <div className="info"
-                     style={ this.getFontCss(this.props.colorNormal).font }
+                     style={ this.getFontCSS(this.props.colorNormal).font }
                 >
                     <h1>Welcome</h1>
                     <p>You must enter a <strong>pairing code</strong>, which you have obtained from your ISP partner of<strong> moderntv.cz</strong>. </p>
                 </div>
                 <div className="keyboard_pin_instruction"
-                     style={ this.getFontCss(this.props.colorNormal).font }
+                     style={ this.getFontCSS(this.props.colorNormal).font }
                 >
                     Enter pairing code:
                 </div>
@@ -82,7 +68,7 @@ export default class ScenePairing extends Scene {
                     />
                 </div>
                 <div id="snippet-code2"
-                     style={ this.getFontCss(this.props.colorNormal).font }
+                     style={ this.getFontCSS(this.props.colorNormal).font }
                 >
                     <div className="codes pairing_code">
                         <h1>Pairing code:</h1>
@@ -94,7 +80,7 @@ export default class ScenePairing extends Scene {
                     <div className="numbers">12345678</div>
                 </div>
                 <div className="url"
-                     style={ this.getFontCss(this.props.colorNormal).font }
+                     style={ this.getFontCSS(this.props.colorNormal).font }
                 >www.moderntv.cz</div>
             </div>
         )

@@ -19,7 +19,9 @@ export default class ChannelNumber extends Button {
                  onMouseOver={ this.mouseOver }
                  onMouseOut={ this.mouseOut }
             >
-                <div className="text">01</div>
+                <div className="text"
+                     style={ {color: styles.color.color} }
+                >01</div>
             </div>
         )
     }
