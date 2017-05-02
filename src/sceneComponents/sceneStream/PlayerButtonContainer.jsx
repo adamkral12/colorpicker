@@ -4,7 +4,7 @@ import Button from '../../core/Button';
 export default class PlayerButtonContainer extends Component {
 
     render () {
-        console.log('PlayerButtonContainer font = ' + JSON.stringify(this.props.font));
+        //console.log('PlayerButtonContainer font = ' + JSON.stringify(this.props.font));
 
         return (
             <ul className="buttons">

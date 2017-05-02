@@ -7,7 +7,7 @@ export default class Event extends OnlyFocusButton {
     shouldComponentUpdate(nextProps, nextState) {
 
 
-        console.log('next props focus ');
+        //console.log('next props focus ');
         if (nextProps.focus === 'normal') {
             return true;
         } else if (nextProps.focus === 'disabled' && this.props.timePosition === 'future') {

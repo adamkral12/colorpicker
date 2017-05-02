@@ -42,7 +42,7 @@ export default class Button extends Component {
      */
     shouldComponentUpdate(nextProps, nextState) {
         //console.log('Buttons next state = ' + JSON.stringify(nextState) + ', nextprops = ' + JSON.stringify(nextProps));
-        console.log('should button update, focus = ' + nextProps.focus);
+        //console.log('should button update, focus = ' + nextProps.focus);
         switch (nextProps.focus) {
             case 'normal':
                 //console.log('normal focus = ' + nextState.normal);
@@ -86,7 +86,7 @@ export default class Button extends Component {
 
     getStyles() {
         let color = {};
-        console.log('Button get styles, hover = ' + this.state.hover + ', focusable = ' + this.state.focusable + ', focus = ' + this.props.focus);
+        //console.log('Button get styles, hover = ' + this.state.hover + ', focusable = ' + this.state.focusable + ', focus = ' + this.props.focus);
         if (this.state.hover && this.state.focusable && this.props.focus !== 'disabled') {
             color = this.props.colorFocused;
         } else if(this.props.focus === 'disabled') {

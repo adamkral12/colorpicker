@@ -10,7 +10,7 @@ export default class TimeFrame extends Button {
 
     render() {
         const styles = this.getStyles();
-        console.log('TimeFrame font = ' + JSON.stringify(styles.color));
+        //console.log('TimeFrame font = ' + JSON.stringify(styles.color));
         return (
             <div id="timeframe" className="focusable">
                 <div className="icon-timeframe">

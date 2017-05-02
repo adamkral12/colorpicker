@@ -8,7 +8,7 @@ export default class TableSettingsRow extends Button {
         const normalFont = this.getCSS(this.props.colorNormal).color.color;
         const classes =  "row focusable";
         const lightColor = this.shadeRGBColor(this.props.colorFocused, 0.15);
-        console.log('config get css = ' + JSON.stringify(this.getCSS(lightColor)));
+        //console.log('config get css = ' + JSON.stringify(this.getCSS(lightColor)));
         return (
             <tr className={ classes }
                 onMouseOver={ this.mouseOver }

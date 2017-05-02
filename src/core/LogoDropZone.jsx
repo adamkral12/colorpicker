@@ -33,13 +33,13 @@ export default class LogoDropZone extends Component {
     }
 
     onDropAccepted(acceptedFiles) {
-        console.log('ondrop accepted files ' + JSON.stringify(acceptedFiles));
+        //console.log('ondrop accepted files ' + JSON.stringify(acceptedFiles));
         this.setState({ logoWasUploaded: true });
         const backgroundWithUrl = update(this.state.logoUploaded, {
             'backgroundImage': { $set: 'url(' + acceptedFiles[0].preview + ')' }
         });
 
-        console.log('on drop ' + JSON.stringify(backgroundWithUrl));
+        //console.log('on drop ' + JSON.stringify(backgroundWithUrl));
         this.setState({ logoUploaded: backgroundWithUrl });
         this.props.handleDropAccepted(backgroundWithUrl);
     }
@@ -47,7 +47,7 @@ export default class LogoDropZone extends Component {
     onDropRejected(rejectedFiles) {
 
         rejectedFiles.forEach(file => {
-            console.log('file name' + file.name);
+            //console.log('file name' + file.name);
             this.props.handleDropRejected(file.name);
         });
     }
@@ -58,7 +58,7 @@ export default class LogoDropZone extends Component {
 
     render() {
 
-        console.log('on drop ' + JSON.stringify(this.state.logoUploaded));
+        //console.log('on drop ' + JSON.stringify(this.state.logoUploaded));
         return (
             <div className="dropzone" >
                 <DropZone onDropAccepted={ this.onDropAccepted }

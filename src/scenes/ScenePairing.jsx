@@ -15,7 +15,7 @@ export default class ScenePairing extends Scene {
         const icon = "icon-backspace";
 
         this.state.hidden = !this.isSceneActive();
-        console.log("logo background style = " + this.props.logoBackgroundStyle);
+        //console.log("logo background style = " + this.props.logoBackgroundStyle);
         return (
             <div id="scene-pairing2"
                  className="scene"

@@ -23,7 +23,7 @@ export default class Main extends Component {
     };
 
     handleLogoUpdate(logoBackgroundStyle) {
-        console.log('Main handle logo update');
+        //console.log('Main handle logo update');
         this.setState({ logoBackgroundStyle: logoBackgroundStyle });
     }
 
@@ -138,6 +138,7 @@ export default class Main extends Component {
         const colorNormal = this.state[this.getColorbyFocus('normal')];
         const font = { rgb: color.font };
         const focus = this.state.focus;
+        console.log('Main state = ' + JSON.stringify(this.state));
 
         return (
           <div id="container">
