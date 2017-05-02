@@ -32,6 +32,22 @@ export default class Main extends Component {
         this.setState({ activeSceneIndex: index });
     };
 
+    shadeRGBColor(color, percent) {
+        console.log('shade color = ' + JSON.stringify(color));
+
+        const t = percent<0?0:255,p=percent<0?percent*-1:percent;
+        const r = parseInt(color.rgb.r, 10);
+        const g = parseInt(color.rgb.g, 10);
+        const b = parseInt(color.rgb.b, 10);
+        return {rgb: {
+            r: (Math.round((t-r)*p)+r),
+            g: (Math.round((t-g)*p)+g),
+            b: (Math.round((t-b)*p)+b)
+        },
+            font: color.font
+        };
+    }
+
     /* default state */
     state = {
         'color': {
@@ -116,6 +132,16 @@ export default class Main extends Component {
         let colorState = {};
         colorState[this.getColorbyFocus()] = nextColor;
         this.setState(colorState);
+
+        if (this.state.focus === 'normal') {
+            const colorNormalDarker = this.shadeRGBColor(color, -0.5);
+            const colorNormalLighter = this.shadeRGBColor(color, 0.4);
+            this.setState({ 'color-normal-darker': colorNormalDarker});
+            this.setState({ 'color-normal-lighter': colorNormalLighter});
+        } else if (this.state.focus === 'focused') {
+            const colorFocusedLighter = this.shadeRGBColor(color, 0.15);
+            this.setState({ 'color-focused-lighter': colorFocusedLighter});
+        }
     };
 
 

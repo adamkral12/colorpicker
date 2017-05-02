@@ -1,10 +1,12 @@
-@colorNormal: rgba(23, 113, 23, 1);
-@fontNormal: blue;
-@colorNormalLighter: rgb(236, 163, 102);
-@colorFocused: black;
-@fontFocused: pink;
+@colorNormal: rgba(42, 96, 45, 1);
+@fontNormal: white;
+@colorNormalLighter: rgb(127, 160, 129);
+@colorNormalDarker: rgb(21, 48, 23);
+@colorFocused: rgba(49, 175, 91, 1);
+@colorFocusedLighter: rgb(80, 187, 116);
+@fontFocused: black;
 @colorDisabled: rgba(210, 180, 161, 0.2);
-@fontDisabled: green;
+@fontDisabled: white;
 
 .snippet-panel-header {
   background: @colorNormal;
@@ -71,11 +73,11 @@
 
 #scene-pairing > #snippet-code > div.codes > div,
 #scene-pairing2 > #snippet-code2 > div.codes > div{
-  background:#6E3200;
+  background: @colorNormalDarker;
 }
 
 #snippet-info > div.info div.button {
-  background-color: #914b0f;
+  background-color: @colorNormal;
 }
 
 #snippet-options > ul.list > li.focus,
@@ -155,4 +157,17 @@
 
 .focus > .px263.focus-yellow, .active > .px263.focus-yellow {
   background: @colorNormalLighter;
+}
+
+#scene-stream > #snippet-player > .player > .content > .bar > .progress {
+  background: @colorNormal;
+}
+
+#scene-stream > #snippet-player > .player > .content > .bar > .progress.active:hover {
+  background: @colorFocused;
+}
+
+#scene-stream > #snippet-player > .player > .content > .channel-number {
+  background: @colorNormal;
+  color: @fontNormal;
 }

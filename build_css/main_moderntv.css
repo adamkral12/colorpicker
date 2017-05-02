@@ -1,5 +1,5 @@
 .snippet-panel-header {
-  background: green;
+  background: #2a602d;
 }
 #snippet-main-menu > ul.list > li.last,
 #snippet-main-menu > ul.list > li.settings,
@@ -21,7 +21,7 @@
 .icon-menu_records .path1,
 .icon-menu_settings .path1,
 .icon-menu_last_playback.focusable .path1 {
-  color: green;
+  color: #2a602d;
 }
 .icon-menu_last_playback .path1 {
   color: #ACACAC;
@@ -31,7 +31,7 @@
 #snippet-main-menu > ul.list > li.icon-menu_records.focus > .path1,
 #snippet-main-menu > ul.list > li.icon-menu_settings.focus > .path1,
 #snippet-main-menu > ul.list > li.icon-menu_last_playback.focus > .path1 {
-  color: black;
+  color: #31af5b;
 }
 .icon-menu_currently .path5,
 .icon-menu_currently .path6,
@@ -54,10 +54,10 @@
 }
 #scene-pairing > #snippet-code > div.codes > div,
 #scene-pairing2 > #snippet-code2 > div.codes > div {
-  background: #6E3200;
+  background: #153017;
 }
 #snippet-info > div.info div.button {
-  background-color: #914b0f;
+  background-color: #2a602d;
 }
 #snippet-options > ul.list > li.focus,
 #snippet-info > div.info div.button.focus,
@@ -65,11 +65,11 @@
 #snippet-enterpindialog .keyboardNumeric .line .key.focus .content,
 #snippet-pindialog .keyboardNumeric .line .key:focus .BSP,
 #snippet-enterpindialog .keyboardNumeric .line .key:focus .BSP {
-  background-color: black;
+  background-color: #31af5b;
 }
 #scene-pairing,
 #scene-pairing2 {
-  background: green no-repeat;
+  background: #2a602d no-repeat;
 }
 #scene-pairing > div.logo,
 #scene-pairing2 > div.logo {
@@ -79,10 +79,10 @@
   background-size: 183px;
 }
 #scene-epg .event.playable.now {
-  background-color: #eca366;
+  background-color: #7fa081;
 }
 #scene-epg .event.playable {
-  background-color: green;
+  background-color: #2a602d;
 }
 #scene-epg .event.now {
   background-color: #81b7bc;
@@ -93,39 +93,49 @@
 #scene-epg .channel.focus .event.selected,
 #scene-epg .channel.focus .event.focus,
 #scene-epg .channel.focus .channelName {
-  background-color: black;
+  background-color: #31af5b;
   color: #000;
 }
 /* player - buttons */
 #scene-stream > #snippet-player > .player > .content > ul.buttons > li {
-  background: green;
+  background: #2a602d;
 }
 #scene-stream > #snippet-player > .player > .content > ul.buttons > li.focus {
-  background: black;
+  background: #31af5b;
 }
 .icon-timeframe .path1 {
-  color: green;
+  color: #2a602d;
 }
 .icon-timeframe .path2 {
-  color: black;
+  color: #31af5b;
 }
 /* curlist and recorded list focus */
 .focus > .px263.focus-blue,
 .active > .px263.focus-blue {
-  background: black;
+  background: #31af5b;
 }
 .focus > .px437.focus-blue,
 .active > .px437.focus-blue {
-  background: black;
+  background: #31af5b;
 }
 #scene-stream > #snippet-player > .player > .content > ul.buttons > li.noactive {
   background-color: rgba(210, 180, 161, 0.2);
 }
 .focus > .px350.focus-yellow,
 .active > .px350.focus-yellow {
-  background: black;
+  background: #31af5b;
 }
 .focus > .px263.focus-yellow,
 .active > .px263.focus-yellow {
-  background: #eca366;
+  background: #7fa081;
+}
+#scene-stream > #snippet-player > .player > .content > .bar > .progress {
+  background: #2a602d;
+}
+#scene-stream > #snippet-player > .player > .content > .bar > .progress.active:hover {
+  background: #31af5b;
+}
+#scene-stream > #snippet-player > .player > .content > .channel-number {
+  background: #2a602d;
+  color: white;
 }
