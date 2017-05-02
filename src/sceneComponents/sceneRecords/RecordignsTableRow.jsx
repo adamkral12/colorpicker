@@ -1,9 +1,8 @@
 import React from 'react';
-import OnlyFocusButton from '../../core/OnlyFocusButton';
 import Button from '../../core/Button';
 import reactCSS from 'reactcss';
 
-export default class RecordignsTableRow extends OnlyFocusButton {
+export default class RecordignsTableRow extends Button {
 
     getGreyCSS() {
         return reactCSS({
@@ -18,6 +17,7 @@ export default class RecordignsTableRow extends OnlyFocusButton {
 
     render() {
         const styles = this.getStyles();
+        const normalFontStyle = { color: this.getCSS(this.props.colorNormal).color.color };
 
         return (
             <tr className="row focusable template-normal"
@@ -25,22 +25,22 @@ export default class RecordignsTableRow extends OnlyFocusButton {
                 onMouseOver={ this.mouseOver }
             >
                 <th className="name box px350 focus-yellow"
-                    style={ this.state.hover ? styles.color : {} }
+                    style={ this.state.hover ? styles.color : normalFontStyle }
                 >
                     <div className="text">{ this.props.text }</div>
                 </th>
                 <td className="start box px240 focus-grey center"
-                    style={ this.state.hover ? this.getGreyCSS().grey : {} }
+                    style={ this.state.hover ? this.getGreyCSS().grey : normalFontStyle }
                 >
                     <div className="text"
-                         style={ this.state.hover ? { color: "black" } : {} }
+                         style={ this.state.hover ? { color: "black" } : normalFontStyle }
                     >{ this.props.date }</div>
                 </td>
                 <td className="kanal box px203 focus-grey center"
-                    style={ this.state.hover ? this.getGreyCSS().grey : {} }
+                    style={ this.state.hover ? this.getGreyCSS().grey : normalFontStyle }
                 >
                     <div className="text"
-                         style={ this.state.hover ? { color: "black" } : {} }
+                         style={ this.state.hover ? { color: "black" } : normalFontStyle }
                     >{ this.props.channelName }</div>
                 </td>
             </tr>

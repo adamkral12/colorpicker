@@ -34,6 +34,7 @@ export default class SceneStream extends Scene {
     render () {
         this.state.hidden = !this.isSceneActive();
         const errorText = "Uploaded file's " + (this.state.fileName ? this.state.fileName : "") + " format is not allowed, please upload .png or .jpg image";
+        const normalFont = this.getFontCSS(this.props.colorNormal).font;
         return (
             <div id={this.props.id}
                  className='scene'
@@ -66,12 +67,23 @@ export default class SceneStream extends Scene {
                                 <tbody>
                                     <tr>
                                         <td className="channels channel1">HBO</td>
-                                        <td className="titles title1"><div>X-Men Origins:Wolverine</div></td>
-                                        <td className="time time1">22:20 - 00:35</td>
+                                        <td className="titles title1"
+                                            style={ normalFont }
+                                        >
+                                            <div>X-Men Origins:Wolverine</div>
+                                        </td>
+                                        <td className="time time1"
+                                            style={ normalFont }
+                                        >22:20 - 00:35
+                                        </td>
                                     </tr>
                                     <tr className="secondRow">
                                         <td className="channels channel2">Following:</td>
-                                        <td className="titles title2"><div>The Matrix</div></td>
+                                        <td className="titles title2"
+                                            style={ normalFont }
+                                        >
+                                            <div>The Matrix</div>
+                                        </td>
                                         <td className="time time2"/>
                                     </tr>
                                 </tbody>

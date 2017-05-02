@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import reactCSS from 'reactcss';
 
 /*
     Abstract class for Scenes
@@ -16,8 +17,17 @@ export default class Scene extends Component {
     };
 
 
-    hide() {
-        return null;
+    getFontCSS(color) {
+        return reactCSS({
+                'default': {
+                    font: {
+                        color: `rgb(${ color.font.r },
+                              ${ color.font.g },
+                              ${ color.font.b })`
+                    }
+                }
+            }
+        );
     };
 
     /* Override by concrete scene render

@@ -7,7 +7,9 @@ export default class Event extends OnlyFocusButton {
 
     shouldComponentUpdate(nextProps, nextState) {
 
-        if (nextProps.focus === 'normal' && (this.props.timePosition === 'now' || this.props.timePosition === "")) {
+
+        console.log('next props focus ');
+        if (nextProps.focus === 'normal') {
             return true;
         } else if (nextProps.focus === 'disabled' && this.props.timePosition === 'future') {
             return true;
@@ -26,7 +28,9 @@ export default class Event extends OnlyFocusButton {
                  className={ classes }
                  style={ this.state.hover ?
                      styles.color : this.props.timePosition === 'future' ?
-                         this.getCSS(this.props.colorDisabled).color : this.props.timePosition === 'now' ?
+                     { background: this.getCSS(this.props.colorDisabled).color.background,
+                       color: this.getCSS(this.props.colorNormal).color.color
+                     } : this.props.timePosition === 'now' ?
                               this.getCSS(lighterColor).color : this.getCSS(this.props.colorNormal).color
                  }
                  onMouseOut={ this.mouseOut }

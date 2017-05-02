@@ -4,8 +4,10 @@ import TableSettingsRow from '../sceneComponents/sceneConfiguration/TableSetting
 import PanelHeader from '../sceneComponents/sceneConfiguration/PanelHeader';
 
 export default class SceneConfiguration extends Scene {
+
     render() {
         this.state.hidden = !this.isSceneActive();
+        const normalFont = this.getFontCSS(this.props.colorNormal).color;
 
         return(
             <div id="scene-configuration"
@@ -70,7 +72,9 @@ export default class SceneConfiguration extends Scene {
                     </table>
                 </div>
 
-                <div className="info">
+                <div className="info"
+                     style={ this.getFontCSS(this.props.colorNormal).font }
+                >
                     <div className="label_value_wrapper">
                         <div className="label"><span className="versionOfTheApplication">App version</span>:</div>
                         <div className="value version">2.0.213</div>
