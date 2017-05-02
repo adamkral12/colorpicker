@@ -13,14 +13,14 @@ export default class LogoDropZone extends Component {
             logoNotUploaded: {
                 width: '200px',
                 height: '72px',
-                'border-width': '2px',
-                'border-color': 'rgb(102, 102, 102)',
-                'border-style': 'dashed',
-                'border-radius': '5px',
-                'background-color': 'rgba(210, 180, 161, 0.2)',
-                'font-size': '20px',
-                'color': 'white',
-                'background-position': '0 0'
+                borderWidth: '2px',
+                borderColor: 'rgb(102, 102, 102)',
+                borderStyle: 'dashed',
+                borderRadius: '5px',
+                backgroundColor: 'rgba(210, 180, 161, 0.2)',
+                fontSize: '20px',
+                color: 'white',
+                backgroundPosition: '0 0'
             },
             logoUploaded: {
                 'backgroundSize': '200px',
@@ -41,10 +41,11 @@ export default class LogoDropZone extends Component {
 
         console.log('on drop ' + JSON.stringify(backgroundWithUrl));
         this.setState({ logoUploaded: backgroundWithUrl });
+        this.props.handleDropAccepted();
     }
 
     onDropRejected(rejectedFiles) {
-        console.log('on drop rejected files ' + JSON.stringify(rejectedFiles));
+        this.props.handleDropRejected();
     }
 
     renderDragText() {

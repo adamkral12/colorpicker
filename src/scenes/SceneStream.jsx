@@ -5,9 +5,28 @@ import TimeFrame from '../sceneComponents/sceneStream/TimeFrame';
 import SeekBar from '../sceneComponents/sceneStream/SeekBar';
 import ChannelNumber from "../sceneComponents/sceneStream/ChannelNumber";
 import LogoDropZone from '../core/LogoDropZone';
+import ErrorContainer from '../core/ErrorContainer';
+
 
 export default class SceneStream extends Scene {
-    
+
+    constructor(props) {
+        super(props);
+        this.handleDropAccepted = this.handleDropAccepted.bind(this);
+        this.handleDropRejected = this.handleDropRejected.bind(this);
+    }
+
+    componentWillMount() {
+        this.setState({ errorHidden: true });
+    }
+
+    handleDropRejected() {
+        this.setState({ errorHidden: false });
+    }
+
+    handleDropAccepted() {
+        this.setState( { errorHidden: true });
+    }
 
     render () {
         this.state.hidden = !this.isSceneActive();
@@ -17,6 +36,11 @@ export default class SceneStream extends Scene {
                  className='scene'
                  style={ this.state.hidden ? { display: "none"} : { display: "block" }}
             >
+
+                <ErrorContainer
+                    hidden={ this.state.errorHidden }
+                    text="Uploaded image format is not allowed, please upload .png or .jpg image"
+                />
 
                 <div id="snippet-player">
                     <div className="player">
@@ -59,6 +83,8 @@ export default class SceneStream extends Scene {
                             <div className="logo">
                                 <LogoDropZone
                                     colorDisabled={ this.props.colorDisabled }
+                                    handleDropRejected={ this.handleDropRejected }
+                                    handleDropAccepted={ this.handleDropAccepted }
                                 />
                             </div>
                         </div>
