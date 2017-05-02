@@ -16,7 +16,7 @@ export default class RecordignsTableRow extends Button {
     }
 
     render() {
-        const styles = this.getStyles();
+        const focusedStyles = this.getCSS(this.props.colorFocused);
         const normalFontStyle = { color: this.getCSS(this.props.colorNormal).color.color };
 
         return (
@@ -25,7 +25,7 @@ export default class RecordignsTableRow extends Button {
                 onMouseOver={ this.mouseOver }
             >
                 <th className="name box px350 focus-yellow"
-                    style={ this.state.hover ? styles.color : normalFontStyle }
+                    style={ this.state.hover ? focusedStyles.color : normalFontStyle }
                 >
                     <div className="text">{ this.props.text }</div>
                 </th>

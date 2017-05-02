@@ -3,8 +3,12 @@ import Button from '../../core/Button';
 
 export default class TableCurrentlyRow extends Button {
 
+        constructor(props) {
+            super(props);
+        }
+
         render() {
-            const styles = this.getStyles();
+            const styles = this.getCSS(this.props.colorFocused);
             const classes =  "row focusable";
             const normalFontStyle = { color: this.getCSS(this.props.colorNormal).color.color };
             return (

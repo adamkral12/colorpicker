@@ -44,6 +44,7 @@ export default class SceneCurrently extends Scene {
                                             <TableCurrentlyRow
                                                 colorNormal={ this.props.colorNormal }
                                                 colorFocused={ this.props.colorFocused }
+                                                colorDisabled={ this.props.colorDisabled }
                                                 name="HBO 3"
                                                 epg="John Oliver"
                                                 focus={ this.props.focus }
