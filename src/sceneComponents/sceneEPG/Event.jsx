@@ -1,6 +1,5 @@
 import React from 'react';
 import OnlyFocusButton from '../../core/OnlyFocusButton';
-import Button from '../../core/Button';
 import classNames from 'classnames';
 
 export default class Event extends OnlyFocusButton {

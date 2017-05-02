@@ -7,7 +7,6 @@ export default class SceneConfiguration extends Scene {
 
     render() {
         this.state.hidden = !this.isSceneActive();
-        const normalFont = this.getFontCSS(this.props.colorNormal).color;
 
         return(
             <div id="scene-configuration"

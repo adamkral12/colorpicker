@@ -33,7 +33,7 @@ export default class SceneStream extends Scene {
 
     render () {
         this.state.hidden = !this.isSceneActive();
-        const errorText = "Uploaded file's " + (this.state.fileName ? this.state.fileName : "") + " format is not allowed, please upload .png or .jpg image";
+        const errorText = "Uploaded file's " + (this.state.fileName ? this.state.fileName : "") + " format is not allowed, please upload .png, .jpg or .svg image";
         const normalFont = this.getFontCSS(this.props.colorNormal).font;
         return (
             <div id={this.props.id}

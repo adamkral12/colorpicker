@@ -13,7 +13,8 @@
     "react-color": "^2.11.4",
     "ucfirst":"",
     "react-addons-update": "",
-    "react-dropzone": ""
+    "react-dropzone": "",
+    "image-size": ""
   },
   "scripts": {
     "start": "react-scripts start",

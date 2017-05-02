@@ -23,9 +23,9 @@ export default class LogoDropZone extends Component {
                 backgroundPosition: '0 0'
             },
             logoUploaded: {
-                'backgroundSize': '200px',
-                'backgroundRepeat': 'no-repeat',
-                'backgroundPosition': 'bottom right ',
+                backgroundSize: '200px',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'bottom right ',
                 height: '72px',
                 width: '200px'
             }
@@ -63,7 +63,7 @@ export default class LogoDropZone extends Component {
             <div className="dropzone" >
                 <DropZone onDropAccepted={ this.onDropAccepted }
                           onDropRejected={ this.onDropRejected }
-                          accept="image/jpeg, image/png"
+                          accept="image/jpeg, image/png, image/svg+xml"
                           style={ this.state.logoWasUploaded ? this.state.logoUploaded : this.state.logoNotUploaded }
                 >
                     { this.renderDragText() }
