@@ -137,5 +137,7 @@
 }
 #scene-stream > #snippet-player > .player > .content > .channel-number {
   background: #2a602d;
+}
+#scene-stream > #snippet-player > .player > .content > .channel-number > div.text {
   color: white;
 }
