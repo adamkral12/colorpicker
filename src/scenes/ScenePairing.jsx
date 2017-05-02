@@ -57,21 +57,18 @@ export default class ScenePairing extends Scene {
                 <div className="keyboardNumeric">
                     <Line
                         text={ keyNumbers }
-                        color={ this.props.color }
                         colorFocused={ this.props.colorFocused }
                         colorNormal={ this.props.colorNormal }
                         focus={ this.props.focus }
                     />
                     <Line
                         text={ keyNumbers2 }
-                        color={ this.props.color }
                         focus={ this.props.focus }
                         colorFocused={ this.props.colorFocused }
                         colorNormal={ this.props.colorNormal }
                     />
                     <Line
                         text={ keyNumbers3 }
-                        color={ this.props.color }
                         colorFocused={ this.props.colorFocused }
                         colorNormal={ this.props.colorNormal }
                         focus={ this.props.focus }
@@ -79,7 +76,6 @@ export default class ScenePairing extends Scene {
                     <Line
                         text={ keyNumbers4 }
                         icon={ icon } //icon for backspace
-                        color={ this.props.color }
                         colorFocused={ this.props.colorFocused }
                         colorNormal={ this.props.colorNormal }
                         focus={ this.props.focus }

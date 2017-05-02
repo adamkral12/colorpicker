@@ -8,7 +8,6 @@ export default class Line extends Component {
             <div className="line">
                 <Key
                     text={ this.props.text[0] }
-                    color={ this.props.color }
                     colorFocused={ this.props.colorFocused }
                     colorNormal={ this.props.colorNormal }
                     focus={ this.props.focus }
@@ -16,14 +15,12 @@ export default class Line extends Component {
                 <Key
                     text={ this.props.text[1] }
                     icon={ this.props.icon }
-                    color={ this.props.color }
                     colorFocused={ this.props.colorFocused }
                     colorNormal={ this.props.colorNormal }
                     focus={ this.props.focus }
                 />
                 <Key
                     text={ this.props.text[2] }
-                    color={ this.props.color }
                     colorFocused={ this.props.colorFocused }
                     colorNormal={ this.props.colorNormal }
                     focus={ this.props.focus }

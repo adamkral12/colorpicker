@@ -1,5 +1,6 @@
 import React from 'react';
 import OnlyFocusButton from '../../core/OnlyFocusButton';
+import Button from '../../core/Button';
 import reactCSS from 'reactcss';
 
 export default class RecordignsTableRow extends OnlyFocusButton {

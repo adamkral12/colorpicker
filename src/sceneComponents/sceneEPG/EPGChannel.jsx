@@ -35,7 +35,6 @@ export default class EPGChannel extends Component {
                 key={index}
                 text={ this.props.events[index] }
                 timePosition={ timePosition }
-                color={ this.props.color }
                 colorFocused={ this.props.colorFocused }
                 colorDisabled={ this.props.colorDisabled }
                 colorNormal={ this.props.colorNormal }

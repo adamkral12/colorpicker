@@ -1,5 +1,6 @@
 import React from 'react';
 import OnlyFocusButton from '../../core/OnlyFocusButton';
+import Button from '../../core/Button';
 import classNames from 'classnames';
 
 export default class Event extends OnlyFocusButton {
@@ -17,7 +18,7 @@ export default class Event extends OnlyFocusButton {
         const id = 'event_' + this.props.channelId.split('channel_')[1] + '-' + this.props.index;
         const classes = classNames('event focusable playable', this.props.timePosition );
         const lighterColor = this.shadeRGBColor(this.props.colorNormal, 0.4);
-        const styles = this.getStyles();
+        const styles = this.getCSS(this.props.colorFocused);
 
         //console.log('props color = ' + JSON.stringify(this.props.colorNormal));
         return(

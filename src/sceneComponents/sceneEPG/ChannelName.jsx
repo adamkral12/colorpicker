@@ -3,7 +3,7 @@ import OnlyFocusButton from '../../core/OnlyFocusButton';
 
 export default class ChannelName extends OnlyFocusButton {
     render() {
-        const styles= this.getStyles();
+        const styles= this.getCSS(this.props.colorNormal);
 
         return (
             <div className="channelBox"

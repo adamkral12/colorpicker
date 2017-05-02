@@ -87,17 +87,6 @@ table.settings th + td {
     margin-right: 6px;
 }
 
-.box > div {
-    padding: 0 25px;
-    text-overflow: ellipsis;
-    line-height: 46px;
-    white-space: nowrap;
-    overflow: hidden;
-    color: #FFF;
-    text-align: left;
-    font-size: 23px;
-}
-
 .box.center > div {
     text-align: center;
 }

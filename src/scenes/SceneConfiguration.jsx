@@ -29,41 +29,41 @@ export default class SceneConfiguration extends Scene {
                             <TableSettingsRow
                                 textLeft="Video quality"
                                 textRight="HD"
-                                color={ this.props.color }
-                                colorFocused={ this.props.colorFocused }
                                 colorNormal={ this.props.colorNormal }
+                                colorFocused={ this.props.colorFocused }
+                                colorDisabled={ this.props.colorDisabled }
                                 focus={ this.props.focus }
                             />
                             <TableSettingsRow
                                 textLeft="Output settings"
                                 textRight="1080p@50Hz"
-                                color={ this.props.color }
-                                colorFocused={ this.props.colorFocused }
                                 colorNormal={ this.props.colorNormal }
+                                colorFocused={ this.props.colorFocused }
+                                colorDisabled={ this.props.colorDisabled }
                                 focus={ this.props.focus }
                             />
                             <TableSettingsRow
                                 textLeft="Show unavailable channels"
                                 textRight="YES"
-                                color={ this.props.color }
-                                colorFocused={ this.props.colorFocused }
                                 colorNormal={ this.props.colorNormal }
+                                colorFocused={ this.props.colorFocused }
+                                colorDisabled={ this.props.colorDisabled }
                                 focus={ this.props.focus }
                             />
                             <TableSettingsRow
                                 textLeft="Account: custom@moderntv.eu"
                                 textRight="Delete pairing"
-                                color={ this.props.color }
-                                colorFocused={ this.props.colorFocused }
                                 colorNormal={ this.props.colorNormal }
+                                colorFocused={ this.props.colorFocused }
+                                colorDisabled={ this.props.colorDisabled }
                                 focus={ this.props.focus }
                             />
                             <TableSettingsRow
                                 textLeft="Language selection"
                                 textRight="English"
-                                color={ this.props.color }
-                                colorFocused={ this.props.colorFocused }
                                 colorNormal={ this.props.colorNormal }
+                                colorFocused={ this.props.colorFocused }
+                                colorDisabled={ this.props.colorDisabled }
                                 focus={ this.props.focus }
                             />
                         </tbody>

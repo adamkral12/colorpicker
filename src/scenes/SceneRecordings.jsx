@@ -71,19 +71,19 @@ export default class SceneRecordings extends Scene {
 
                 <div id="snippet-recorded-list">
 
-                    <div className="player-clickable clickable" data-value="stream"></div>
+                    <div className="player-clickable clickable" ></div>
                     <div className="emptyList"></div>
 
-                    <div className="currentlyArrow clickable" data-value="left" id="recArrowLeft">
+                    <div className="currentlyArrow clickable" id="recArrowLeft">
                        <span className="arrow arrow-left icon-arrow-left"/>
                     </div>
-                    <div className="currentlyArrow clickable" data-value="right" id="recArrowRight">
+                    <div className="currentlyArrow clickable" id="recArrowRight">
                        <span className="arrow arrow-right icon-arrow-right"/>
                     </div>
-                    <div className="currentlyArrow clickable" data-value="up" id="recArrowUp">
+                    <div className="currentlyArrow clickable"  id="recArrowUp">
                        <span className="arrow arrow-up icon-arrow-up"/>
                     </div>
-                    <div className="currentlyArrow clickable" data-value="down" id="recArrowDown">
+                    <div className="currentlyArrow clickable"  id="recArrowDown">
                        <span className="arrow arrow-down icon-arrow-bottom"/>
                     </div>
                     <div className="opaque-scroll"></div>
@@ -95,85 +95,81 @@ export default class SceneRecordings extends Scene {
                             text="Ultimate Taekwondo"
                             date="27.04.2017 08:30"
                             channelName="FightBox"
-                            color={ this.props.color }
                             colorNormal={ this.props.colorNormal }
                             colorFocused={ this.props.colorFocused }
-                            focus={ this.props.focus }
+                            colorDisabled={ this.props.colorDisabled }
                         />
                         <RecordingsTableRow
                             text="Watching the Hawks"
                             date="27.04.2017 08:29"
                             channelName="Russia Today"
-                            color={ this.props.color }
                             colorNormal={ this.props.colorNormal }
                             colorFocused={ this.props.colorFocused }
-                            focus={ this.props.focus }
+                            colorDisabled={ this.props.colorDisabled }
                         />
                         <RecordingsTableRow
                             text="CNN Newsroom"
                             date="27.04.2017 08:00"
                             channelName="CNN"
-                            color={ this.props.color }
                             colorNormal={ this.props.colorNormal }
                             colorFocused={ this.props.colorFocused }
-                            focus={ this.props.focus }
+                            colorDisabled={ this.props.colorDisabled }
                         />
                         <RecordingsTableRow
                             text="NinjaGo: Masters of Spinjitzu (The Titanium Ninja)"
                             date="27.04.2017 07:20"
                             channelName="Cartoon Network"
-                            color={ this.props.color }
                             colorNormal={ this.props.colorNormal }
                             colorFocused={ this.props.colorFocused }
-                            focus={ this.props.focus }
+                            colorDisabled={ this.props.colorDisabled }
                         />
                         <RecordingsTableRow
                             text="My Knight and Me"
                             date="27.04.2017 06:55"
                             channelName="Boomerang"
-                            color={ this.props.color }
                             colorNormal={ this.props.colorNormal }
                             colorFocused={ this.props.colorFocused }
+                            colorDisabled={ this.props.colorDisabled }
                         />
                         <RecordingsTableRow
                             text="Grimsby"
                             date="05.04.2017 03:10"
                             channelName="HBO 3"
-                            color={ this.props.color }
                             colorNormal={ this.props.colorNormal }
                             colorFocused={ this.props.colorFocused }
+                            colorDisabled={ this.props.colorDisabled }
                         />
                         <RecordingsTableRow
                             text="Avengers"
                             date="12.03.2017 20:55"
                             channelName="HBO 2"
-                            color={ this.props.color }
                             colorNormal={ this.props.colorNormal }
                             colorFocused={ this.props.colorFocused }
+                            colorDisabled={ this.props.colorDisabled }
                         />
                         <RecordingsTableRow
                             text="Westworld (9)"
                             date="02.03.2017 00:25"
                             channelName="HBO 3"
-                            color={ this.props.color }
                             colorNormal={ this.props.colorNormal }
                             colorFocused={ this.props.colorFocused }
+                            colorDisabled={ this.props.colorDisabled }
                         />
                         <RecordingsTableRow
                             text="Krypto: The Superdog"
                             date="23.02.2017 10:55"
                             channelName="Boomerang"
-                            color={ this.props.color }
                             colorNormal={ this.props.colorNormal }
                             colorFocused={ this.props.colorFocused }
+                            colorDisabled={ this.props.colorDisabled }
                         />
                         <RecordingsTableRow
                             text="X-Men Origins: Wolverine"
                             date="08.12.2016 22:20"
                             channelName="Prima COOL"
-                            color={ this.props.color }
                             colorNormal={ this.props.colorNormal }
                             colorFocused={ this.props.colorFocused }
+                            colorDisabled={ this.props.colorDisabled }
                         />
                     </tbody>
                 </table>

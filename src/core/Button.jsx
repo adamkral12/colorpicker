@@ -144,9 +144,6 @@ export default class Button extends Component {
 
     mouseOver() {
        this.setState({hover: true});
-        if (this.state.currentFocus !== 'disabled' && this.state.focusable) {
-            this.setState({ currentFocus: 'focused'});
-        }
     }
 
     mouseOut() {

@@ -1,10 +1,10 @@
 import React from 'react';
-import OnlyFocusButton from '../../core/OnlyFocusButton';
+import Button from '../../core/Button';
 
-export default class TableSettingsRow extends OnlyFocusButton {
+export default class TableSettingsRow extends Button {
 
     render() {
-        const styles = this.getStyles();
+        const styles = this.getCSS(this.props.colorFocused);
         const classes =  "row focusable";
         const lightColor = this.shadeRGBColor(this.props.colorFocused, 0.15);
         console.log('config get css = ' + JSON.stringify(this.getCSS(lightColor)));

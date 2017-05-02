@@ -5,7 +5,7 @@ import classNames from 'classnames';
 export default class Key extends OnlyFocusButton {
 
     render() {
-        const styles = this.getStyles();
+        const styles = this.getCSS(this.props.colorFocused);
 
         let iconSpan = <span className="content keyboard"
                              style={ this.state.hover ? styles.color : {} }

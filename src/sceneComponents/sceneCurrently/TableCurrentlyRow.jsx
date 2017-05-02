@@ -1,7 +1,7 @@
 import React from 'react';
-import OnlyFocusButton from '../../core/OnlyFocusButton';
+import Button from '../../core/OnlyFocusButton';
 
-export default class TableCurrentlyRow extends OnlyFocusButton {
+export default class TableCurrentlyRow extends Button {
 
         render() {
             const styles = this.getStyles();

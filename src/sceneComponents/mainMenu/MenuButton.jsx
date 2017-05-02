@@ -8,12 +8,11 @@ export default class MenuButton extends Button {
     renderPaths() {
         let paths = [];
         const styles = this.getStyles();
-        console.log('Menu button colorfocused = ' + JSON.stringify(this.getCSS(this.props.colorFocused)) + ', hover = ' + this.state.hover);
 
         for(let i =1; i <= this.props.numberOfPaths; i++ ) {
             let classes = "path path" + i;
             if (i === 1) {
-                paths.push(<span className={ classes } style={ this.state.hover ? { color: this.getCSS(this.props.colorFocused).color.background } :  {color : styles.color.background} } /> );
+                paths.push(<span className={ classes } style={ { color: styles.color.background } } /> );
             } else {
                 paths.push(<span className={ classes } /> );
             }
