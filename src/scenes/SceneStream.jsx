@@ -20,17 +20,19 @@ export default class SceneStream extends Scene {
         this.setState({ errorHidden: true });
     }
 
-    handleDropRejected() {
+    handleDropRejected(fileName) {
+        this.setState( { fileName: fileName });
         this.setState({ errorHidden: false });
     }
 
     handleDropAccepted() {
-        this.setState( { errorHidden: true });
+    this.setState( { fileName: "" });
+    this.setState( { errorHidden: true });
     }
 
     render () {
         this.state.hidden = !this.isSceneActive();
-
+        const errorText = "Uploaded file's " + (this.state.fileName ? this.state.fileName : "") + " format is not allowed, please upload .png or .jpg image";
         return (
             <div id={this.props.id}
                  className='scene'
@@ -39,7 +41,7 @@ export default class SceneStream extends Scene {
 
                 <ErrorContainer
                     hidden={ this.state.errorHidden }
-                    text="Uploaded image format is not allowed, please upload .png or .jpg image"
+                    text={ errorText }
                 />
 
                 <div id="snippet-player">

@@ -45,7 +45,11 @@ export default class LogoDropZone extends Component {
     }
 
     onDropRejected(rejectedFiles) {
-        this.props.handleDropRejected();
+
+        rejectedFiles.forEach(file => {
+            console.log('file name' + file.name);
+            this.props.handleDropRejected(file.name);
+        });
     }
 
     renderDragText() {
