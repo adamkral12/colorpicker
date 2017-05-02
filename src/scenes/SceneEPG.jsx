@@ -15,6 +15,7 @@ export default class SceneEPG extends Scene {
                 <PanelHeader
                     text="EPG"
                     color={ this.props.color }
+                    colorNormal={ this.props.colorNormal }
                     focus={ this.props.focus }
                 />
 

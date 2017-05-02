@@ -51,13 +51,13 @@ export default class SceneStream extends Scene {
                         <div className="content">
 
                             <SeekBar
-                                color={ this.props.color }
+                                colorNormal={ this.props.colorNormal }
                                 colorFocused={ this.props.colorFocused }
                                 focus={ this.props.focus }
                             />
 
                             <ChannelNumber
-                                color={ this.props.color }
+                                colorNormal={ this.props.colorNormal }
                                 colorFocused={ this.props.colorFocused }
                                 focus={ this.props.focus }
                             />
@@ -78,8 +78,9 @@ export default class SceneStream extends Scene {
                             </table>
 
                             <PlayerButtonContainer
-                                color={ this.props.color }
+                                colorNormal={ this.props.colorNormal }
                                 colorFocused={ this.props.colorFocused }
+                                colorDisabled={ this.props.colorDisabled }
                                 focus={ this.props.focus }
                             />
 
@@ -93,7 +94,7 @@ export default class SceneStream extends Scene {
                         </div>
 
                         <TimeFrame
-                            color={ this.props.color }
+                            colorNormal={ this.props.colorNormal }
                             colorFocused={ this.props.colorFocused }
                             focus={ this.props.focus }
                         />

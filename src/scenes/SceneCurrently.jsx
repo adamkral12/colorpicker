@@ -18,6 +18,7 @@ export default class SceneCurrently extends Scene {
                 <Panelheader
                     text="CURRENTLY"
                     color={ this.props.color }
+                    colorNormal={ this.props.colorNormal }
                     focus={ this.props.focus }
                 />
 
@@ -43,60 +44,70 @@ export default class SceneCurrently extends Scene {
                                         <tbody>
                                             <TableCurrentlyRow
                                                 color={ this.props.color }
+                                                colorNormal={ this.props.colorNormal }
                                                 colorFocused={ this.props.colorFocused }
                                                 name="HBO 3"
                                                 epg="John Oliver"
                                             />
                                             <TableCurrentlyRow
                                                 color={ this.props.color }
+                                                colorNormal={ this.props.colorNormal }
                                                 colorFocused={ this.props.colorFocused }
                                                 name="Eurosport 2"
                                                 epg="Snooker"
                                             />
                                             <TableCurrentlyRow
                                                 color={ this.props.color }
+                                                colorNormal={ this.props.colorNormal }
                                                 colorFocused={ this.props.colorFocused }
                                                 name="Discovery"
                                                 epg="Animals"
                                             />
                                             <TableCurrentlyRow
                                                 color={ this.props.color }
+                                                colorNormal={ this.props.colorNormal }
                                                 colorFocused={ this.props.colorFocused }
                                                 name="FilmBox"
                                                 epg="Sonny boy"
                                             />
                                             <TableCurrentlyRow
                                                 color={ this.props.color }
+                                                colorNormal={ this.props.colorNormal }
                                                 colorFocused={ this.props.colorFocused }
                                                 name="Golf Channel"
                                                 epg="RBC Heritage"
                                             />
                                             <TableCurrentlyRow
                                                 color={ this.props.color }
+                                                colorNormal={ this.props.colorNormal }
                                                 colorFocused={ this.props.colorFocused }
                                                 name="Cartoon Network"
                                                 epg="Xiaolin Chronicles (120)"
                                             />
                                             <TableCurrentlyRow
                                                 color={ this.props.color }
+                                                colorNormal={ this.props.colorNormal }
                                                 colorFocused={ this.props.colorFocused }
                                                 name="Disney Channel"
                                                 epg="Star Darlings (1)"
                                             />
                                             <TableCurrentlyRow
                                                 color={ this.props.color }
+                                                colorNormal={ this.props.colorNormal }
                                                 colorFocused={ this.props.colorFocused }
                                                 name="History Channel"
                                                 epg="Danny's cars"
                                             />
                                             <TableCurrentlyRow
                                                 color={ this.props.color }
+                                                colorNormal={ this.props.colorNormal }
                                                 colorFocused={ this.props.colorFocused }
                                                 name="AMC"
                                                 epg="Chitty chitty bang bang"
                                             />
                                             <TableCurrentlyRow
                                                 color={ this.props.color }
+                                                colorNormal={ this.props.colorNormal }
                                                 colorFocused={ this.props.colorFocused }
                                                 name="Fishing&Hunting"
                                                 epg="Ultimate Fishing Show"

@@ -149,7 +149,6 @@ export default class Main extends Component {
               <ViewPort
                   onStylesChange={ this.handleStylesChange }
                   activeSceneIndex={ this.state.activeSceneIndex }
-                  color={ color }
                   colorFocused={ colorFocused }
                   colorDisabled={ colorDisabled }
                   colorNormal={ colorNormal }

@@ -65,8 +65,9 @@ export default class EPGChannel extends Component {
                 <ChannelName
                     index={ this.props.index }
                     channelName={ this.props.channelName }
-                    color={ this.props.color }
+                    colorNormal={ this.props.colorNormal }
                     colorFocused={ this.props.colorFocused }
+                    colorDisabled={ this.props.colorDisabled }
                     focus={ this.props.focus }
                     hover={ this.state.hover }
                 />

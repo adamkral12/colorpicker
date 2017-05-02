@@ -16,6 +16,7 @@ export default class SceneRecordings extends Scene {
                 <Panelheader
                     text="RECORDINGS"
                     color={ this.props.color }
+                    colorNormal={ this.props.colorNormal }
                     focus={ this.props.focus }
                 />
 
@@ -95,6 +96,7 @@ export default class SceneRecordings extends Scene {
                             date="27.04.2017 08:30"
                             channelName="FightBox"
                             color={ this.props.color }
+                            colorNormal={ this.props.colorNormal }
                             colorFocused={ this.props.colorFocused }
                             focus={ this.props.focus }
                         />
@@ -103,6 +105,7 @@ export default class SceneRecordings extends Scene {
                             date="27.04.2017 08:29"
                             channelName="Russia Today"
                             color={ this.props.color }
+                            colorNormal={ this.props.colorNormal }
                             colorFocused={ this.props.colorFocused }
                             focus={ this.props.focus }
                         />
@@ -111,6 +114,7 @@ export default class SceneRecordings extends Scene {
                             date="27.04.2017 08:00"
                             channelName="CNN"
                             color={ this.props.color }
+                            colorNormal={ this.props.colorNormal }
                             colorFocused={ this.props.colorFocused }
                             focus={ this.props.focus }
                         />
@@ -119,6 +123,7 @@ export default class SceneRecordings extends Scene {
                             date="27.04.2017 07:20"
                             channelName="Cartoon Network"
                             color={ this.props.color }
+                            colorNormal={ this.props.colorNormal }
                             colorFocused={ this.props.colorFocused }
                             focus={ this.props.focus }
                         />
@@ -127,6 +132,7 @@ export default class SceneRecordings extends Scene {
                             date="27.04.2017 06:55"
                             channelName="Boomerang"
                             color={ this.props.color }
+                            colorNormal={ this.props.colorNormal }
                             colorFocused={ this.props.colorFocused }
                         />
                         <RecordingsTableRow
@@ -134,6 +140,7 @@ export default class SceneRecordings extends Scene {
                             date="05.04.2017 03:10"
                             channelName="HBO 3"
                             color={ this.props.color }
+                            colorNormal={ this.props.colorNormal }
                             colorFocused={ this.props.colorFocused }
                         />
                         <RecordingsTableRow
@@ -141,6 +148,7 @@ export default class SceneRecordings extends Scene {
                             date="12.03.2017 20:55"
                             channelName="HBO 2"
                             color={ this.props.color }
+                            colorNormal={ this.props.colorNormal }
                             colorFocused={ this.props.colorFocused }
                         />
                         <RecordingsTableRow
@@ -148,6 +156,7 @@ export default class SceneRecordings extends Scene {
                             date="02.03.2017 00:25"
                             channelName="HBO 3"
                             color={ this.props.color }
+                            colorNormal={ this.props.colorNormal }
                             colorFocused={ this.props.colorFocused }
                         />
                         <RecordingsTableRow
@@ -155,6 +164,7 @@ export default class SceneRecordings extends Scene {
                             date="23.02.2017 10:55"
                             channelName="Boomerang"
                             color={ this.props.color }
+                            colorNormal={ this.props.colorNormal }
                             colorFocused={ this.props.colorFocused }
                         />
                         <RecordingsTableRow
@@ -162,6 +172,7 @@ export default class SceneRecordings extends Scene {
                             date="08.12.2016 22:20"
                             channelName="Prima COOL"
                             color={ this.props.color }
+                            colorNormal={ this.props.colorNormal }
                             colorFocused={ this.props.colorFocused }
                         />
                     </tbody>

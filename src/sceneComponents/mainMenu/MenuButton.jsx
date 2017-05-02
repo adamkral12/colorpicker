@@ -24,7 +24,6 @@ export default class MenuButton extends Button {
 
     render() {
         const classes = classNames('item focusable', this.props.classes );
-        const styles = this.getStyles();
         return(
             <li className={ classes }
                 onMouseOver={ this.mouseOver }

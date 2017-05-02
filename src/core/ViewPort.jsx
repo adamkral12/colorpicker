@@ -17,8 +17,9 @@ export default class ViewPort extends Component {
                 <SceneStream id="scene-stream"
                              onChangeComplete={ this.handleStylesChange }
                              activeSceneIndex={ this.props.activeSceneIndex }
-                             color={ this.props.color }
+                             colorNormal={ this.props.colorNormal }
                              colorFocused={ this.props.colorFocused }
+                             colorDisabled={ this.props.colorDisabled }
                              focus={ this.props.focus }
                              onLogoUpdate={ this.props.onLogoUpdate }
                              index={0}
@@ -27,60 +28,63 @@ export default class ViewPort extends Component {
                 <ScenePairing id="scene-pairing"
                               onChangeComplete={ this.handleStylesChange }
                               activeSceneIndex={ this.props.activeSceneIndex }
-                              color={ this.props.color }
-                              colorFocused={ this.props.colorFocused }
                               colorNormal={ this.props.colorNormal }
+                              colorFocused={ this.props.colorFocused }
+                              colorDisabled={ this.props.colorDisabled }
                               focus={ this.props.focus }
                               logoBackgroundStyle={ this.props.logoBackgroundStyle }
                               index={1}
                               key={1}
                 />
                 <SceneConfiguration id="scene-configuration"
-                              onChangeComplete={ this.handleStylesChange }
-                              activeSceneIndex={ this.props.activeSceneIndex }
-                              color={ this.props.color }
-                              colorFocused={ this.props.colorFocused }
-                              focus={ this.props.focus }
-                              index={2}
-                              key={2}
-                />
-                <SceneCurrently id="scene-currently"
                                     onChangeComplete={ this.handleStylesChange }
                                     activeSceneIndex={ this.props.activeSceneIndex }
-                                    color={ this.props.color }
+                                    colorNormal={ this.props.colorNormal }
                                     colorFocused={ this.props.colorFocused }
+                                    colorDisabled={ this.props.colorDisabled }
                                     focus={ this.props.focus }
-                                    index={3}
-                                    key={3}
+                                    index={2}
+                                    key={2}
                 />
-                <SceneRecordings id="scene-recordings"
+                <SceneCurrently id="scene-currently"
                                 onChangeComplete={ this.handleStylesChange }
                                 activeSceneIndex={ this.props.activeSceneIndex }
-                                color={ this.props.color }
+                                colorNormal={ this.props.colorNormal }
                                 colorFocused={ this.props.colorFocused }
+                                colorDisabled={ this.props.colorDisabled }
                                 focus={ this.props.focus }
-                                index={4}
-                                key={4}
+                                index={3}
+                                key={3}
+                />
+                <SceneRecordings id="scene-recordings"
+                                 onChangeComplete={ this.handleStylesChange }
+                                 activeSceneIndex={ this.props.activeSceneIndex }
+                                 colorNormal={ this.props.colorNormal }
+                                 colorFocused={ this.props.colorFocused }
+                                 colorDisabled={ this.props.colorDisabled }
+                                 focus={ this.props.focus }
+                                 index={4}
+                                 key={4}
                 />
                 <SceneEPG id="scene-epg"
                           onChangeComplete={ this.handleStylesChange }
                           activeSceneIndex={ this.props.activeSceneIndex }
-                          color={ this.props.color }
+                          colorNormal={ this.props.colorNormal }
                           colorFocused={ this.props.colorFocused }
                           colorDisabled={ this.props.colorDisabled }
-                          colorNormal={ this.props.colorNormal }
                           focus={ this.props.focus }
                           index={5}
                           key={5}
                 />
                 <SceneMenu id="scene-menu"
-                          onChangeComplete={ this.handleStylesChange }
-                          activeSceneIndex={ this.props.activeSceneIndex }
-                          color={ this.props.color }
-                          colorFocused={ this.props.colorFocused }
-                          focus={ this.props.focus }
-                          index={6}
-                          key={6}
+                           onChangeComplete={ this.handleStylesChange }
+                           activeSceneIndex={ this.props.activeSceneIndex }
+                           colorNormal={ this.props.colorNormal }
+                           colorFocused={ this.props.colorFocused }
+                           colorDisabled={ this.props.colorDisabled }
+                           focus={ this.props.focus }
+                           index={6}
+                           key={6}
                 />
                 <RCButtons
                     activeSceneIndex={ this.props.activeSceneIndex }

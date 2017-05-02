@@ -16,6 +16,7 @@ export default class SceneConfiguration extends Scene {
             <PanelHeader
                 text="SETTINGS"
                 color={ this.props.color }
+                colorNormal={ this.props.colorNormal }
                 focus={ this.props.focus }
             />
 
@@ -30,6 +31,7 @@ export default class SceneConfiguration extends Scene {
                                 textRight="HD"
                                 color={ this.props.color }
                                 colorFocused={ this.props.colorFocused }
+                                colorNormal={ this.props.colorNormal }
                                 focus={ this.props.focus }
                             />
                             <TableSettingsRow
@@ -37,6 +39,7 @@ export default class SceneConfiguration extends Scene {
                                 textRight="1080p@50Hz"
                                 color={ this.props.color }
                                 colorFocused={ this.props.colorFocused }
+                                colorNormal={ this.props.colorNormal }
                                 focus={ this.props.focus }
                             />
                             <TableSettingsRow
@@ -44,6 +47,7 @@ export default class SceneConfiguration extends Scene {
                                 textRight="YES"
                                 color={ this.props.color }
                                 colorFocused={ this.props.colorFocused }
+                                colorNormal={ this.props.colorNormal }
                                 focus={ this.props.focus }
                             />
                             <TableSettingsRow
@@ -51,6 +55,7 @@ export default class SceneConfiguration extends Scene {
                                 textRight="Delete pairing"
                                 color={ this.props.color }
                                 colorFocused={ this.props.colorFocused }
+                                colorNormal={ this.props.colorNormal }
                                 focus={ this.props.focus }
                             />
                             <TableSettingsRow
@@ -58,6 +63,7 @@ export default class SceneConfiguration extends Scene {
                                 textRight="English"
                                 color={ this.props.color }
                                 colorFocused={ this.props.colorFocused }
+                                colorNormal={ this.props.colorNormal }
                                 focus={ this.props.focus }
                             />
                         </tbody>

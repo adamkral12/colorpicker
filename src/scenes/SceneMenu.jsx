@@ -17,8 +17,9 @@ export default class SceneMenu extends Scene {
                         numberOfPaths={6}
                         wrapperClass="menuCurrently"
                         wrapperText="CURRENTLY"
-                        color={ this.props.color }
+                        colorNormal={ this.props.colorNormal }
                         colorFocused={ this.props.colorFocused }
+                        colorDisabled={ this.props.colorDisabled }
                         focus={ this.props.focus }
                     />
                     <MenuButton
@@ -26,8 +27,9 @@ export default class SceneMenu extends Scene {
                         numberOfPaths={7}
                         wrapperClass="menuEPG"
                         wrapperText="EPG"
-                        color={ this.props.color }
+                        colorNormal={ this.props.colorNormal }
                         colorFocused={ this.props.colorFocused }
+                        colorDisabled={ this.props.colorDisabled }
                         focus={ this.props.focus }
                     />
                     <MenuButton
@@ -35,8 +37,9 @@ export default class SceneMenu extends Scene {
                         numberOfPaths={6}
                         wrapperClass="menuRecorded"
                         wrapperText="RECORDINGS"
-                        color={ this.props.color }
+                        colorNormal={ this.props.colorNormal }
                         colorFocused={ this.props.colorFocused }
+                        colorDisabled={ this.props.colorDisabled }
                         focus={ this.props.focus }
                     />
                     <MenuButton
@@ -44,8 +47,9 @@ export default class SceneMenu extends Scene {
                         numberOfPaths={5}
                         wrapperClass="menuLatestPlay"
                         wrapperText="LAST PLAYBACK"
-                        color={ this.props.color }
+                        colorNormal={ this.props.colorNormal }
                         colorFocused={ this.props.colorFocused }
+                        colorDisabled={ this.props.colorDisabled }
                         focus={ this.props.focus }
                     />
                     <MenuButton
@@ -53,8 +57,9 @@ export default class SceneMenu extends Scene {
                         numberOfPaths={7}
                         wrapperClass="menuConfiguration"
                         wrapperText="SETTINGS"
-                        color={ this.props.color }
+                        colorNormal={ this.props.colorNormal }
                         colorFocused={ this.props.colorFocused }
+                        colorDisabled={ this.props.colorDisabled }
                         focus={ this.props.focus }
                     />
                 </ul>

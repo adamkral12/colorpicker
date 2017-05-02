@@ -9,7 +9,7 @@ export default class PairingCode extends Button {
 
     render() {
         console.log('pairing code render');
-        const darkerColor = this.getCSS(this.shadeRGBColor(this.props.color, -0.5));
+        const darkerColor = this.getCSS(this.shadeRGBColor(this.props.colorNormal, -0.5));
         return (
             <div
                 style={ darkerColor.color }
