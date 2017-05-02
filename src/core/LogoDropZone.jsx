@@ -41,7 +41,7 @@ export default class LogoDropZone extends Component {
 
         console.log('on drop ' + JSON.stringify(backgroundWithUrl));
         this.setState({ logoUploaded: backgroundWithUrl });
-        this.props.handleDropAccepted();
+        this.props.handleDropAccepted(backgroundWithUrl);
     }
 
     onDropRejected(rejectedFiles) {

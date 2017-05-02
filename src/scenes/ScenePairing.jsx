@@ -28,9 +28,8 @@ export default class ScenePairing extends Scene {
         const keyNumbers4 = [0,"", "OK"];
         const icon = "BSP";
 
-        console.log('gete font = ' + JSON.stringify(this.getFontCss(this.props.color)));
         this.state.hidden = !this.isSceneActive();
-
+        console.log("logo background style = " + this.props.logoBackgroundStyle);
         return (
             <div id="scene-pairing2"
                  className="scene"
@@ -40,7 +39,9 @@ export default class ScenePairing extends Scene {
                                    focus={ this.props.focus }
                 />
 
-                <div className="logo"></div>
+                <div className="logo"
+                     style={ this.props.logoBackgroundStyle }
+                ></div>
                 <div className="info"
                      style={ this.getFontCss(this.props.colorNormal).font }
                 >

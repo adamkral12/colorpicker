@@ -19,7 +19,13 @@ export default class Main extends Component {
         this.handleFocus = this.handleFocus.bind(this);
         this.handleSceneChange = this.handleSceneChange.bind(this);
         this.handleFontSelection = this.handleFontSelection.bind(this);
+        this.handleLogoUpdate = this.handleLogoUpdate.bind(this);
     };
+
+    handleLogoUpdate(logoBackgroundStyle) {
+        console.log('Main handle logo update');
+        this.setState({ logoBackgroundStyle: logoBackgroundStyle });
+    }
 
 
     handleSceneChange(index) {
@@ -148,6 +154,8 @@ export default class Main extends Component {
                   colorDisabled={ colorDisabled }
                   colorNormal={ colorNormal }
                   focus={ this.state.focus }
+                  onLogoUpdate={ this.handleLogoUpdate }
+                  logoBackgroundStyle={ this.state.logoBackgroundStyle }
               />
 
               <ColorPicker

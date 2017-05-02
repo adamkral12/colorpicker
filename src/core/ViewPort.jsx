@@ -8,7 +8,7 @@ import SceneEPG from "../scenes/SceneEPG";
 import SceneMenu from "../scenes/SceneMenu";
 import RCButtons from "../sceneComponents/sceneStream/RCButtons.jsx";
 
-export default class Container extends Component {
+export default class ViewPort extends Component {
 
     render() {
         //console.log('Viewport font = ' + JSON.stringify(this.props.colorNormal));
@@ -20,6 +20,7 @@ export default class Container extends Component {
                              color={ this.props.color }
                              colorFocused={ this.props.colorFocused }
                              focus={ this.props.focus }
+                             onLogoUpdate={ this.props.onLogoUpdate }
                              index={0}
                              key={0}
                 />
@@ -30,6 +31,7 @@ export default class Container extends Component {
                               colorFocused={ this.props.colorFocused }
                               colorNormal={ this.props.colorNormal }
                               focus={ this.props.focus }
+                              logoBackgroundStyle={ this.props.logoBackgroundStyle }
                               index={1}
                               key={1}
                 />
