@@ -75,19 +75,19 @@ export default class SceneConfiguration extends Scene {
                      style={ this.getFontCSS(this.props.colorNormal).font }
                 >
                     <div className="label_value_wrapper">
-                        <div className="label"><span className="versionOfTheApplication">App version</span>:</div>
+                        <div className="labels"><span className="versionOfTheApplication">App version</span>:</div>
                         <div className="value version">2.0.213</div>
                     </div>
                     <div className="label_value_wrapper">
-                        <div className="label"><span className="deviceID">Device ID</span>:</div>
+                        <div className="labels"><span className="deviceID">Device ID</span>:</div>
                         <div className="value tvName"></div>
                     </div>
                     <div className="label_value_wrapper">
-                        <div className="label"><span className="deviceIP"/></div>
+                        <div className="labels"><span className="deviceIP"/></div>
                         <div className="value tvIP"></div>
                     </div>
                     <div className="label_value_wrapper">
-                        <div className="label"><span className="versionOfTheBoot"/></div>
+                        <div className="labels"><span className="versionOfTheBoot"/></div>
                         <div className="value versionBoot"></div>
                     </div>
                 </div>

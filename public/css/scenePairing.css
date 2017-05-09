@@ -43,7 +43,7 @@
 
 .keyboardNumeric .line {
     width: 100%;
-    height: 50px;
+    height: 54px;
     padding: 0 5px 5px 0;
     line-height: 50px;
 }
@@ -71,7 +71,7 @@
 
 .icon-backspace {
     line-height: 50px;
-    margin-top: 1px;
+    margin-top: 3px;
 }
 
 #snippet-code2 {

@@ -123,3 +123,15 @@ body {
 .hidden {
     display: none;
 }
+
+table {
+    border-collapse: separate;
+}
+
+.box {
+    padding: 3px;
+}
+
+ul {
+    margin-top: 35px;
+}

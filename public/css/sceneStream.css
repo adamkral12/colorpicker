@@ -249,11 +249,11 @@ div.rc-buttons td.button-red div.color-button-red {
     float: left;
     border-radius: 10%;
     margin-right: 5px;
-    margin-top: 3px;
+    margin-top: 5px;
 }
 
 div.rc-buttons td div {
-    padding-left: 30px;
+    padding-left: 44px;
 }
 
 div.rc-buttons td.button-green div.color-button-green {
@@ -263,7 +263,7 @@ div.rc-buttons td.button-green div.color-button-green {
     float: left;
     border-radius: 10%;
     margin-right: 5px;
-    margin-top: 3px;
+    margin-top: 5px;
 }
 
 body div.rc-buttons td.button-yellow div.color-button-yellow {
@@ -273,7 +273,7 @@ body div.rc-buttons td.button-yellow div.color-button-yellow {
     float: left;
     border-radius: 10%;
     margin-right: 5px;
-    margin-top: 3px;
+    margin-top: 5px;
 }
 
 div.rc-buttons td.button-back .icon-undo2 {
@@ -281,6 +281,7 @@ div.rc-buttons td.button-back .icon-undo2 {
     font-size: 22px;
     margin-right: 8px;
     margin-left: -10px;
+    margin-top: 5px;
 }
 
 
