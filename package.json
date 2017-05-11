@@ -15,7 +15,8 @@
     "react-addons-update": "",
     "react-dropzone": "",
     "image-size": "",
-    "jquery":""
+    "jquery":"",
+    "react-file-base64": ""
   },
   "scripts": {
     "start": "react-scripts start",

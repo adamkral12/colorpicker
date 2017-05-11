@@ -23,9 +23,9 @@ export default class Main extends Component {
         this.handleLogoUpdate = this.handleLogoUpdate.bind(this);
     };
 
-    handleLogoUpdate(logoBackgroundStyle) {
+    handleLogoUpdate(fileBase64) {
         //console.log('Main handle logo update');
-        this.setState({ logoBackgroundStyle: logoBackgroundStyle });
+        this.setState({ fileBase64: fileBase64 });
     }
 
 
@@ -201,6 +201,7 @@ export default class Main extends Component {
                     colorNormal={ colorNormal }
                     colorFocused={ colorFocused }
                     colorDisabled={ colorDisabled }
+                    fileBase64={ this.state.fileBase64 }
                 />
 
           </div>

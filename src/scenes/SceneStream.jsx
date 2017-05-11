@@ -25,10 +25,10 @@ export default class SceneStream extends Scene {
         this.setState({ errorHidden: false });
     }
 
-    handleDropAccepted(logoBackgroundStyle) {
+    handleDropAccepted(fileBase64) {
         this.setState( { fileName: "" });
         this.setState( { errorHidden: true });
-        this.props.onLogoUpdate(logoBackgroundStyle);
+        this.props.onLogoUpdate(fileBase64);
     }
 
     render () {

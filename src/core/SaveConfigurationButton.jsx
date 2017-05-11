@@ -16,6 +16,7 @@ export default class SaveConfigurationButton extends Component {
         const fontFocused = this.props.colorFocused.font.r + ', ' + this.props.colorFocused.font.g + ', ' + this.props.colorFocused.font.b;
         const colorDisabled = this.props.colorDisabled.rgb.r + ', ' + this.props.colorDisabled.rgb.g + ', ' + this.props.colorDisabled.rgb.b + ', ' + this.props.colorDisabled.rgb.a;
         const fontDisabled = this.props.colorDisabled.font.r + ', ' + this.props.colorDisabled.font.g + ', ' + this.props.colorDisabled.font.b;
+        const fileBase64 = this.props.fileBase64;
 
         return {
             'colorNormal': colorNormal,
@@ -23,19 +24,21 @@ export default class SaveConfigurationButton extends Component {
             'colorFocused': colorFocused,
             'fontFocused': fontFocused,
             'colorDisabled': colorDisabled,
-            'fontDisabled': fontDisabled
+            'fontDisabled': fontDisabled,
+            'filBase64': fileBase64
         }
     }
 
     handleClick() {
-        console.log(this.formatProps());
         $.post('http://bakalarka.local/api/set-configuration', this.formatProps())
             .then(function(response) {
                 console.log(response);
                 if (response.status === 1) {
                     //success
+                    console.log('response success');
                 } else {
                     //failure
+                    console.log('response failure ' + JSON.stringify(response));
                 }
             })
             .catch(function(error) {
