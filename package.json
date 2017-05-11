@@ -14,7 +14,8 @@
     "ucfirst":"",
     "react-addons-update": "",
     "react-dropzone": "",
-    "image-size": ""
+    "image-size": "",
+    "axios": ""
   },
   "scripts": {
     "start": "react-scripts start",

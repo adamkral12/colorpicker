@@ -3,6 +3,7 @@ import ViewPort from './core/ViewPort';
 import ChooseSceneContainer from './core/ChooseSceneContainer';
 import ColorPicker from "./core/ColorPicker";
 import ChangeFocusContainer from './core/ChangeFocusContainer';
+import SaveConfigurationButton from './core/SaveConfigurationButton';
 
 
 /* Main class
@@ -158,10 +159,11 @@ export default class Main extends Component {
 
 
     render () {
-        const color = this.state[this.getColorbyFocus()];
         const colorFocused = this.state[this.getColorbyFocus('focused')];
         const colorDisabled = this.state[this.getColorbyFocus('disabled')];
         const colorNormal = this.state[this.getColorbyFocus('normal')];
+
+        const color = this.state[this.getColorbyFocus()];
         const font = { rgb: color.font };
         const focus = this.state.focus;
         console.log('Main state = ' + JSON.stringify(this.state));
@@ -194,6 +196,12 @@ export default class Main extends Component {
                   handleFontSelection={ this.handleFontSelection }
                   focus={ focus }
               />
+
+                <SaveConfigurationButton
+                    colorNormal={ colorNormal }
+                    colorFocused={ colorFocused }
+                    colorDisabled={ colorDisabled }
+                />
 
           </div>
         );
