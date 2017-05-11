@@ -15,7 +15,7 @@
     "react-addons-update": "",
     "react-dropzone": "",
     "image-size": "",
-    "axios": ""
+    "jquery":""
   },
   "scripts": {
     "start": "react-scripts start",
