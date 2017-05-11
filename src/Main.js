@@ -142,6 +142,7 @@ export default class Main extends Component {
         } else if (this.state.focus === 'focused') {
             const colorFocusedLighter = this.shadeRGBColor(color, 0.15);
             this.setState({ 'color-focused-lighter': colorFocusedLighter});
+            console.log(this.state['color-normal-darker']);
         }
     };
 
@@ -202,6 +203,9 @@ export default class Main extends Component {
                     colorFocused={ colorFocused }
                     colorDisabled={ colorDisabled }
                     fileBase64={ this.state.fileBase64 }
+                    colorNormalDarker={ this.state['color-normal-darker'] }
+                    colorNormalLighter={ this.state['color-normal-lighter'] }
+                    colorFocusedLighter={ this.state['color-focused-lighter'] }
                 />
 
           </div>
