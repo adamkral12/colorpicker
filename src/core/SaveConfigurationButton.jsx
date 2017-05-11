@@ -17,9 +17,9 @@ export default class SaveConfigurationButton extends Component {
         const colorDisabled = this.props.colorDisabled.rgb.r + ', ' + this.props.colorDisabled.rgb.g + ', ' + this.props.colorDisabled.rgb.b + ', ' + this.props.colorDisabled.rgb.a;
         const fontDisabled = this.props.colorDisabled.font.r + ', ' + this.props.colorDisabled.font.g + ', ' + this.props.colorDisabled.font.b;
         const fileBase64 = this.props.fileBase64;
-        const colorNormalLighter = this.props.colorNormalLighter.rgb.r + ', ' + this.props.colorNormalLighter.rgb.g + ', ' + this.props.colorNormalLighter.rgb.b + ', ' + this.props.colorNormalLighter.rgb.a;
-        const colorNormalDarker = this.props.colorNormalDarker.rgb.r + ', ' + this.props.colorNormalDarker.rgb.g + ', ' + this.props.colorNormalDarker.rgb.b + ', ' + this.props.colorNormalDarker.rgb.a;
-        const colorFocusedLighter = this.props.colorFocusedLighter.rgb.r + ', ' + this.props.colorFocusedLighter.rgb.g + ', ' + this.props.colorFocusedLighter.rgb.b + ', ' + this.props.colorFocusedLighter.rgb.a;
+        const colorNormalLighter = this.props.colorNormalLighter.rgb.r + ', ' + this.props.colorNormalLighter.rgb.g + ', ' + this.props.colorNormalLighter.rgb.b;
+        const colorNormalDarker = this.props.colorNormalDarker.rgb.r + ', ' + this.props.colorNormalDarker.rgb.g + ', ' + this.props.colorNormalDarker.rgb.b;
+        const colorFocusedLighter = this.props.colorFocusedLighter.rgb.r + ', ' + this.props.colorFocusedLighter.rgb.g + ', ' + this.props.colorFocusedLighter.rgb.b;
 
         console.log('lighter = ' + colorNormalDarker + ', darker = ' + colorNormalLighter + ', focused = ' + colorFocusedLighter);
         return {
