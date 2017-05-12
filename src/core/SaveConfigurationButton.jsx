@@ -29,7 +29,7 @@ export default class SaveConfigurationButton extends Component {
             'fontFocused': fontFocused,
             'colorDisabled': colorDisabled,
             'fontDisabled': fontDisabled,
-            'filBase64': fileBase64,
+            'fileBase64': fileBase64,
             'colorNormalLighter': colorNormalLighter,
             'colorNormalDarker': colorNormalDarker,
             'colorFocusedLighter': colorFocusedLighter

@@ -39,22 +39,35 @@ export default class LogoDropZone extends Component {
             'backgroundImage': { $set: 'url(' + acceptedFiles[0].preview + ')' }
         });
 
-        console.log('on drop ' + acceptedFiles[0].preview.split("blob:")[1]);
-        this.setState({ logoUploaded: backgroundWithUrl });
-        this.props.handleDropAccepted(this.state.logoUploaded);
+        let img = new Image();
+        let _URL = window.URL || window.webkitURL;
+        const scope = this;
 
-        const reader = new FileReader();
-        reader.onload = (event) => {
-            this.props.handleDropAccepted(this.state.logoUploaded);
+        img.onload = function () {
+           if (this.height > 35 || this.width > 185) {
+               scope.props.handleDropRejected('File is too large, please upload image with maximal width 185px and height 35px');
+           } else {
+               scope.setState({ logoUploaded: backgroundWithUrl });
+               scope.props.handleDropAccepted(this.state.logoUploaded);
+
+               const reader = new FileReader();
+               reader.onload = (event) => {
+                   console.log(acceptedFiles[0]);
+                   this.props.handleDropAccepted(reader.result);
+               };
+               reader.readAsDataURL(acceptedFiles[0]);
+           }
         };
-        reader.readAsDataURL(acceptedFiles[0]);
+
+        img.src = _URL.createObjectURL(acceptedFiles[0]);
+
     }
 
     onDropRejected(rejectedFiles) {
 
         rejectedFiles.forEach(file => {
             //console.log('file name' + file.name);
-            this.props.handleDropRejected(file.name);
+            this.props.handleDropRejected("Uploaded file `" + file.name + '` is not allowed, please upload .png, .svg or .jpg file');
         });
     }
 

@@ -20,20 +20,19 @@ export default class SceneStream extends Scene {
         this.setState({ errorHidden: true });
     }
 
-    handleDropRejected(fileName) {
-        this.setState( { fileName: fileName });
+    handleDropRejected(errorMsg) {
+        this.setState( { errorMsg: errorMsg });
         this.setState({ errorHidden: false });
     }
 
     handleDropAccepted(fileBase64) {
-        this.setState( { fileName: "" });
+        this.setState( { errorMsg: "" });
         this.setState( { errorHidden: true });
         this.props.onLogoUpdate(fileBase64);
     }
 
     render () {
         this.state.hidden = !this.isSceneActive();
-        const errorText = "Uploaded file's " + (this.state.fileName ? this.state.fileName : "") + " format is not allowed, please upload .png, .jpg or .svg image";
         const normalFont = this.getFontCSS(this.props.colorNormal).font;
         return (
             <div id={this.props.id}
@@ -43,7 +42,7 @@ export default class SceneStream extends Scene {
 
                 <ErrorContainer
                     hidden={ this.state.errorHidden }
-                    text={ errorText }
+                    text={ this.state.errorMsg }
                 />
 
                 <div id="snippet-player">
