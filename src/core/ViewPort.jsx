@@ -1,19 +1,46 @@
 import React, { Component } from 'react';
-import SceneStream from "../scenes/SceneStream.jsx";
-import ScenePairing from "../scenes/ScenePairing.jsx";
-import SceneConfiguration from "../scenes/SceneConfiguration.jsx";
+import inArray from 'in-array';
+
+import SceneStream from "../scenes/SceneStream";
+import ScenePairing from "../scenes/ScenePairing";
+import SceneConfiguration from "../scenes/SceneConfiguration";
 import SceneCurrently from "../scenes/SceneCurrently";
 import SceneRecordings from "../scenes/SceneRecordings";
 import SceneEPG from "../scenes/SceneEPG";
 import SceneMenu from "../scenes/SceneMenu";
-import RCButtons from "../sceneComponents/sceneStream/RCButtons.jsx";
+import RCButtons from "../sceneComponents/sceneStream/RCButtons";
+import Player from '../core/Player';
+
 
 export default class ViewPort extends Component {
 
     render() {
-        //console.log('Viewport font = ' + JSON.stringify(this.props.colorNormal));
+        let width = 0;
+        let height = 0;
+        let left = 0;
+        let top = 0;
+
+        if (inArray([0, 3, 6], this.props.activeSceneIndex )) {
+            width = 1280;
+            height = 720;
+        } else if (inArray([2, 4, 5], this.props.activeSceneIndex )) {
+            width = 311;
+            height = 175;
+            left = 904;
+            top = 79;
+        } else {
+            //dimensions 0 for pairing
+        }
+
         return (
             <div id="viewport">
+                <Player
+                    width={ width }
+                    height={ height }
+                    left={ left }
+                    top={ top }
+                />
+
                 <SceneStream id="scene-stream"
                              onChangeComplete={ this.handleStylesChange }
                              activeSceneIndex={ this.props.activeSceneIndex }

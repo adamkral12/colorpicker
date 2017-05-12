@@ -6,6 +6,7 @@ import ChangeFocusContainer from './core/ChangeFocusContainer';
 import SaveConfigurationButton from './core/SaveConfigurationButton';
 
 
+
 /* Main class
     Handles style of style changing buttons
         focused | normal | disabled
@@ -171,6 +172,7 @@ export default class Main extends Component {
 
         return (
           <div id="container">
+
               <ChooseSceneContainer
                   onSceneChange={ this.handleSceneChange }
                   activeSceneIndex={ this.state.activeSceneIndex }

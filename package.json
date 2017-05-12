@@ -16,7 +16,8 @@
     "react-dropzone": "",
     "image-size": "",
     "jquery":"",
-    "react-file-base64": ""
+    "react-file-base64": "",
+    "in-array": ""
   },
   "scripts": {
     "start": "react-scripts start",

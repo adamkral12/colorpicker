@@ -135,3 +135,20 @@ table {
 ul {
     margin-top: 35px;
 }
+
+.dummy-player {
+    z-index: 3;
+    position:absolute;
+    background-size: 1280px 720px;
+    background-repeat: no-repeat;
+    -webkit-transition: background-image 0.8s ease-in-out;
+    transition: background-image 0.8s ease-in-out;
+}
+
+.dummy-player.light-background {
+    background-image: url('../images/westworld.jpg');
+}
+
+.dummy-player.dark-background {
+    background-image: url('../images/avengers.jpg');
+}

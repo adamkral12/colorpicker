@@ -11,6 +11,7 @@ export default class SceneMenu extends Scene {
                  className="scene"
                  style={ this.state.hidden ? { display: 'none'} : { display: "block" } }
             >
+                <div className="opaque"/>
                 <ul className="list">
                     <MenuButton
                         classes="actual icon-menu_currently"

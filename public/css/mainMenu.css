@@ -7,6 +7,14 @@
     z-index: 1000;
 }
 
+#snippet-main-menu > div.opaque {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.75;
+}
+
 #snippet-main-menu > ul.list {
     position: absolute;
     top: 200px;
