@@ -48,12 +48,13 @@ export default class LogoDropZone extends Component {
                scope.props.handleDropRejected('File is too large, please upload image with maximal width 185px and height 35px');
            } else {
                scope.setState({ logoUploaded: backgroundWithUrl });
-               scope.props.handleDropAccepted(this.state.logoUploaded);
+               scope.props.handleDropAccepted(scope.state.logoUploaded);
 
                const reader = new FileReader();
                reader.onload = (event) => {
                    console.log(acceptedFiles[0]);
-                   this.props.handleDropAccepted(reader.result);
+                   console.log('accepted');
+                   scope.props.handleDropAccepted(reader.result);
                };
                reader.readAsDataURL(acceptedFiles[0]);
            }
