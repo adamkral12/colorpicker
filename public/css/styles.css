@@ -143,6 +143,8 @@ ul {
     background-repeat: no-repeat;
     -webkit-transition: background-image 0.8s ease-in-out;
     transition: background-image 0.8s ease-in-out;
+    -moz-transition: background-image 0.8s ease-in-out;
+    -o-transition: background-image 0.8s ease-in-out;
 }
 
 .dummy-player.light-background {

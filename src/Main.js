@@ -4,6 +4,7 @@ import ChooseSceneContainer from './core/ChooseSceneContainer';
 import ColorPicker from "./core/ColorPicker";
 import ChangeFocusContainer from './core/ChangeFocusContainer';
 import SaveConfigurationButton from './core/SaveConfigurationButton';
+import update from 'react-addons-update';
 
 
 
@@ -22,7 +23,106 @@ export default class Main extends Component {
         this.handleSceneChange = this.handleSceneChange.bind(this);
         this.handleFontSelection = this.handleFontSelection.bind(this);
         this.handleLogoUpdate = this.handleLogoUpdate.bind(this);
+
+        console.log('main props = ' + JSON.stringify(props));
+
+
+        /* default state */
+        this.state = {
+            'color': {
+                rgb: {
+                    r: '223',
+                    g: '101',
+                    b: '0',
+                    a: '1'
+                },
+                font: {
+                    r: '255',
+                    g: '255',
+                    b: '255'
+                }
+            },
+            'color-focused': {
+                rgb: {
+                    r: '245',
+                    g: '166',
+                    b: '5',
+                    a: '1'
+                },
+                font: {
+                    r: '0',
+                    g: '0',
+                    b: '0'
+                }
+            },
+            'color-disabled': {
+                rgb: {
+                    r: '210',
+                    g: '180',
+                    b: '161',
+                    a: '0.2'
+                },
+                font: {
+                    r: '255',
+                    g: '255',
+                    b: '255'
+                }
+            },
+            focus : 'normal',
+            activeSceneIndex: 0,
+            fontSelected: false
+        };
+
+        /* state from props = editing already existing configuration */
+        if (props.cid) {
+            this.state = update(this.state, {
+            cid: {$set: props.cid}
+            });
+        }
+
+        if (props.colorNormal) {
+            const colorNormal = this.colorStringToObject(props.colorNormal, 'rgb');
+            this.state = update(this.state, {
+                'color': {$set: colorNormal}
+            });
+        }
+        //TODO: only update, not replace whole object!
+        if (props.fontNormal) {
+            const fontNormal = this.colorStringToObject(props.fontNormal, 'font');
+            this.state = update(this.state, {
+                'color': {$set: fontNormal}
+            });
+        }
+
+
+
+
+        console.log(this.state);
+
+        const colorNormalLighter = this.shadeRGBColor(this.state.color, 0.4);
+        const colorNormalDarker = this.shadeRGBColor(this.state.color, -0.5);
+        const colorFocusedLighter = this.shadeRGBColor(this.state['color-focused'], 0.15);
+
+        this.state['color-normal-lighter'] = colorNormalLighter;
+        this.state['color-normal-darker'] = colorNormalDarker;
+        this.state['color-focused-lighter'] = colorFocusedLighter;
     };
+
+    colorStringToObject(colorString, fontOrRgb) {
+        let stringData = colorString.split(',');
+        let colorObject = {};
+        colorObject[fontOrRgb] = {};
+        console.log(stringData);
+        colorObject[fontOrRgb].r = stringData[0];
+        colorObject[fontOrRgb].g = stringData[1];
+        colorObject[fontOrRgb].b = stringData[2];
+
+        if (stringData.length === 4) {
+            colorObject.a = stringData[3];
+        }
+
+        return colorObject;
+    }
 
     handleLogoUpdate(fileBase64) {
         //console.log('Main handle logo update');
@@ -50,51 +150,7 @@ export default class Main extends Component {
         };
     }
 
-    /* default state */
-    state = {
-        'color': {
-            rgb: {
-                r: '223',
-                g: '101',
-                b: '0',
-                a: '1'
-            },
-            font: {
-                r: '255',
-                g: '255',
-                b: '255'
-            }
-        },
-        'color-focused': {
-            rgb: {
-                r: '245',
-                g: '166',
-                b: '5',
-                a: '1'
-            },
-            font: {
-                r: '0',
-                g: '0',
-                b: '0'
-            }
-        },
-        'color-disabled': {
-            rgb: {
-                r: '210',
-                g: '180',
-                b: '161',
-                a: '0.2'
-            },
-            font: {
-                r: '255',
-                g: '255',
-                b: '255'
-            }
-        },
-        focus : 'normal',
-        activeSceneIndex: 0,
-        fontSelected: false
-    };
+
 
 
     getColorbyFocus(focus) {
