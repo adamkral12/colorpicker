@@ -21,6 +21,7 @@ export default class SaveConfigurationButton extends Component {
         const colorNormalDarker = this.props.colorNormalDarker.rgb.r + ', ' + this.props.colorNormalDarker.rgb.g + ', ' + this.props.colorNormalDarker.rgb.b;
         const colorFocusedLighter = this.props.colorFocusedLighter.rgb.r + ', ' + this.props.colorFocusedLighter.rgb.g + ', ' + this.props.colorFocusedLighter.rgb.b;
         const cid = this.props.cid ? this.props.cid : null;
+        const configName = (!this.props.configName || this.props.configName.length === 0) ? null : this.props.configName;
 
         console.log('filebase64 = ' + fileBase64);
         return {
@@ -34,7 +35,8 @@ export default class SaveConfigurationButton extends Component {
             'colorNormalLighter': colorNormalLighter,
             'colorNormalDarker': colorNormalDarker,
             'colorFocusedLighter': colorFocusedLighter,
-            'cid': cid
+            'cid': cid,
+            'configName': configName
         }
     }
 

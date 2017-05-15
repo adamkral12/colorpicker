@@ -4,7 +4,7 @@ import ChooseSceneContainer from './core/ChooseSceneContainer';
 import ColorPicker from "./core/ColorPicker";
 import ChangeFocusContainer from './core/ChangeFocusContainer';
 import SaveConfigurationButton from './core/SaveConfigurationButton';
-import FancyBox from './core/FancyBox';
+import InputConfigurationName from './core/InputConfigurationName';
 import update from 'immutability-helper';
 
 
@@ -25,6 +25,7 @@ export default class Main extends Component {
         this.handleFontSelection = this.handleFontSelection.bind(this);
         this.handleLogoUpdate = this.handleLogoUpdate.bind(this);
         this.handleResponseReceived = this.handleResponseReceived.bind(this);
+        this.handleNameChange = this.handleNameChange.bind(this);
 
         console.log('main props = ' + JSON.stringify(props));
 
@@ -246,6 +247,11 @@ export default class Main extends Component {
         this.setState({ ajaxResponse: response });
     }
 
+    handleNameChange(name) {
+        console.log('name change ' + name);
+        this.setState({ configName: name });
+    }
+
 
     render () {
         const colorFocused = this.state[this.getColorbyFocus('focused')];
@@ -288,6 +294,10 @@ export default class Main extends Component {
                   focus={ focus }
               />
 
+              <InputConfigurationName
+                  handleNameChange={ this.handleNameChange }
+              />
+
                 <SaveConfigurationButton
                     colorNormal={ colorNormal }
                     colorFocused={ colorFocused }
@@ -298,6 +308,7 @@ export default class Main extends Component {
                     colorFocusedLighter={ this.state['color-focused-lighter'] }
                     handleResponseReceived={ this.handleResponseReceived }
                     cid={ this.state.cid }
+                    configName={ this.state.configName }
                 />
 
           </div>
