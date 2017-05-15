@@ -16,6 +16,7 @@ export default class SceneStream extends Scene {
         this.handleDropRejected = this.handleDropRejected.bind(this);
     }
 
+
     componentWillMount() {
         this.setState({ errorHidden: true });
     }
@@ -29,6 +30,15 @@ export default class SceneStream extends Scene {
         this.setState( { errorMsg: "" });
         this.setState( { errorHidden: true });
         this.props.onLogoUpdate(fileBase64);
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.ajaxResponse && nextProps.ajaxResponse.status === 0) {
+            this.setState( { errorMsg: nextProps.ajaxResponse.msg });
+            this.setState( { errorHidden: false });
+        } else {
+            this.setState( { errorHidden: true });
+        }
     }
 
     render () {

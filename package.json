@@ -12,7 +12,7 @@
     "classnames": "^2.2.5",
     "react-color": "^2.11.4",
     "ucfirst":"",
-    "react-addons-update": "",
+    "immutability-helper": "",
     "react-dropzone": "",
     "image-size": "",
     "jquery":"",

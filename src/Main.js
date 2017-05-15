@@ -4,14 +4,15 @@ import ChooseSceneContainer from './core/ChooseSceneContainer';
 import ColorPicker from "./core/ColorPicker";
 import ChangeFocusContainer from './core/ChangeFocusContainer';
 import SaveConfigurationButton from './core/SaveConfigurationButton';
-import update from 'react-addons-update';
-
+import FancyBox from './core/FancyBox';
+import update from 'immutability-helper';
 
 
 /* Main class
     Handles style of style changing buttons
         focused | normal | disabled
     Handles active scene
+    Recieves props from outside of the app
 
  */
 export default class Main extends Component {
@@ -23,6 +24,7 @@ export default class Main extends Component {
         this.handleSceneChange = this.handleSceneChange.bind(this);
         this.handleFontSelection = this.handleFontSelection.bind(this);
         this.handleLogoUpdate = this.handleLogoUpdate.bind(this);
+        this.handleResponseReceived = this.handleResponseReceived.bind(this);
 
         console.log('main props = ' + JSON.stringify(props));
 
@@ -83,19 +85,44 @@ export default class Main extends Component {
         if (props.colorNormal) {
             const colorNormal = this.colorStringToObject(props.colorNormal, 'rgb');
             this.state = update(this.state, {
-                'color': {$set: colorNormal}
+                'color': {$merge: colorNormal}
             });
         }
         //TODO: only update, not replace whole object!
         if (props.fontNormal) {
             const fontNormal = this.colorStringToObject(props.fontNormal, 'font');
             this.state = update(this.state, {
-                'color': {$set: fontNormal}
+                'color': {$merge: fontNormal}
             });
         }
 
+        if (props.colorFocused) {
+            const colorFocused = this.colorStringToObject(props.colorFocused, 'rgb');
+            this.state = update(this.state, {
+                'color-focused': {$merge: colorFocused}
+            });
+        }
 
+        if (props.fontFocused) {
+            const fontFocused = this.colorStringToObject(props.fontFocused, 'font');
+            this.state = update(this.state, {
+                'color-focused': {$merge: fontFocused}
+            });
+        }
 
+        if (props.colorDisabled) {
+            const colorDisabled = this.colorStringToObject(props.colorDisabled, 'rgb');
+            this.state = update(this.state, {
+                'color-disabled': {$merge: colorDisabled}
+            });
+        }
+
+        if (props.fontDisabled) {
+            const fontDisabled = this.colorStringToObject(props.fontDisabled, 'font');
+            this.state = update(this.state, {
+                'color-disabled': {$merge: fontDisabled}
+            });
+        }
 
         console.log(this.state);
 
@@ -118,7 +145,7 @@ export default class Main extends Component {
         colorObject[fontOrRgb].b = stringData[2];
 
         if (stringData.length === 4) {
-            colorObject.a = stringData[3];
+            colorObject[fontOrRgb].a = stringData[3];
         }
 
         return colorObject;
@@ -215,6 +242,10 @@ export default class Main extends Component {
         this.setState({ fontSelected : fontSelected});
     };
 
+    handleResponseReceived(response) {
+        this.setState({ ajaxResponse: response });
+    }
+
 
     render () {
         const colorFocused = this.state[this.getColorbyFocus('focused')];
@@ -243,6 +274,7 @@ export default class Main extends Component {
                   focus={ this.state.focus }
                   onLogoUpdate={ this.handleLogoUpdate }
                   logoBackgroundStyle={ this.state.logoBackgroundStyle }
+                  ajaxResponse={ this.state.ajaxResponse }
               />
 
               <ColorPicker
@@ -264,6 +296,7 @@ export default class Main extends Component {
                     colorNormalDarker={ this.state['color-normal-darker'] }
                     colorNormalLighter={ this.state['color-normal-lighter'] }
                     colorFocusedLighter={ this.state['color-focused-lighter'] }
+                    handleResponseReceived={ this.handleResponseReceived }
                 />
 
           </div>

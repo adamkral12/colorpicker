@@ -154,3 +154,14 @@ ul {
 .dummy-player.dark-background {
     background-image: url('../img/avengers.jpg');
 }
+
+.ajax-response {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 100;
+    backgorund: grey;
+    background: rgba(0,0,0,0.5);
+}

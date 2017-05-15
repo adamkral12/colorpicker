@@ -42,16 +42,21 @@ export default class SaveConfigurationButton extends Component {
                 console.log(response);
                 if (response.status === 1) {
                     //success
-                    console.log('response success');
+                    console.log(window.location.protocol + "//" + window.location.host + '/admin/configurations/');
+                    window.location.href = window.location.protocol + "//" + window.location.host + '/admin/configurations/';
                 } else {
                     //failure
                     console.log('response failure ' + JSON.stringify(response));
                 }
-            })
+
+                this.props.handleResponseReceived(response);
+
+            }.bind(this))
             .catch(function(error) {
                 console.log('Could not get configuration ' + JSON.stringify(error));
                 //TODO: handle error
-            });
+                this.props.handleResponseReceived(error);
+            }.bind(this));
     }
 
     render() {
