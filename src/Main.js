@@ -297,6 +297,7 @@ export default class Main extends Component {
                     colorNormalLighter={ this.state['color-normal-lighter'] }
                     colorFocusedLighter={ this.state['color-focused-lighter'] }
                     handleResponseReceived={ this.handleResponseReceived }
+                    cid={ this.state.cid }
                 />
 
           </div>
