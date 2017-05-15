@@ -43,7 +43,7 @@ export default class SaveConfigurationButton extends Component {
                 if (response.status === 1) {
                     //success
                     console.log(window.location.protocol + "//" + window.location.host + '/admin/configurations/');
-                    window.location.href = window.location.protocol + "//" + window.location.host + '/admin/configurations/';
+                    window.location.href = window.location.protocol + "//" + window.location.host + '/admin/configurations/?success=true';
                 } else {
                     //failure
                     console.log('response failure ' + JSON.stringify(response));
