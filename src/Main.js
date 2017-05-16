@@ -179,6 +179,7 @@ export default class Main extends Component {
     handleSceneChange(index) {
         this.setState({ activeSceneIndex: index });
         this.setState({ hideErrorMsg: !this.state.hideErrorMsg });
+        this.setState({ajaxResponse: null });
     };
 
     shadeRGBColor(color, percent) {
