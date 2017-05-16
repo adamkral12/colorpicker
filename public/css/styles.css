@@ -10,7 +10,7 @@ body {
 
 #container {
     overflow: hidden;
-    width: 1800px;
+    width: 1730px;
 }
 
 #viewport {
@@ -164,4 +164,24 @@ ul {
     z-index: 100;
     backgorund: grey;
     background: rgba(0,0,0,0.5);
+}
+
+div.config-name {
+    text-align: center;
+}
+
+div.config-name label {
+    width: 390px;
+    float: left;
+}
+
+input#config-name {
+    width: 236px;
+    margin-left: -50px;
+}
+
+button#save-button {
+    float: left;
+    margin-left: 160px;
+    margin-top: 20px;
 }

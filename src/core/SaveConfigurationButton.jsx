@@ -41,7 +41,7 @@ export default class SaveConfigurationButton extends Component {
     }
 
     handleClick() {
-        $.post('http://bakalarka.local/api/set-configuration', this.formatProps())
+        $.post(window.location.protocol + "//" + window.location.host + '/api/set-configuration', this.formatProps())
             .then(function(response) {
                 console.log(response);
                 if (response.status === 1) {
@@ -67,6 +67,7 @@ export default class SaveConfigurationButton extends Component {
         return (
             <button
                 className="btn btn-lg btn-primary"
+                id="save-button"
                 onClick={ this.handleClick }
             >
                 Save
