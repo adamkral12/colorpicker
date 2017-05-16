@@ -11,6 +11,7 @@ ReactDOM.render(
         fontFocused={document.getElementById('root').hasAttribute('data-font-focused') ? document.getElementById('root').getAttribute('data-font-focused') : null}
         colorDisabled={document.getElementById('root').hasAttribute('data-color-disabled') ? document.getElementById('root').getAttribute('data-color-disabled') : null}
         fontDisabled={document.getElementById('root').hasAttribute('data-font-disabled') ? document.getElementById('root').getAttribute('data-font-disabled') : null}
+        configName={document.getElementById('root').hasAttribute('data-config-name') ? document.getElementById('root').getAttribute('data-config-name') : null}
     />,
     document.getElementById('root')
 );

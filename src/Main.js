@@ -89,7 +89,7 @@ export default class Main extends Component {
                 'color': {$merge: colorNormal}
             });
         }
-        //TODO: only update, not replace whole object!
+
         if (props.fontNormal) {
             const fontNormal = this.colorStringToObject(props.fontNormal, 'font');
             this.state = update(this.state, {
@@ -122,6 +122,12 @@ export default class Main extends Component {
             const fontDisabled = this.colorStringToObject(props.fontDisabled, 'font');
             this.state = update(this.state, {
                 'color-disabled': {$merge: fontDisabled}
+            });
+        }
+
+        if (props.configName) {
+            this.state = update(this.state, {
+               'configName': { $set: props.configName }
             });
         }
 
@@ -296,6 +302,7 @@ export default class Main extends Component {
 
               <InputConfigurationName
                   handleNameChange={ this.handleNameChange }
+                  initialName={ this.state.configName }
               />
 
                 <SaveConfigurationButton
