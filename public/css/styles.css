@@ -148,11 +148,11 @@ ul {
 }
 
 .dummy-player.light-background {
-    background-image: url('../img/westworld.jpg');
+    background-image: url('../../img/westworld.jpg');
 }
 
 .dummy-player.dark-background {
-    background-image: url('../img/avengers.jpg');
+    background-image: url('../../img/avengers.jpg');
 }
 
 .ajax-response {

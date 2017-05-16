@@ -297,7 +297,7 @@ export default class Main extends Component {
                   colorNormal={ colorNormal }
                   focus={ this.state.focus }
                   onLogoUpdate={ this.handleLogoUpdate }
-                  logoBackgroundStyle={ this.state.logoBackgroundStyle }
+                  logoBackgroundStyle={ this.state.fileBase64 }
                   ajaxResponse={ this.state.ajaxResponse }
                   initialImage={ this.state.fileBase64 }
                   imageFormat={ this.state.imageFormat }
