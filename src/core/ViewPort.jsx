@@ -10,9 +10,42 @@ import SceneEPG from "../scenes/SceneEPG";
 import SceneMenu from "../scenes/SceneMenu";
 import RCButtons from "../sceneComponents/sceneStream/RCButtons";
 import Player from '../core/Player';
+import ErrorContainer from '../core/ErrorContainer';
 
 
 export default class ViewPort extends Component {
+
+    constructor(props) {
+        super(props);
+        this.handleDropAccepted = this.handleDropAccepted.bind(this);
+        this.handleDropRejected = this.handleDropRejected.bind(this);
+    }
+
+    componentWillMount() {
+        this.setState({ errorHidden: true });
+    }
+
+    handleDropAccepted(fileBase64) {
+        this.setState( { errorMsg: "" });
+        this.setState( { errorHidden: true });
+        this.props.onLogoUpdate(fileBase64);
+    }
+
+    handleDropRejected(errorMsg) {
+        this.setState( { errorMsg: errorMsg });
+        this.setState({ errorHidden: false });
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.ajaxResponse && nextProps.ajaxResponse.status === 0) {
+            console.log('setting state of error mesg');
+            this.setState( { errorMsg: nextProps.ajaxResponse.msg });
+            this.setState( { errorHidden: false });
+        } else {
+            this.setState( { errorHidden: true });
+        }
+    }
+
 
     render() {
         let width = 0;
@@ -41,12 +74,19 @@ export default class ViewPort extends Component {
                     top={ top }
                 />
 
+                <ErrorContainer
+                    hidden={ this.state.errorHidden }
+                    text={ this.state.errorMsg }
+                />
+
                 <SceneStream id="scene-stream"
                              onChangeComplete={ this.handleStylesChange }
                              activeSceneIndex={ this.props.activeSceneIndex }
                              colorNormal={ this.props.colorNormal }
                              colorFocused={ this.props.colorFocused }
                              colorDisabled={ this.props.colorDisabled }
+                             handleDropAccepted={ this.handleDropAccepted }
+                             handleDropRejected={ this.handleDropRejected }
                              focus={ this.props.focus }
                              onLogoUpdate={ this.props.onLogoUpdate }
                              initialImage={ this.props.initialImage }

@@ -178,6 +178,7 @@ export default class Main extends Component {
 
     handleSceneChange(index) {
         this.setState({ activeSceneIndex: index });
+        this.setState({ hideErrorMsg: !this.state.hideErrorMsg });
     };
 
     shadeRGBColor(color, percent) {
@@ -301,7 +302,7 @@ export default class Main extends Component {
                   ajaxResponse={ this.state.ajaxResponse }
                   initialImage={ this.state.fileBase64 }
                   imageFormat={ this.state.imageFormat }
-
+                  hideErrorMsg={ this.state.hideErrorMsg }
               />
 
               <ColorPicker

@@ -5,18 +5,17 @@ import TimeFrame from '../sceneComponents/sceneStream/TimeFrame';
 import SeekBar from '../sceneComponents/sceneStream/SeekBar';
 import ChannelNumber from "../sceneComponents/sceneStream/ChannelNumber";
 import LogoDropZone from '../core/LogoDropZone';
-import ErrorContainer from '../core/ErrorContainer';
 
 
 export default class SceneStream extends Scene {
 
     constructor(props) {
         super(props);
-        this.handleDropAccepted = this.handleDropAccepted.bind(this);
-        this.handleDropRejected = this.handleDropRejected.bind(this);
+  //      this.handleDropAccepted = this.handleDropAccepted.bind(this);
+    //    this.handleDropRejected = this.handleDropRejected.bind(this);
     }
 
-
+/*
     componentWillMount() {
         this.setState({ errorHidden: true });
     }
@@ -40,7 +39,7 @@ export default class SceneStream extends Scene {
             this.setState( { errorHidden: true });
         }
     }
-
+*/
     render () {
         this.state.hidden = !this.isSceneActive();
         const normalFont = this.getFontCSS(this.props.colorNormal).font;
@@ -50,10 +49,6 @@ export default class SceneStream extends Scene {
                  style={ this.state.hidden ? { display: "none"} : { display: "block" }}
             >
 
-                <ErrorContainer
-                    hidden={ this.state.errorHidden }
-                    text={ this.state.errorMsg }
-                />
 
                 <div id="snippet-player">
                     <div className="player">
@@ -110,8 +105,8 @@ export default class SceneStream extends Scene {
                                     colorDisabled={ this.props.colorDisabled }
                                     initialImage={ this.props.initialImage }
                                     imageFormat={ this.props.imageFormat }
-                                    handleDropRejected={ this.handleDropRejected }
-                                    handleDropAccepted={ this.handleDropAccepted }
+                                    handleDropRejected={ this.props.handleDropRejected }
+                                    handleDropAccepted={ this.props.handleDropAccepted }
                                 />
                             </div>
                         </div>

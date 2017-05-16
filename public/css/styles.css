@@ -102,11 +102,13 @@ body {
 
 .rejected-file-container {
     width: 50%;
-    margin: 55px auto 0;
+    margin: 55px 25% 0;
     color: white;
     text-align: center;
     background: transparent;
     display: block;
+    position: absolute;
+    z-index: 5000;
 }
 
 .rejected-error-text {
@@ -118,6 +120,7 @@ body {
     box-sizing: border-box;
     padding: 98px 70px;
     border: 7px solid rgb(23,109,48);
+    font-size: 38px;
 }
 
 .hidden {
