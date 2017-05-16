@@ -12,6 +12,8 @@ ReactDOM.render(
         colorDisabled={document.getElementById('root').hasAttribute('data-color-disabled') ? document.getElementById('root').getAttribute('data-color-disabled') : null}
         fontDisabled={document.getElementById('root').hasAttribute('data-font-disabled') ? document.getElementById('root').getAttribute('data-font-disabled') : null}
         configName={document.getElementById('root').hasAttribute('data-config-name') ? document.getElementById('root').getAttribute('data-config-name') : null}
+        image={document.getElementById('root').hasAttribute('data-image') ? document.getElementById('root').getAttribute('data-image') : null}
+        imageFormat={document.getElementById('root').hasAttribute('data-image-format') ? document.getElementById('root').getAttribute('data-image-format') : null}
     />,
     document.getElementById('root')
 );

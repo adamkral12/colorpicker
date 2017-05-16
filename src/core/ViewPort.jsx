@@ -49,6 +49,8 @@ export default class ViewPort extends Component {
                              colorDisabled={ this.props.colorDisabled }
                              focus={ this.props.focus }
                              onLogoUpdate={ this.props.onLogoUpdate }
+                             initialImage={ this.props.initialImage }
+                             imageFormat={ this.props.imageFormat }
                              ajaxResponse={ this.props.ajaxResponse }
                              index={0}
                              key={0}

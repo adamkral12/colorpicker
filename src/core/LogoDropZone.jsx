@@ -8,8 +8,10 @@ export default class LogoDropZone extends Component {
         this.state = { files: [] };
         this.onDropAccepted = this.onDropAccepted.bind(this);
         this.onDropRejected = this.onDropRejected.bind(this);
+        console.log('initial image = '  + props.initialImage);
+        const logoUploaded = props.initialImage ? true : false;
         this.state = {
-            logoWasUploaded: false,
+            logoWasUploaded: logoUploaded,
             logoNotUploaded: {
                 width: '200px',
                 height: '72px',
@@ -26,10 +28,18 @@ export default class LogoDropZone extends Component {
                 backgroundSize: '200px',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'bottom right ',
+                backgroundImage: "",
                 height: '72px',
                 width: '200px'
             }
         }
+
+        this.setInitialImage(props.initialImage);
+
+    }
+
+    setInitialImage(fileBase64) {
+        this.state.logoUploaded.backgroundImage = 'url(' + fileBase64 + ')';
     }
 
     onDropAccepted(acceptedFiles) {
@@ -48,7 +58,6 @@ export default class LogoDropZone extends Component {
                scope.props.handleDropRejected('File is too large, please upload image with maximal width 185px and height 35px');
            } else {
                scope.setState({ logoUploaded: backgroundWithUrl });
-               scope.props.handleDropAccepted(scope.state.logoUploaded);
 
                const reader = new FileReader();
                reader.onload = (event) => {
@@ -80,7 +89,7 @@ export default class LogoDropZone extends Component {
 
         //console.log('on drop ' + JSON.stringify(this.state.logoUploaded));
         return (
-            <div className="dropzone" >
+            <div className="dropzone" id="img-dropzone">
                 <DropZone onDropAccepted={ this.onDropAccepted }
                           onDropRejected={ this.onDropRejected }
                           accept="image/jpeg, image/png, image/svg+xml"

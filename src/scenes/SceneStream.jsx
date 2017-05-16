@@ -108,6 +108,8 @@ export default class SceneStream extends Scene {
                             <div className="logo">
                                 <LogoDropZone
                                     colorDisabled={ this.props.colorDisabled }
+                                    initialImage={ this.props.initialImage }
+                                    imageFormat={ this.props.imageFormat }
                                     handleDropRejected={ this.handleDropRejected }
                                     handleDropAccepted={ this.handleDropAccepted }
                                 />

@@ -131,6 +131,18 @@ export default class Main extends Component {
             });
         }
 
+        if (props.image) {
+            this.state = update(this.state, {
+                'fileBase64': { $set: "data:image/" + props.imageFormat + ";base64," + props.image }
+            });
+        }
+
+        if (props.imageFormat) {
+            this.state = update(this.state, {
+                'imageFormat': { $set: props.imageFormat }
+            });
+        }
+
         console.log(this.state);
 
         const colorNormalLighter = this.shadeRGBColor(this.state.color, 0.4);
@@ -287,6 +299,9 @@ export default class Main extends Component {
                   onLogoUpdate={ this.handleLogoUpdate }
                   logoBackgroundStyle={ this.state.logoBackgroundStyle }
                   ajaxResponse={ this.state.ajaxResponse }
+                  initialImage={ this.state.fileBase64 }
+                  imageFormat={ this.state.imageFormat }
+
               />
 
               <ColorPicker
