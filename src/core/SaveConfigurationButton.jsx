@@ -41,7 +41,7 @@ export default class SaveConfigurationButton extends Component {
     }
 
     handleClick() {
-        $.post(window.location.protocol + "//" + window.location.host + '/api/set-configuration', this.formatProps())
+        $.post(window.location.protocol + "//" + window.location.host + '/admin/api/set-configuration', this.formatProps())
             .then(function(response) {
                 console.log(response);
                 if (response.status === 1) {
@@ -64,6 +64,8 @@ export default class SaveConfigurationButton extends Component {
     }
 
     render() {
+        if (this.props.mode === 'view') return null;
+
         return (
             <button
                 className="btn btn-lg btn-primary"

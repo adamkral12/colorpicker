@@ -7,6 +7,8 @@ export default class InputConfigurationName extends Component {
     }
 
     render() {
+        if (this.props.mode === 'view') return null;
+
         return (
             <div className="config-name">
                 <label htmlFor="config-name">Configuration name</label>

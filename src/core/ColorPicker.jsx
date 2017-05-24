@@ -26,6 +26,8 @@ export default class ColorPicker extends Component {
 
     render() {
         //console.log('ColorPicker props = ' + JSON.stringify(this.props.color));
+        if (this.props.mode === 'view') return null;
+
         const color = this.props.color;
 
         return (

@@ -24,6 +24,8 @@ export default class ChangeFocusContainer extends Component {
     }
 
     render() {
+        if (this.props.mode === 'view') return null;
+
         return (
             <div className="change-focus-container">
                 <ChangeFocusButton text="focused"

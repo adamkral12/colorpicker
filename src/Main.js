@@ -309,17 +309,20 @@ export default class Main extends Component {
               <ColorPicker
                   color={ this.state.fontSelected ? font : color }
                   onStylesChange={ this.handleStylesChange }
+                  mode={ this.props.mode }
               />
 
               <ChangeFocusContainer
                   handleFocus={this.handleFocus}
                   handleFontSelection={ this.handleFontSelection }
                   focus={ focus }
+                  mode={ this.props.mode }
               />
 
               <InputConfigurationName
                   handleNameChange={ this.handleNameChange }
                   initialName={ this.state.configName }
+                  mode={ this.props.mode }
               />
 
                 <SaveConfigurationButton
@@ -333,6 +336,7 @@ export default class Main extends Component {
                     handleResponseReceived={ this.handleResponseReceived }
                     cid={ this.state.cid }
                     configName={ this.state.configName }
+                    mode={ this.props.mode }
                 />
 
           </div>

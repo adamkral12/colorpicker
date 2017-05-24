@@ -36,6 +36,7 @@ body {
     float:left;
     padding: 11px 30px;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
 .choose-button.selected {
