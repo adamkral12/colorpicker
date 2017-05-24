@@ -25,7 +25,7 @@ export default class LogoDropZone extends Component {
                 backgroundPosition: '0 0'
             },
             logoUploaded: {
-                backgroundSize: '200px',
+                backgroundSize: '175px 35px',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'bottom right ',
                 backgroundImage: "",
@@ -54,8 +54,8 @@ export default class LogoDropZone extends Component {
         const scope = this;
 
         img.onload = function () {
-           if (this.height > 35 || this.width > 185) {
-               scope.props.handleDropRejected('File is too large, please upload image with maximal width 185px and height 35px');
+           if (this.height > 100 || this.width > 500) {
+               scope.props.handleDropRejected('Dimensions are too large, please upload image with maximal width 100px and height 500px, ideal ratio is 5:1');
            } else {
                scope.setState({ logoUploaded: backgroundWithUrl });
 

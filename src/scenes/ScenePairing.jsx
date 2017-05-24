@@ -28,7 +28,7 @@ export default class ScenePairing extends Scene {
 
                 <div className="logo"
                      style={ { backgroundImage: 'url(' + this.props.logoBackgroundStyle + ')',
-                               backgroundSize: "180px 35px"
+                               backgroundSize: "175px 35px"
                      } }
                 ></div>
                 <div className="info"
