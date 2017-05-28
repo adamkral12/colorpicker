@@ -8,7 +8,7 @@ export default class LogoDropZone extends Component {
         this.state = { files: [] };
         this.onDropAccepted = this.onDropAccepted.bind(this);
         this.onDropRejected = this.onDropRejected.bind(this);
-        console.log('initial image = '  + props.initialImage);
+     //   console.log('initial image = '  + props.initialImage);
         const logoUploaded = props.initialImage ? true : false;
         this.state = {
             logoWasUploaded: logoUploaded,
@@ -81,7 +81,7 @@ export default class LogoDropZone extends Component {
     }
 
     renderDragText() {
-        console.log('state logo was upload = ' + this.state.logoWasUploaded);
+    //    console.log('state logo was upload = ' + this.state.logoWasUploaded);
         return this.state.logoWasUploaded ? "" : "Drag files here or click to upload logo";
     }
 
