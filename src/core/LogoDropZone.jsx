@@ -43,8 +43,6 @@ export default class LogoDropZone extends Component {
     }
 
     onDropAccepted(acceptedFiles) {
-        //console.log('ondrop accepted files ' + JSON.stringify(acceptedFiles));
-        this.setState({ logoWasUploaded: true });
         const backgroundWithUrl = update(this.state.logoUploaded, {
             'backgroundImage': { $set: 'url(' + acceptedFiles[0].preview + ')' }
         });
@@ -55,7 +53,7 @@ export default class LogoDropZone extends Component {
 
         img.onload = function () {
            if (this.height > 100 || this.width > 500) {
-               scope.props.handleDropRejected('Dimensions are too large, please upload image with maximal width 100px and height 500px, ideal ratio is 5:1');
+               scope.props.handleDropRejected('Dimensions are too large, please upload image with maximal width 500px and height 100px, ideal ratio is 5:1');
            } else {
                scope.setState({ logoUploaded: backgroundWithUrl });
 
@@ -63,6 +61,7 @@ export default class LogoDropZone extends Component {
                reader.onload = (event) => {
                    console.log(acceptedFiles[0]);
                    console.log('accepted');
+                   this.setState({ logoWasUploaded: true });
                    scope.props.handleDropAccepted(reader.result);
                };
                reader.readAsDataURL(acceptedFiles[0]);
@@ -82,6 +81,7 @@ export default class LogoDropZone extends Component {
     }
 
     renderDragText() {
+        console.log('state logo was upload = ' + this.state.logoWasUploaded);
         return this.state.logoWasUploaded ? "" : "Drag files here or click to upload logo";
     }
 

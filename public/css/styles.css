@@ -24,7 +24,16 @@ body {
 #choose-scene-container {
     width: 1280px;
     height: 40px;
-    background:lightblue;
+    border: none;
+    background: rgba(23, 109, 48, 0.6);
+    color: white;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 0 15px 0;
 }
 
 .scene.selected {
