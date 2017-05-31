@@ -1,0 +1,87 @@
+#scene-currently {
+    z-index: 4;
+}
+
+#snippet-curlist {
+    position: absolute;
+    top: 56px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+#snippet-curlist .currentlyArrow, #snippet-recorded-list .currentlyArrow {
+    position: absolute;
+    z-index: 10;
+    color: #fcc715;
+}
+
+#snippet-curlist #curArrowUp, #snippet-curlist #curArrowDown {
+    height: 20px;
+    left: 600px;
+    width: 162px;
+}
+
+#snippet-curlist #curArrowUp .arrow, #snippet-curlist #curArrowDown .arrow {
+    top: 0px;
+    left: 16px;
+    width: 70px;
+    height: 18px;
+    line-height: 18px;
+}
+
+#snippet-curlist .currentlyArrow .arrow, #snippet-recorded-list .currentlyArrow .arrow {
+    position: absolute;
+    font-size: 70px;
+    text-align: left;
+    overflow: hidden;
+}
+
+#curArrowLeft .arrow, #curArrowRight .arrow, #recArrowLeft .arrow, #recArrowRight .arrow {
+    top: 113px;
+    width: 18px;
+    height: 70px;
+    line-height: 70px;
+}
+
+#curArrowLeft {
+    left: 250px;
+    top: 150px;
+}
+
+#curArrowRight {
+    right: 250px;
+    top: 150px;
+}
+
+#curArrowUp {
+    top: 1%;
+}
+
+#snippet-curlist #curArrowDown {
+    bottom: 16%;
+}
+
+#snippet-curlist > div.pages {
+    position: absolute;
+    top: 41px;
+    left: 1020px;
+    font-size: 24px;
+}
+
+#snippet-curlist > table.tb-curlist {
+    margin: 26px auto 0 auto;
+    left: 105px;
+    color: #ffffff;
+}
+
+.px437 {
+    width: 437px;
+    background: rgba(36,36,36,0.5);
+    border-radius: 5px;
+}
+
+.px437 > div {
+    width: 387px;
+}

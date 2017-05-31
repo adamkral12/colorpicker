@@ -1,0 +1,122 @@
+#curArrowLeft, #curArrowRight, #recArrowLeft, #recArrowRight {
+    top: 22%;
+    height: 297px;
+    width: 20px;
+}
+
+#recArrowRight {
+    right: 34%;
+}
+
+#recArrowLeft {
+    left: 1%;
+}
+
+#recArrowUp {
+    top: 4.5%;
+    left: 30.5%;
+}
+
+#recArrowDown {
+    bottom: 14.5%;
+    left: 30.5%;
+}
+
+table.recorded-list {
+    margin: 75px auto 0 35px;
+    left: 105px;
+    color: #ffffff;
+}
+
+#snippet-recorded-info {
+    position: absolute;
+    top: 280px;
+    left: 900px;
+    width: 340px;
+    color: #ffffff;
+}
+
+#snippet-recorded-info > div.info {
+    position: absolute;
+    top: 260px;
+    color: #ffffff;
+    width: 340px;
+}
+
+#snippet-recorded-info table.info-event, #snippet-recorded-info table.info {
+    width: 340px;
+}
+#snippet-recorded-info table.info {
+    float: right;
+}
+
+#snippet-recorded-info .validity, #snippet-recorded-info .length, #snippet-recorded-info .totalCapacity, #snippet-recorded-info .freeCapacity, #snippet-recorded-info .countOfRecorded {
+    text-align: left;
+}
+
+#snippet-recorded-info table.info th, #snippet-recorded-info table.info td, #snippet-recorded-info > div.info-event th, #snippet-recorded-info > div.info-event td {
+    font-size: 20px;
+}
+
+.px350 {
+    display: table-cell;
+    background: #242424;
+    border-radius: 5px;
+    width: 350px;
+    font-weight: normal;
+}
+
+.px350 div.text {
+    width: 290px;
+}
+.box > div {
+    padding: 0 25px;
+    text-overflow: ellipsis;
+    line-height: 46px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: left;
+    font-size: 23px;
+}
+
+.px240 {
+    display: table-cell;
+    background: #242424;
+    border-radius: 5px;
+}
+
+.px203 {
+    display: block;
+    background: #242424;
+    border-radius: 5px;
+    width: 203px;
+}
+
+#recArrowRight .arrow {
+    right: -50px;
+}
+
+#snippet-recorded-info > div.info-event {
+    color: #ffffff;
+}
+
+#snippet-recorded-info > div.info {
+    position: absolute;
+    top: 260px;
+    color: #ffffff;
+    width: 340px;
+}
+
+#snippet-recorded-info > div.info-event .eventName {
+    padding-left: 6px;
+    font-size: 22px;
+}
+
+#snippet-recorded-info table td {
+    text-align: right;
+}
+
+.btn-group-vertical>.btn-group:after, .btn-group-vertical>.btn-group:before, .btn-toolbar:after, .btn-toolbar:before, .clearfix:after, .clearfix:before, .container-fluid:after, .container-fluid:before, .container:after, .container:before, .dl-horizontal dd:after, .dl-horizontal dd:before, .form-horizontal .form-group:after, .form-horizontal .form-group:before, .modal-footer:after, .modal-footer:before, .modal-header:after, .modal-header:before, .nav:after, .nav:before, .navbar-collapse:after, .navbar-collapse:before, .navbar-header:after, .navbar-header:before, .navbar:after, .navbar:before, .pager:after, .pager:before, .panel-body:after, .panel-body:before, .row:after, .row:before {
+    display: block;
+    content: " ";
+}

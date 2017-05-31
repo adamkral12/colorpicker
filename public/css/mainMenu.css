@@ -1,0 +1,120 @@
+#snippet-main-menu {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 1000;
+}
+
+#snippet-main-menu > div.opaque {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.75;
+}
+
+#snippet-main-menu > ul.list {
+    position: absolute;
+    top: 200px;
+    list-style: none;
+    left: 95px;
+}
+
+#snippet-main-menu > ul.list > li {
+    position: absolute;
+    top: 25px;
+    width: 188px;
+    height: 183px;
+    cursor: pointer;
+}
+
+#snippet-main-menu > ul.list > li.actual {
+    left: 0;
+}
+
+#snippet-main-menu > ul.list > li.epg {
+    left: 214px;
+}
+
+#snippet-main-menu > ul.list > li.recorded {
+    left: 429px;
+}
+
+#snippet-main-menu > ul.list > li.last {
+    left: 642px;
+}
+
+#snippet-main-menu > ul.list > li.settings {
+    left: 856px;
+}
+
+#snippet-main-menu > ul.list > li > span.path {
+    position: absolute;
+    left: 174px;
+    top: 13px;
+}
+
+#snippet-main-menu > ul.list > li {
+    font-size: 160px;
+}
+
+.icon-menu_currently .path1,
+.icon-menu_epg .path1,
+.icon-menu_records .path1,
+.icon-menu_settings .path1,
+.icon-menu_last_playback.focusable .path1 {
+    color: #df6500;
+}
+
+.icon-menu_last_playback .path1 {
+    color: #ACACAC;
+}
+
+#snippet-main-menu > ul.list > li.icon-menu_currently.focus > .path1,
+#snippet-main-menu > ul.list > li.icon-menu_epg.focus > .path1,
+#snippet-main-menu > ul.list > li.icon-menu_records.focus > .path1,
+#snippet-main-menu > ul.list > li.icon-menu_settings.focus > .path1,
+#snippet-main-menu > ul.list > li.icon-menu_last_playback.focus > .path1 {
+    color:#F7A30D;
+}
+
+.icon-menu_currently .path4,
+.icon-menu_currently .path5,
+.icon-menu_currently .path6,
+.icon-menu_epg .path5,
+.icon-menu_epg .path6,
+.icon-menu_epg .path3,
+.icon-menu_records .path5,
+.icon-menu_settings .path3,
+.icon-menu_last_playback .path4,
+.icon-menu_last_playback .path5 {
+    color: #ECECEC;
+}
+
+.icon-menu_currently .path3,
+.icon-menu_epg .path4,
+.icon-menu_records .path3,
+.icon-menu_records .path4,
+.icon-menu_settings .path5,
+.icon-menu_last_playback .path3 {
+    color: #242221;
+}
+
+#snippet-main-menu > ul.list > li > div.wrapper {
+    position: absolute;
+    top: 170px;
+    width: 180px;
+}
+
+#snippet-main-menu > ul.list > li > div.wrapper > div {
+    width: 180px;
+    height: 90px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 26px;
+    text-transform: uppercase;
+    color:white;
+}

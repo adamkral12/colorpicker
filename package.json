@@ -1,0 +1,27 @@
+{
+  "name":"colorPicker",
+  "version":"1.0.0",
+  "private": true,
+  "author": "Adam Kral",
+  "devDependencies": {
+    "react-scripts": "0.9.5"
+  },
+  "dependencies": {
+    "react":"^15.5.4",
+    "react-dom":"^15.5.4",
+    "classnames": "^2.2.5",
+    "react-color": "^2.11.4",
+    "ucfirst":"",
+    "immutability-helper": "",
+    "react-dropzone": "",
+    "image-size": "",
+    "jquery":"",
+    "react-file-base64": "",
+    "in-array": ""
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom"
+  }
+}
