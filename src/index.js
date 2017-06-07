@@ -13,7 +13,6 @@ ReactDOM.render(
         colorDisabled={root.hasAttribute('data-color-disabled') ? root.getAttribute('data-color-disabled') : null}
         fontDisabled={root.hasAttribute('data-font-disabled') ? root.getAttribute('data-font-disabled') : null}
         configName={root.hasAttribute('data-config-name') ? root.getAttribute('data-config-name') : null}
-        image={root.hasAttribute('data-image') ? root.getAttribute('data-image') : null}
         imageFormat={root.hasAttribute('data-image-format') ? root.getAttribute('data-image-format') : null}
         mode={root.hasAttribute('data-mode') ? root.getAttribute('data-mode') : null}
     />,
