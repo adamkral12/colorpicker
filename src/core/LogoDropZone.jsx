@@ -52,9 +52,9 @@ export default class LogoDropZone extends Component {
         const scope = this;
 
         img.onload = function () {
-           if (this.height > 100 || this.width > 500) {
-               scope.props.handleDropRejected('Dimensions are too large, please upload image with maximal width 500px and height 100px, ideal ratio is 5:1');
-           } else {
+      //     if (this.height > 100 || this.width > 500) {
+          //     scope.props.handleDropRejected('Dimensions are too large, please upload image with maximal width 500px and height 100px, ideal ratio is 5:1');
+        //   } else {
                scope.setState({ logoUploaded: backgroundWithUrl });
 
                const reader = new FileReader();
@@ -65,7 +65,7 @@ export default class LogoDropZone extends Component {
                    scope.props.handleDropAccepted(reader.result);
                };
                reader.readAsDataURL(acceptedFiles[0]);
-           }
+          // }
         };
 
         img.src = _URL.createObjectURL(acceptedFiles[0]);
