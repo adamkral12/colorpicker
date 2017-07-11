@@ -41,6 +41,7 @@ export default class SaveConfigurationButton extends Component {
     }
 
     handleClick() {
+        this.props.showLoader(true);
         $.post(window.location.protocol + "//" + window.location.host + '/admin/api/set-configuration', this.formatProps())
             .then(function(response) {
                 console.log(response);

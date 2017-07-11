@@ -11,6 +11,7 @@ import SceneMenu from "../scenes/SceneMenu";
 import RCButtons from "../sceneComponents/sceneStream/RCButtons";
 import Player from '../core/Player';
 import ErrorContainer from '../core/ErrorContainer';
+import Loader from "../core/Loader";
 
 
 export default class ViewPort extends Component {
@@ -72,6 +73,10 @@ export default class ViewPort extends Component {
                     height={ height }
                     left={ left }
                     top={ top }
+                />
+
+                <Loader
+                    show={ this.props.showLoader }
                 />
 
                 <ErrorContainer

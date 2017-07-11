@@ -26,6 +26,7 @@ export default class Main extends Component {
         this.handleLogoUpdate = this.handleLogoUpdate.bind(this);
         this.handleResponseReceived = this.handleResponseReceived.bind(this);
         this.handleNameChange = this.handleNameChange.bind(this);
+        this.showLoader = this.showLoader.bind(this);
 
         console.log('main props = ' + JSON.stringify(props));
 
@@ -73,7 +74,8 @@ export default class Main extends Component {
             },
             focus : 'normal',
             activeSceneIndex: 0,
-            fontSelected: false
+            fontSelected: false,
+            showLoader: false
         };
 
         /* state from props = editing already existing configuration */
@@ -265,11 +267,16 @@ export default class Main extends Component {
 
     handleResponseReceived(response) {
         this.setState({ ajaxResponse: response });
+        this.setState({showLoader: false});
     }
 
     handleNameChange(name) {
         console.log('name change ' + name);
         this.setState({ configName: name });
+    }
+
+    showLoader(bool) {
+        this.setState({showLoader: bool});
     }
 
 
@@ -304,6 +311,7 @@ export default class Main extends Component {
                   initialImage={ this.state.fileBase64 }
                   imageFormat={ this.state.imageFormat }
                   hideErrorMsg={ this.state.hideErrorMsg }
+                  showLoader={ this.state.showLoader }
               />
 
               <ColorPicker
@@ -325,6 +333,7 @@ export default class Main extends Component {
                   mode={ this.props.mode }
               />
 
+
                 <SaveConfigurationButton
                     colorNormal={ colorNormal }
                     colorFocused={ colorFocused }
@@ -337,6 +346,7 @@ export default class Main extends Component {
                     cid={ this.state.cid }
                     configName={ this.state.configName }
                     mode={ this.props.mode }
+                    showLoader={ this.showLoader }
                 />
 
           </div>
