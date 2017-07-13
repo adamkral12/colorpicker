@@ -276,6 +276,7 @@ export default class Main extends Component {
     }
 
     showLoader(bool) {
+        console.log('showing loader = ' + bool);
         this.setState({showLoader: bool});
     }
 

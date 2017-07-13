@@ -4,7 +4,6 @@ import classNames from 'classnames';
 export default class Loader extends Component {
     render() {
         const classes = this.props.show ? classNames('spinner spinner-start') : classNames('spinner spinner-start spinner-stop');
-
         return (
             <div id="loading"
                  style={this.props.show ? {display:'block'} : {display:'none'}}
