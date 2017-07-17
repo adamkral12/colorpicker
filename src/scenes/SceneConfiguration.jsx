@@ -71,9 +71,7 @@ export default class SceneConfiguration extends Scene {
                     </table>
                 </div>
 
-                <div className="info"
-                     style={ this.getFontCSS(this.props.colorNormal).font }
-                >
+                <div className="info">
                     <div className="label_value_wrapper">
                         <div className="labels"><span className="versionOfTheApplication">App version</span>:</div>
                         <div className="value version">2.0.213</div>

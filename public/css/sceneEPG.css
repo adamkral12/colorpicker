@@ -557,4 +557,28 @@
     color: #000;
 }
 
+#epgNow {
+    position: absolute;
+    top: 30px;
+    width: 6px;
+    height: 357px;
+    display: none;
+    z-index: 1000;
+    background-color: #eb2a52;
+    display: block;
+    left: 742.987px;
+}
 
+#epgNowTime {
+    position: absolute;
+    top: -22px;
+    left: -25px;
+    width: 56px;
+    text-align: center;
+    height: 22px;
+    background-color: #eb2a52;
+    content: '';
+    text-transform: inherit;
+    font-size: 17px;
+    line-height: 22px;
+}
