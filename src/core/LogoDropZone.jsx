@@ -20,7 +20,7 @@ export default class LogoDropZone extends Component {
                 borderStyle: 'dashed',
                 borderRadius: '5px',
                 backgroundColor: 'rgba(210, 180, 161, 0.2)',
-                fontSize: '20px',
+                fontSize: '19px',
                 color: 'white',
                 backgroundPosition: '0 0'
             },
