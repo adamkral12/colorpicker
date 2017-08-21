@@ -34,12 +34,12 @@ export default class LogoDropZone extends Component {
             }
         }
 
-        this.setInitialImage(props.initialImage);
+        this.setInitialImage(props.initialImage, props.imageFormat);
 
     }
 
-    setInitialImage(fileBase64) {
-        this.state.logoUploaded.backgroundImage = 'url("data:image/png;base64,' + fileBase64 + '")';
+    setInitialImage(fileBase64, format) {
+        this.state.logoUploaded.backgroundImage = 'url("data:image/' + format + ';base64,' + fileBase64 + '")';
     }
 
     onDropAccepted(acceptedFiles) {

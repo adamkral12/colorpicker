@@ -310,7 +310,7 @@ export default class Main extends Component {
                   logoBackgroundStyle={ this.state.fileBase64 }
                   ajaxResponse={ this.state.ajaxResponse }
                   initialImage={ this.props.image }
-                  imageFormat={ this.state.imageFormat }
+                  imageFormat={ this.props.imageFormat }
                   hideErrorMsg={ this.state.hideErrorMsg }
                   showLoader={ this.state.showLoader }
               />
