@@ -8,7 +8,7 @@ export default class LogoDropZone extends Component {
         this.state = { files: [] };
         this.onDropAccepted = this.onDropAccepted.bind(this);
         this.onDropRejected = this.onDropRejected.bind(this);
-     //   console.log('initial image = '  + props.initialImage);
+        console.log('initial image = '  + props.initialImage);
         const logoUploaded = props.initialImage ? true : false;
         this.state = {
             logoWasUploaded: logoUploaded,
@@ -39,7 +39,7 @@ export default class LogoDropZone extends Component {
     }
 
     setInitialImage(fileBase64) {
-        this.state.logoUploaded.backgroundImage = 'url(' + fileBase64 + ')';
+        this.state.logoUploaded.backgroundImage = 'url("data:image/png;base64,' + fileBase64 + '")';
     }
 
     onDropAccepted(acceptedFiles) {

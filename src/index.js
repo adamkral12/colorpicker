@@ -14,6 +14,7 @@ ReactDOM.render(
         fontDisabled={root.hasAttribute('data-font-disabled') ? root.getAttribute('data-font-disabled') : null}
         configName={root.hasAttribute('data-config-name') ? root.getAttribute('data-config-name') : null}
         imageFormat={root.hasAttribute('data-image-format') ? root.getAttribute('data-image-format') : null}
+        image={root.hasAttribute('data-image') ? root.getAttribute('data-image') : null}
         mode={root.hasAttribute('data-mode') ? root.getAttribute('data-mode') : null}
     />,
     document.getElementById('root')
