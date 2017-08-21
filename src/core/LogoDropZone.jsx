@@ -82,7 +82,7 @@ export default class LogoDropZone extends Component {
 
     renderDragText() {
     //    console.log('state logo was upload = ' + this.state.logoWasUploaded);
-        return this.state.logoWasUploaded ? "" : "Drag files here or click to upload logo";
+        return this.state.logoWasUploaded ? "" : "Drag files here or click to upload logo (5:1)";
     }
 
     render() {
