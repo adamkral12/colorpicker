@@ -99,6 +99,7 @@ export default class ViewPort extends Component {
                              ajaxResponse={ this.props.ajaxResponse }
                              index={0}
                              key={0}
+                             mode={ this.props.mode }
                 />
                 <ScenePairing id="scene-pairing"
                               onChangeComplete={ this.handleStylesChange }
@@ -110,6 +111,7 @@ export default class ViewPort extends Component {
                               logoBackgroundStyle={ this.props.logoBackgroundStyle }
                               index={1}
                               key={1}
+                              mode={ this.props.mode }
                 />
                 <SceneConfiguration id="scene-configuration"
                                     onChangeComplete={ this.handleStylesChange }

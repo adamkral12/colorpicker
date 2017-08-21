@@ -313,6 +313,7 @@ export default class Main extends Component {
                   imageFormat={ this.props.imageFormat }
                   hideErrorMsg={ this.state.hideErrorMsg }
                   showLoader={ this.state.showLoader }
+                  mode={ this.props.mode }
               />
 
               <ColorPicker

@@ -107,6 +107,7 @@ export default class SceneStream extends Scene {
                                     imageFormat={ this.props.imageFormat }
                                     handleDropRejected={ this.props.handleDropRejected }
                                     handleDropAccepted={ this.props.handleDropAccepted }
+                                    mode={ this.props.mode }
                                 />
                             </div>
                         </div>

@@ -88,15 +88,23 @@ export default class LogoDropZone extends Component {
     render() {
 
         //console.log('on drop ' + JSON.stringify(this.state.logoUploaded));
+        let dropZone = null;
+        if (this.props.mode === "view") {
+            dropZone = <div
+                style={ this.state.logoWasUploaded ? this.state.logoUploaded : this.state.logoNotUploaded }
+                        ></div>
+        } else {
+            dropZone = <DropZone onDropAccepted={ this.onDropAccepted }
+                      onDropRejected={ this.onDropRejected }
+                      accept="image/jpeg, image/png, image/svg+xml"
+                      style={ this.state.logoWasUploaded ? this.state.logoUploaded : this.state.logoNotUploaded }
+            >
+                { this.renderDragText() }
+            </DropZone>;
+        }
         return (
             <div className="dropzone" id="img-dropzone">
-                <DropZone onDropAccepted={ this.onDropAccepted }
-                          onDropRejected={ this.onDropRejected }
-                          accept="image/jpeg, image/png, image/svg+xml"
-                          style={ this.state.logoWasUploaded ? this.state.logoUploaded : this.state.logoNotUploaded }
-                >
-                    { this.renderDragText() }
-                </DropZone>
+                {dropZone}
             </div>
         )
     }
