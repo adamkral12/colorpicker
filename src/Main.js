@@ -135,7 +135,7 @@ export default class Main extends Component {
 
         if (props.image) {
             this.state = update(this.state, {
-                'fileBase64': { $set: "data:image/" + props.imageFormat + ";base64," + props.image }
+                'fileBase64': { $set: props.image }
             });
         }
 
